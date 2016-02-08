@@ -96,7 +96,8 @@ a {
   color: #939597;
   text-decoration: none; }
   a:hover {
-    color: #00519c !important; }
+    color: #00519c !important;
+    text-decoration: none; }
 
 ul {
   list-style-type: none;
@@ -307,12 +308,12 @@ input[type="text"] {
 #msg {
   position: absolute;
   min-height: 421px;
-  left: -735px;
+  left: -839px;
   background-color: #00519c;
   color: white;
   overflow: hidden;
   z-index: 2;
-  width: 735px; }
+  width: 91.6%; }
 
 .bankDetails {
   padding-top: 35%;
@@ -347,6 +348,18 @@ input[type="text"] {
   display: inline-block;
   margin-top: 70px;
   font-family: "nextExitRound-Light", sans-serif; }
+
+.interviewName {
+  font-family: 'NextExitRound-Light', sans-serif !important;
+  text-align: right;
+  background-color: white;
+  padding-top: 15px;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.interviewJob {
+  margin-left: 5px;
+  font-family: 'NextExitRound-Regular', sans-serif !important; }
 
 .descPeople {
   max-width: 640px;

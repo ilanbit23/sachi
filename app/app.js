@@ -15,28 +15,45 @@ angular.module('myApp', [
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/home'});
     }]);
-function slideIn(el){
-    var elem = document.getElementById(el);
-    elem.style.transition = "left 1.1s ease 0s";
-    elem.style.left = "0px";
+function slideIn(el) {
+    var donation = document.getElementById(el);
+    donation.style.transition = "left 1.1s ease 0s";
+    donation.style.left = "0px";
+    var donationBtn = document.querySelector("#d1");
+    donationBtn.style.transition = "left 1.1s ease 0s";
+    donationBtn.style.left = "777px";
 }
-function slideOut(el){
+
+function slideOut(el) {
     var elem = document.getElementById(el);
     elem.style.transition = "left 1.1s ease 0s";
-    elem.style.left = "-800px";
+    elem.style.left = "-839px";
+    var donationBtn = document.querySelector("#d1");
+    donationBtn.style.transition = "left 1.1s ease 0s";
+    donationBtn.style.left = "-60px";
 }
 var obj =
 {
 
     homePage: [{videoId: "vimeo-78907398", "name": "Arik"}],
     past: [{}],
+    present: [{
+        pageTitle: "הווה",
+        ulTitle: "סיירות החסד",
+        header: "סיירות החסד",
+        headText: 'סח"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת שותפות עם נוער בסיכון, הלומד לקחת אחריות על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר שינוי חיובי הן אצל הנער והן בקהילה מסביבו.',
+        firstParagraph: 'סח"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת שותפות עם נוער בסיכון, הלומד לקחת אחריות על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר שינוי חיובי הן אצל הנער והן בקהילה מסביבו.',
+        secondParagraph: 'סח"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת שותפות עם נוער בסיכון, הלומד לקחת אחריות על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר שינוי חיובי הן אצל הנער והן בקהילה מסביבו.'
+    }],
     future: [{}],
 
     people: [
         {
-            name: "cdcd"
-
-
+            pageTitle: "אנשים",
+            name: 'אברהם חיון',
+            job: 'מנכ"ל סח"י',
+            jobDescription1: "מעל ל 333,300- בני נוער בישראל נמצאים בסיכון. לעתים קרובות הם חשים ניכור, חוסר שייכות, תסכול, חוסר תקווה וכישלון. הם מרגישים מנותקים מהמשפחות, הקהילות שלהם והחברה כולה. הם מפגינים התנהגות הרסנית ואנטי חברתית, אשר, אם אינה מטופלת בזמן, עלולה להביא למעשים פליליים, התמכרות לסמים ואלכוהול.",
+            jobDescription2: "מעל ל 333,300- בני נוער בישראל נמצאים בסיכון. לעתים קרובות הם חשים ניכור, חוסר שייכות, תסכול, חוסר תקווה וכישלון. הם מרגישים מנותקים מהמשפחות, הקהילות שלהם והחברה כולה. הם מפגינים התנהגות הרסנית ואנטי חברתית, אשר, אם אינה מטופלת בזמן, עלולה להביא למעשים פליליים, התמכרות לסמים ואלכוהול."
         }
 
     ]

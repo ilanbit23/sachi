@@ -131,6 +131,7 @@ a {
   text-decoration: none;
   &:hover {
     color: $lightBlue !important;
+    text-decoration: none;
   }
 }
 
@@ -396,12 +397,12 @@ input[type="text"] {
 #msg {
   position: absolute;
   min-height: 421px;
-  left: -735px;
+  left: -839px;
   background-color: $lightBlue;
   color: white;
   overflow: hidden;
   z-index: 2;
-  width: 735px;
+  width: 91.6%;
 }
 
 .bankDetails {
@@ -444,6 +445,20 @@ input[type="text"] {
   display: inline-block;
   margin-top: 70px;
   font-family: "nextExitRound-Light", sans-serif;
+}
+
+.interviewName {
+  font-family: 'NextExitRound-Light', sans-serif !important;
+  text-align: right;
+  background-color: white;
+  padding-top: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.interviewJob{
+  margin-left: 5px;
+  font-family: 'NextExitRound-Regular', sans-serif !important;
+
 }
 
 //******People page******//
