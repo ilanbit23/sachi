@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>sachi</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-rtl.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container menu">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!--<a href="#/home"><img src="img/logo.jpg" alt="logo" class="logo"/></a>-->
+            <a class="navbar-brand" href="#/home"><img src="img/logo.png" alt="" class="logo"></a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right flip pull-left">
+                <li><a href="#/home">עבר</a></li>
+                <li><a href="#/present">הווה</a></li>
+                <li><a href="#/present">עתיד</a></li>
+                <li><a href="#/home">נתינה</a></li>
+                <li><a href="#/people">אנשים</a></li>
+                <li><a href="#/transparency">שקיפות</a></li>
+                <li><a href="#/contact">קשר</a></li>
+            </ul>
+            <br/>
+            <span class="social">
+                <img src="img/fb-circ.png" alt="fb" class="fb"/>
+                <img src="img/youtube_circ.png" alt="yt" class="yt"/>
+                <a href="#/home" class="trans">ENG</a>
+            </span>
+        </div>
+        <!-- /.navbar-collapse -->
+
+    </div>
+    <!-- /.container -->
+</nav>
+<!--<ul class="menu">-->
+<!--<a href="#/home"><img src="img/logo.jpg" alt="logo" class="logo"/></a>-->
+<!--<li><a href="#/home">עבר</a></li>-->
+<!--<li><a href="#/present">הווה</a></li>-->
+<!--<li><a href="#/home">עתיד</a></li>-->
+<!--<li><a href="#/present">נתינה</a></li>-->
+<!--<li><a href="#/people">אנשים</a></li>-->
+<!--<li><a href="#/transparency">שקיפות</a></li>-->
+<!--<li><a href="#/contact">קשר</a></li>-->
+<!--<img src="img/fb-circ.png" alt="fb" class="fb"/>-->
+<!--<img src="img/youtube_circ.png" alt="yt" class="yt"/>-->
+<!--<a href="#/home" class="trans">ENG</a>-->
+<!--</ul>-->
+
+
+<donation></donation>
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div ng-view></div>
+
+<!--<div>Angular seed app: v<span app-version></span></div>-->
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="lib/bootstrap/javascripts/ui-bootstrap-tpls-0.14.3.min.js"></script>
+<script src="lib/jquery/jquery.js"></script>
+<script src="app.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="home/home.js"></script>
+<script src="present/present.js"></script>
+<script src="people/people.js"></script>
+<script src="partners/partners.js"></script>
+<script src="contact/contact.js"></script>
+<script src="transparency/transparency.js"></script>
+<script src="components/donation/donation.js"></script>
+<!--<script src="components/version/version.js"></script>-->
+<!--<script src="components/version/version-directive.js"></script>-->
+<!--<script src="components/version/interpolate-filter.js"></script>-->
+</body>
+</html>
