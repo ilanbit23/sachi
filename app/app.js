@@ -11,10 +11,11 @@ angular.module('myApp', [
     'myApp.transparency',
     'myApp.contact'
     //'myApp.version'
-]).
-    config(['$routeProvider', function ($routeProvider) {
+])
+    .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/home'});
     }]);
+
 function slideIn(el) {
     var donation = document.getElementById(el);
     donation.style.transition = "left 1.1s ease 0s";
@@ -32,6 +33,18 @@ function slideOut(el) {
     donationBtn.style.transition = "left 1.1s ease 0s";
     donationBtn.style.left = "-60px";
 }
+
+function openMenu(){
+    var menu = document.querySelector(".nav>ul");
+    if (menu.style.display = "none") menu.style.display = "block";
+    //else if (menu.style.display = "block") menu.style.display = "none";
+}
+//
+//function closeMenu() {
+//    var menu = document.querySelector(".nav>ul");
+//    if (menu.style.display = "block") menu.style.display = "none";
+//}
+
 var obj =
 {
 

@@ -7,6 +7,9 @@ angular.module('myApp.present', ['ngRoute'])
             templateUrl: 'present/present.html',
             controller: 'presentCtrl'
         });
+        $routeProvider.when('/presentMobile', {
+            templateUrl: 'present/presentMobile.html',
+        });
     }])
 
     //.directive('mbFade', function () {
