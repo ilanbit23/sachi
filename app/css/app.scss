@@ -368,7 +368,7 @@ li {
   .activity > aside > h3 {
     padding-left: 50% !important;
     font-size: 2.5em !important;
-    margin-bottom: 5px !important;
+    margin-bottom: 20px !important;
   }
   .activity > aside {
     border-top: none !important;
@@ -377,7 +377,10 @@ li {
   .activity > aside > nav {
     float: right !important;
     width: 100% !important;
-    line-height: 0.6em !important;
+    padding-bottom: 10px !important;
+  }
+  li {
+    padding: 0 !important;
   }
 
   nav {
@@ -386,23 +389,35 @@ li {
   hr {
     display: none;
   }
-  nav ul, nav:active ul {
+  .cb {
+    color: white !important;
+  }
+  .nav > ul {
     display: none;
-    position: absolute;
-    padding: 20px;
-    background: #fff;
-    border: 5px solid #444;
-    right: 20px;
-    top: 60px;
-    width: 50%;
-    border-radius: 4px 0 4px 4px;
+  }
+  aside > nav ul{
+    display: flex !important;
+    padding: 0 !important;
+    position: relative !important;
+    background: #00519C !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin-right: 0 !important;
   }
 
+  nav > ul > li {
+    &:before {
+      content: "" !important;
+      padding-right: 0.3em;
+      padding-left: 0.3em;
+    }
+  }
   nav li {
     text-align: center;
     width: 100%;
-    padding: 10px 0;
-    margin: 0;
+  }
+  .fs18 {
+    font-size: 22px !important;
   }
 }
 
@@ -555,6 +570,42 @@ input[type="text"] {
   width: 10px;
 }
 
+
+
+//******Present page******//
+section {
+  display: flex;
+  width: 100%;
+}
+
+.ml15 {
+  margin-left: 15px;
+}
+
+aside {
+  flex: 1.4;
+  background-color: $lighterGray;
+  text-align: left;
+  border-top: 15px solid $lightBlue;
+}
+
+article {
+  flex: 1.6;
+}
+
+aside > h3 {
+  padding-left: 22px;
+  color: $lightBlue;
+  font-weight: normal;
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+aside > nav > li > p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
 /*MEDIA-QUERY PRESENT*/
 @media only screen and (max-width: 640px) {
   .activity > aside {
@@ -605,8 +656,12 @@ input[type="text"] {
     display: flex;
     padding-left: 15px;
     background-color: #00519C;
-    color: white;
+    color: white !important;
     float: right;
+    min-height: 50px;
+  }
+  ul {
+    display: flex;
   }
 
   .desc {
@@ -616,65 +671,30 @@ input[type="text"] {
   }
 
   nav li {
-    padding: 15px 15px 10px 15px;
+    padding: 15px;
     margin: 0;
-    margin-left: -45px;
   }
-}
-
-//******Present page******//
-section {
-  display: flex;
-  width: 100%;
-}
-
-.ml15 {
-  margin-left: 15px;
-}
-
-aside {
-  flex: 1.4;
-  background-color: $lighterGray;
-  text-align: left;
-  border-top: 15px solid $lightBlue;
-}
-
-article {
-  flex: 1.6;
-}
-
-aside > h3 {
-  padding-left: 25px;
-  color: $lightBlue;
-  font-weight: normal;
-  font-size: 1.5em;
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-aside > nav > li > p {
-  margin-bottom: 0;
-  margin-top: 0;
 }
 
 aside > nav {
   padding-left: 15px;
   float: left;
   list-style-type: none;
-  width: 117px;
+  width: 158px;
   line-height: 0.3em;
   padding-bottom: 30px;
 }
 
-aside > nav > hr {
+aside > nav hr {
   border-top: 1px dotted #6f6c6d;
-  margin-bottom: 0px;
-  margin-top: 0;
   margin-left: 10px;
+  margin-bottom: -15px;
+  margin-top: -15px
 }
 
 .activity img {
   width: 100%;
+  margin-top: -30px;
 }
 
 article > h1 {
@@ -689,6 +709,7 @@ article > h1 {
 }
 
 .desc {
+  color: $darkGray;
   padding-right: 25px;
   max-width: 70%;
   line-height: 0.9;
@@ -698,87 +719,99 @@ article > h1 {
   font-size: 1.5em;
 }
 
+.weight {
+  font-weight: 600;
+}
+
 .descParagraph {
   font-size: 1.3em;
   padding-left: 50px;
 }
 
 //******People page******//
-.people > aside > nav {
-  width: 152px;
-  margin-top: -25px;
+.people > aside nav {
+  width: 158px;
 }
 
-.people li {
-  padding-bottom: 0;
-  margin-top: -25px;
+.people img {
+  width: 100%;
+  margin-top: -20px;
 }
 
-.people hr {
-  margin-top: -10px;
+article > div > p {
+  margin-bottom: -40px;
+  margin-top: 45px;
 }
 
-.peopleArticle {
-  flex: 1.6;
-  flex-direction: column;
+.mb-20 {
+  margin-bottom: -20px;
 }
 
-.peopleArticle > article {
-  flex: 1;
+.mt-15 {
+  margin-top: -15px;
 }
 
-//.descPeople {
-//  max-width: 640px;
-//  color: black;
-//  line-height: 1.0em;
-//}
-//
-//.people {
-//  width: 100%;
-//  margin-top: 50px;
-//}
-//
-//.people2 {
-//  margin-top: 40px;
-//}
-//
-//.desc2 {
-//  margin-top: -53px;
-//}
+.second {
+  margin-top: 65px;
+}
+
+.mt30 {
+  margin-top: 30px !important;
+}
+
+.cb {
+  color: black;
+}
+
+.fs18 {
+  font-size: 18px;
+}
 
 //******Partners page******//
+.partners, .transparency {
+  display: flex;
+  width: 100%;
+  height: 104px;
+  margin-bottom: 80px;
+}
+
 .cg {
-  color: $darkGray;
+  color: #77787a;
 }
 
-.fs {
-  font-size: 0.8em;
-  margin-top: 15px;
+.mw90 {
+  max-width: 90%;
 }
 
-.headMargin {
-  margin-top: 60px;
-  margin-bottom: -15px;
-}
-
-.secondParagraph {
-  padding-top: 4px;
+.partners nav {
+  padding-bottom: 0;
 }
 
 .recommendation {
   display: flex;
-  margin-top: 40px;
-  color: $lightGray;
+}
+
+.recommendationRight {
+  flex: 1;
+}
+
+.recommendationMid {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.ml30 {
+  margin-left: 30px;
+}
+
+.recommendationLeft {
+  flex: 1;
+  margin-right: 20px;
+  margin-left: -30px;
 }
 
 .quote {
-  color: $lightGray;
-  float: left;
-}
-
-.right {
-  margin-top: 80px;
-  margin-right: -75px;
+  color: #b4b4b4;
 }
 
 .partnerName {
@@ -786,22 +819,16 @@ article > h1 {
   float: right;
 }
 
-.mt80 {
-  margin-top: 80px;
-}
-
 .logosRow {
   display: flex;
 }
 
 .logoImg {
-  width: 145px;
+  width: 20%;
   height: 75px;
   margin: 5px;
-  border-right: 1px dotted $lightGray;
+  border-right: 1px dotted #e0e0e0;
   margin-top: 56px;
-  margin-left: 20px;
-  margin-right: 5px;
 }
 
 .brn {
@@ -810,7 +837,7 @@ article > h1 {
 
 .logosHr {
   border: none;
-  border-top: 1px dotted $lightGray;
+  border-top: 1px dotted #e0e0e0;
   background-color: #fff;
   height: 1px;
   width: 100%;
@@ -818,27 +845,95 @@ article > h1 {
   margin-bottom: -50px;
 }
 
-.rightSidePartners > ul {
-  margin-bottom: 11px;
-}
-
 //******Transparency page******//
-.rightSideTransparency {
-  padding-bottom: 33px;
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #EEEEEE;
+  color: black;
+  padding: 3px;
+  font-size: 17px;
+  width: 55px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'NextExitRound-Regular', sans-serif !important;
+  padding-left: 10px;
 }
 
-.headLeftSideTrasnsparency {
-  margin-top: -22px;
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: $lightGray;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  right: 40%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 55px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 6px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: $lightGray
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+.arrowDown {
+  background-image: url("./../img/arrowDown.png");
+  width: 15px;
+  background-repeat: no-repeat;
+  height: 15px;
+  font-size: 0.3em;
+  margin-top: -20px;
+  background-size: contain;
+  position: relative;
+  margin-right: 3px;
 }
 
 .docList {
+  color: #322e2f;
   width: 260px;
   float: left;
-  margin-left: 192px;
-  margin-top: 30px;
+  margin-left: 25%;
+  margin-top: -3%;
+}
+
+.docList hr {
+  border: 0.2px dotted #656363;
+}
+
+.mt8 {
+  margin-top: 8px;
 }
 
 //******Contact page******//
+.contact {
+  display: flex;
+  width: 100%;
+}
+
 .info {
   text-align: right;
   margin-top: 90px;
@@ -853,25 +948,32 @@ article > h1 {
   padding-bottom: 20px;
 }
 
+.formSection {
+  float: left;
+  margin-top: -95px;
+  margin-left: 0px;
+}
+
 .contactForm {
-  display: table-caption;
+  display: flex;
   margin-top: -5px;
-  width: 370px;
+  width: 420px;
   color: $lightGray;
 }
 
 .formRight {
+  flex: 1;
   float: right;
 }
 
 .formMiddle {
+  flex: 1;
   float: right;
-  margin-right: 15px;
 }
 
 .formLeft {
+  flex: 1;
   float: left;
-  margin-left: -5px;
 }
 
 .formTextArea {
@@ -892,17 +994,18 @@ article > h1 {
 }
 
 .note {
-  text-align: center;
   color: $lightGray;
   margin-top: 15px;
 }
 
 .formSend {
+  font-family: 'NextExitRound-Light', sans-serif !important;
   float: left;
   margin-top: -31px;
   border: none;
-  background-color: $lightBlue;
+  background-color: #00519c;
   color: white;
-  margin-left: 39px;
-  padding-top: 4px;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  width: 35px;
 }
