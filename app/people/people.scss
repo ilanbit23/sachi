@@ -1,0 +1,52 @@
+.people {
+  display: flex;
+  width: 100%;
+}
+
+.peopleDesc {
+  display: flex;
+  .boxImg {
+    margin: 0;
+    padding: 0;
+    flex: 1.4;
+    margin-bottom: 30px;
+    img {
+      width: 105%;
+    }
+  }
+  article {
+    flex: 1.6;
+    margin-top: -30px;
+    margin-right: 45px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .people, .partners {
+    aside {
+      flex: none !important;
+      nav {
+        width: 100%;
+        max-height: 60px;
+      }
+      p {
+        margin-bottom: 10px;
+        margin-top: 0px;
+      }
+    }
+    .mt-15 {
+      margin-top: 15px;
+    }
+  }
+  .peopleDesc {
+    flex-direction: column;
+    margin-top: 30px;
+    padding-right: 50px;
+    padding-left: 4em;
+    article {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+

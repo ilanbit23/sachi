@@ -1,0 +1,80 @@
+.contact {
+  display: flex;
+  width: 100%;
+}
+
+.info {
+  text-align: right;
+  margin-top: 90px;
+  font-size: 0.9em;
+  margin-right: 20px;
+  line-height: 1em;
+}
+
+.headContact {
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.formSection {
+  float: left;
+  margin-top: -95px;
+  margin-left: 0;
+}
+
+.contactForm {
+  display: flex;
+  margin-top: -5px;
+  width: 420px;
+  color: $lightGray;
+}
+
+.formRight {
+  flex: 1;
+  float: right;
+}
+
+.formMiddle {
+  flex: 1;
+  float: right;
+}
+
+.formLeft {
+  flex: 1;
+  float: left;
+}
+
+.formTextArea {
+  resize: none;
+  background-color: #EFEFEF;
+  border: none;
+  padding-bottom: 8px;
+}
+
+.contactForm p {
+  margin-bottom: 5px;
+}
+
+.formInput {
+  background-color: #EFEFEF;
+  border: none;
+  line-height: 1.7em;
+}
+
+.note {
+  color: $lightGray;
+  margin-top: 15px;
+}
+
+.formSend {
+  font-family: 'NextExitRound-Light', sans-serif !important;
+  float: left;
+  margin-top: -31px;
+  border: none;
+  background-color: #00519c;
+  color: white;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  width: 35px;
+}

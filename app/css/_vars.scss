@@ -1,0 +1,44 @@
+$darkGray: #403d3e;
+$lightGray: #939597;
+$lighterGray: #eeeeee;
+$darkBlue: #001a5f;
+$lightBlue: #00519c;
+
+@font-face {
+  font-family: 'NextExitRound-Bold';
+  src: url('fonts/NextExitRound-Bold_WEB/NextExitRound-Bold.eot');
+  src: url('fonts/NextExitRound-Bold_WEB/NextExitRound-Bold.woff') format('woff');
+  src: url('fonts/NextExitRound-Bold_WEB/NextExitRound-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NextExitRound-Light';
+  src: url('fonts/NextExitRound-Light_WEB/NextExitRound-Light.eot');
+  src: url('fonts/NextExitRound-Light_WEB/NextExitRound-Light.woff') format('woff');
+  src: url('fonts/NextExitRound-Light_WEB/NextExitRound-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NextExitRound-Regular';
+  src: url('fonts/NextExitRound-Regular_WEB/NextExitRound-Regular.eot');
+  src: url('fonts/NextExitRound-Regular_WEB/NextExitRound-Regular.woff') format('woff');
+  src: url('fonts/NextExitRound-Regular_WEB/NextExitRound-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.light {
+  font-family: "nextExitRound-Light", sans-serif;
+}
+
+.regular {
+  font-family: "nextExitRound-Regular", sans-serif;
+}
+
+.bold {
+  font-family: "nextExitRound-Bold", sans-serif;
+}

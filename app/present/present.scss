@@ -1,0 +1,123 @@
+.activity {
+  display: flex;
+  width: 100%;
+}
+
+aside {
+  flex: 1.4;
+  background-color: $lighterGray;
+  text-align: left;
+  border-top: 15px solid $lightBlue;
+  ul {
+    margin-left: 20px;
+  }
+  hr {
+    border-top: 1px dotted #6f6c6d;
+    margin-left: 1px;
+    margin-bottom: -15px;
+    margin-top: -15px;
+    width: 30%;
+  }
+  h3 {
+    padding-left: 22px;
+    color: $lightBlue;
+    font-weight: normal;
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  nav > li > p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  img {
+    width: 100%;
+    margin-top: -30px;
+  }
+
+}
+
+article {
+  flex: 1.6;
+  h1 {
+    background-color: #00519c;
+    padding-top: 70px;
+    margin-top: 0px;
+    color: white;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    font-weight: normal;
+    font-size: 1.5em;
+  }
+  .desc {
+    color: $darkGray;
+    padding-right: 25px;
+    max-width: 70%;
+    line-height: 0.9;
+  }
+}
+
+.descParagraph {
+  font-size: 1.3em;
+  padding-left: 50px;
+}
+
+/*MEDIA-QUERY PRESENT*/
+@media only screen and (max-width: 640px) {
+  .activity, .people, .partners, .transparency {
+    aside {
+      width: 100%;
+      margin-top: 115px;
+      text-align: center;
+      border-top: none;
+      h3 {
+        padding-left: 88%;
+        font-weight: normal;
+        font-size: 2.5em;
+        margin-top: 15px;
+        padding-right: 40%;
+        margin-bottom: 10px;
+      }
+      nav {
+        display: block;
+        padding-left: 15px;
+        background-color: #00519C;
+        color: white !important;
+        float: right;
+        min-height: 50px;
+        p {
+          margin-bottom: 15px;
+          margin-top: -15px;
+        }
+        ul {
+          display: flex;
+        }
+      }
+    }
+    nav > li > p {
+      padding-left: 25px;
+      margin-right: -10px;
+    }
+    img {
+      margin-bottom: -5px;
+    }
+  }
+  .social {
+    display: none;
+  }
+
+  article > h1 {
+    display: none;
+  }
+
+  .desc {
+    padding-top: 10px !important;
+    padding-left: 25px !important;
+    max-width: 85% !important;
+  }
+
+  nav li {
+    padding: 15px;
+    margin: 0;
+  }
+}

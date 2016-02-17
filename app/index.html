@@ -13,8 +13,6 @@
     <title>sachi</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link href="css/bootstrap.css" rel="stylesheet">-->
-    <!--<link href="css/bootstrap-rtl.css" rel="stylesheet">-->
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
@@ -22,10 +20,11 @@
 <body>
 <header>
     <nav class="nav">
-        <a onclick="openMenu()" href="#"><i class="fa fa-bars" id="menu-icon"></i></a>
+        <a ng-click="isShown = !isShown"><i class="fa fa-bars" id="menu-icon"></i></a>
         <a href="#/home"><img src="img/logo.jpg" alt="logo" class="logo"/></a>
-        <ul>
-            <li><a class="current" href="#/home">עבר</a></li>
+        <ul ng-show="!isShown">
+            <!--<li><a class="current" href="#/home">ENG</a></li>-->
+            <li><a href="#/home">עבר</a></li>
             <li><a href="#/present">הווה</a></li>
             <li><a href="#/present">עתיד</a></li>
             <li><a href="#/home">נתינה</a></li>

@@ -1,0 +1,151 @@
+.dd {
+  position: absolute;
+  height: 42px;
+  width: 161px;
+  text-align: center;
+  background-color: $lightBlue;
+  color: white;
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  left: -60px;
+  padding-top: 15px;
+  top: 50%;
+}
+
+.checkDetails {
+  padding-right: 45px;
+  margin-top: -20px;
+}
+
+.donation {
+  text-align: center;
+  margin-left: 273px;
+  margin-top: 0;
+}
+
+.donationDetails {
+  font-family: "nextExitRound-Light", sans-serif;
+  float: left;
+  padding-left: 72px;
+  margin-top: -48px;
+}
+
+.donationRightSide {
+  float: right;
+}
+
+.donationFormRight {
+  float: right;
+  margin-left: 10px;
+}
+
+.donationFormLeft {
+  margin-bottom: 20px;
+}
+
+.donationFormRight p {
+  margin-bottom: 3px;
+}
+
+.donationFormLeft p {
+  margin-bottom: 3px;
+}
+
+.donationLast {
+  margin-top: 50px;
+}
+
+.fl {
+  float: left;
+}
+
+.arrow {
+  position: relative;
+  bottom: 46px;
+  left: 118px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+form {
+  display: table-caption;
+  margin-top: -28px;
+  width: 380px;;
+}
+
+form h5 {
+  margin: 0;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-left: 5px;
+}
+
+input[type="text"] {
+  width: 105px;
+  color: black;
+  margin-left: 4px;
+  padding-right: 2px;
+}
+
+#msg {
+  position: absolute;
+  min-height: 421px;
+  left: -1236px;
+  background-color: $lightBlue;
+  color: white;
+  overflow: hidden;
+  z-index: 2;
+  width: 91.6%;
+}
+
+.bankDetails {
+  padding-top: 35%;
+  padding-right: 45px;
+}
+
+.btnContinue {
+  padding-top: 2px;
+  float: left;
+  background-color: $darkBlue;
+  border: none;
+  color: white;
+  margin-left: 136px;
+  font-family: "nextExitRound-Regular", sans-serif;
+}
+
+.bankDetailsMargin {
+  margin-top: -10px;
+}
+
+.closeDonation {
+  margin-right: 5px;
+  margin-top: 3px;
+  cursor: pointer;
+  width: 10px;
+}
+@media only screen and (max-width: 640px) {
+  .dd {
+    position: fixed;
+    height: 50px;
+    margin-top: 13px;
+    width: 95px;
+    margin-left: -15px;
+    text-align: center;
+    background-color: #00519c;
+    color: white;
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    left: 0;
+    font-size: 2em;
+    padding-top: 20px;
+    top: 0;
+    z-index: 100;
+  }
+}
