@@ -7,26 +7,20 @@ angular.module('myApp.present', ['ngRoute'])
             templateUrl: 'present/present.html',
             controller: 'presentCtrl'
         });
-        $routeProvider.when('/presentMobile', {
-            templateUrl: 'present/presentMobile.html',
-        });
     }])
 
-    //.directive('mbFade', function () {
-    //    return function (scope, el, attrs) {
-    //        el = el[0];
-    //        //console.log('mbFade, el is: ', el);
-    //        //console.log('mbFade, attrs is: ', attrs);
-    //
-    //        scope.$watch(attrs.mbFade, function (newVal) {
-    //            $(el).fadeToggle();
-    //
-    //            //console.log('Attr Changed!', newVal);
-    //        });
-    //    }
-    //})
-
-
-    .controller('presentCtrl', [function ($scope) {
+    .controller('presentCtrl', ['$scope', 'DataFactory', function ($scope, DataFactory) {
         //$scope.isShown = false;
+        //console.log('DataFactory', DataFactory.getDataForPage('present'));
+
+        $scope.data  = DataFactory.getDataForPage('present');
+        var activeSection = $scope.data.sections[0];
+        activeSection.selected = true;
+
+        $scope.sectionClicked = function (section) {
+            if (section === activeSection) return;
+            section.selected = true;
+            activeSection.selected = false;
+            activeSection = section;
+        }
     }]);

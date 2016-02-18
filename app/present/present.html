@@ -1,48 +1,30 @@
 <section class="activity">
     <aside>
-        <h3>הווה</h3>
+        <h3>{{data.pageTitle}}</h3>
         <nav>
-            <ul class="mt-15 cb light fs18">
-                <li>
-                    <p class="cb regular">סיירות החסד</p>
-                </li>
-                <hr/>
-                <li>
-                    <p class="">מנהיגות</p>
-                </li>
-                <hr/>
-                <li>
-                    <p>צוות מלווה</p>
-                </li>
-                <hr/>
-                <li>
-                    <p>מפת פעילות</p>
+            <ul class="mt-15 cb light fs18 activity-sections">
+                <li ng-repeat="section in data.sections" ng-click="sectionClicked(section)">
+                    <p ng-class="{regular: section.selected}">{{section.title}}</p>
                 </li>
             </ul>
         </nav>
         <img src="img/gal1Big.jpg" alt="" class="interviewImg"/>
-    </aside>
-    <article>
-        <h1 class="light">סיירות החסד </h1>
 
-        <div class="desc">
+        <p class="interviewName">שם המתראיין / תפקיד המתראיין</p>
+    </aside>
+    <article ng-repeat="section in data.sections" ng-if="section.selected">
+        <h1 class="light">{{section.title}}</h1>
+
+        <div ng-repeat="section in data.sections" ng-if="section.selected" class="desc">
             <p class="strong light weight mb0">
-                סח"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת
-                שותפות עם נוער בסיכון, הלומד לקחת אחריות
-                על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר
-                שינוי חיובי הן אצל הנער והן בקהילה מסביבו.
+                {{section.textPrimary}}
             </p>
             <br/>
+
             <p class="descParagraph regular">
-                סח"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת
-                שותפות עם נוער בסיכון, הלומד לקחת אחריות
-                על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר
-                שינוי חיובי הן אצל הנער והן בקהילה מסביבו.
-                סח"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת
-                שותפות עם נוער בסיכון, הלומד לקחת אחריות
-                על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר
-                שינוי חיובי הן אצל הנער והן בקהילה מסביבו.
+                {{section.textSecondary}}
             </p>
         </div>
     </article>
 </section>
+

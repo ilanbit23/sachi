@@ -9,21 +9,15 @@ angular.module('myApp.people', ['ngRoute'])
         });
     }])
 
-    //.directive('mbFade', function () {
-    //    return function (scope, el, attrs) {
-    //        el = el[0];
-    //        //console.log('mbFade, el is: ', el);
-    //        //console.log('mbFade, attrs is: ', attrs);
-    //
-    //        scope.$watch(attrs.mbFade, function (newVal) {
-    //            $(el).fadeToggle();
-    //
-    //            //console.log('Attr Changed!', newVal);
-    //        });
-    //    }
-    //})
+    .controller('peopleCtrl', ['$scope', 'DataFactory', function ($scope, DataFactory) {
+        $scope.data = DataFactory.getDataForPeoplePage('people');
+        var activeSection = $scope.data.sections[0];
+        activeSection.selected = true;
 
-
-    .controller('peopleCtrl', [function ($scope) {
-        //$scope.isShown = false;
+        $scope.sectionClicked = function (section) {
+            if (section === activeSection) return;
+            section.selected = true;
+            activeSection.selected = false;
+            activeSection = section;
+        }
     }]);

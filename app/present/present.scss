@@ -1,6 +1,18 @@
-.activity {
+.activity, .people, .partners {
   display: flex;
   width: 100%;
+  .activity-sections {
+    width: 30%;
+    float: left;
+    li {
+      border-bottom: 1px dotted #6f6c6d;
+      display: block;
+      p {
+        margin-bottom: 3px;
+        margin-top: 3px;
+      }
+    }
+  }
 }
 
 aside {
@@ -11,20 +23,14 @@ aside {
   ul {
     margin-left: 20px;
   }
-  hr {
-    border-top: 1px dotted #6f6c6d;
-    margin-left: 1px;
-    margin-bottom: -15px;
-    margin-top: -15px;
-    width: 30%;
-  }
+
   h3 {
     padding-left: 22px;
     color: $lightBlue;
     font-weight: normal;
     font-size: 1.5em;
     margin-top: 10px;
-    margin-bottom: 0;
+    margin-bottom: 25px;
   }
   nav > li > p {
     margin-bottom: 0;
@@ -32,9 +38,16 @@ aside {
   }
   img {
     width: 100%;
-    margin-top: -30px;
-  }
 
+  }
+  .interviewName {
+  text-align: right;
+  font-size: 1.3em;
+  background-color: white;
+  margin-top: -5px;
+  padding-top: 10px;
+  margin-bottom: -10px;
+  }
 }
 
 article {
@@ -64,7 +77,7 @@ article {
 
 /*MEDIA-QUERY PRESENT*/
 @media only screen and (max-width: 640px) {
-  .activity, .people, .partners, .transparency {
+  .activity, .people, .partners, .transparency, .contact {
     aside {
       width: 100%;
       margin-top: 115px;
@@ -94,10 +107,19 @@ article {
         }
       }
     }
-    nav > li > p {
-      padding-left: 25px;
-      margin-right: -10px;
-    }
+
+
+    .activity-sections li {
+        border-bottom: none;
+        padding: 15px;
+        margin: 0;
+        p {
+          padding-left: 25px;
+          margin-right: -10px;
+        }
+      }
+
+
     img {
       margin-bottom: -5px;
     }
@@ -116,8 +138,4 @@ article {
     max-width: 85% !important;
   }
 
-  nav li {
-    padding: 15px;
-    margin: 0;
-  }
 }

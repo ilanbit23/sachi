@@ -10,9 +10,7 @@
 @import "../transparency/transparency";
 
 
-//@media only screen and (min-width: 600px) and (max-width: 768px) {
-//
-//}
+
 //
 //@media only screen and (min-width: 768px) {
 
@@ -24,6 +22,9 @@ body {
   max-width: 860px;
   margin: auto;
   overflow-x: hidden;
+}
+.bbn {
+  border-bottom: none !important;
 }
 
 .mb0 {

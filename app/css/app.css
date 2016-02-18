@@ -123,8 +123,7 @@ li {
 
   .activity > aside > h3 {
     padding-left: 50% !important;
-    font-size: 2.5em !important;
-    margin-bottom: 20px !important; }
+    font-size: 2.5em !important; }
 
   .activity > aside {
     border-top: none !important; }
@@ -133,6 +132,8 @@ li {
     float: right !important;
     width: 100% !important;
     padding-bottom: 10px !important; }
+    .activity > aside > nav .mt-15 {
+      margin-top: 15px; }
 
   li {
     padding: 0 !important; }
@@ -198,6 +199,11 @@ li {
   #menu-icon {
     float: right;
     margin-top: 50px; } }
+@media only screen and (min-width: 640px) and (max-width: 800px) {
+  .nav > ul {
+    margin-left: -3em;
+    flex: 1.5;
+    margin-right: -6em; } }
 .dd {
   position: absolute;
   height: 42px;
@@ -274,7 +280,7 @@ input[type="text"] {
   width: 105px;
   color: black;
   margin-left: 4px;
-  padding-right: 2px; }
+  padding-right: 15px; }
 
 #msg {
   position: absolute;
@@ -312,9 +318,9 @@ input[type="text"] {
   .dd {
     position: fixed;
     height: 50px;
-    margin-top: 13px;
-    width: 95px;
-    margin-left: -15px;
+    margin-top: 22px;
+    width: 115px;
+    margin-left: -24px;
     text-align: center;
     background-color: #00519c;
     color: white;
@@ -325,7 +331,44 @@ input[type="text"] {
     font-size: 2em;
     padding-top: 20px;
     top: 0;
-    z-index: 100; } }
+    z-index: 100; }
+
+  .donation {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 4em;
+    margin-bottom: 0; }
+
+  .donationDetails {
+    display: flex;
+    flex-direction: column;
+    float: none;
+    padding-right: 45px; }
+
+  #msg {
+    font-size: 1.5em; }
+
+  .bankDetails {
+    padding-top: 0; }
+
+  .checkDetails {
+    margin-top: -65px; }
+
+  .donationFormRight {
+    float: none; }
+
+  .btnContinue {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.5em;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    float: none; }
+
+  .arrow {
+    bottom: 60px;
+    left: 180px; } }
 .imgSection {
   background-color: #001a5f;
   width: 100%;
@@ -344,9 +387,18 @@ input[type="text"] {
   .gal {
     width: 100%;
     height: 400px; } }
-.activity {
+.activity, .people, .partners {
   display: flex;
   width: 100%; }
+  .activity .activity-sections, .people .activity-sections, .partners .activity-sections {
+    width: 30%;
+    float: left; }
+    .activity .activity-sections li, .people .activity-sections li, .partners .activity-sections li {
+      border-bottom: 1px dotted #6f6c6d;
+      display: block; }
+      .activity .activity-sections li p, .people .activity-sections li p, .partners .activity-sections li p {
+        margin-bottom: 3px;
+        margin-top: 3px; }
 
 aside {
   flex: 1.4;
@@ -355,25 +407,25 @@ aside {
   border-top: 15px solid #00519c; }
   aside ul {
     margin-left: 20px; }
-  aside hr {
-    border-top: 1px dotted #6f6c6d;
-    margin-left: 1px;
-    margin-bottom: -15px;
-    margin-top: -15px;
-    width: 30%; }
   aside h3 {
     padding-left: 22px;
     color: #00519c;
     font-weight: normal;
     font-size: 1.5em;
     margin-top: 10px;
-    margin-bottom: 0; }
+    margin-bottom: 25px; }
   aside nav > li > p {
     margin-bottom: 0;
     margin-top: 0; }
   aside img {
-    width: 100%;
-    margin-top: -30px; }
+    width: 100%; }
+  aside .interviewName {
+    text-align: right;
+    font-size: 1.3em;
+    background-color: white;
+    margin-top: -5px;
+    padding-top: 10px;
+    margin-bottom: -10px; }
 
 article {
   flex: 1.6; }
@@ -398,34 +450,38 @@ article {
 
 /*MEDIA-QUERY PRESENT*/
 @media only screen and (max-width: 640px) {
-  .activity aside, .people aside, .partners aside, .transparency aside {
+  .activity aside, .people aside, .partners aside, .transparency aside, .contact aside {
     width: 100%;
     margin-top: 115px;
     text-align: center;
     border-top: none; }
-    .activity aside h3, .people aside h3, .partners aside h3, .transparency aside h3 {
+    .activity aside h3, .people aside h3, .partners aside h3, .transparency aside h3, .contact aside h3 {
       padding-left: 88%;
       font-weight: normal;
       font-size: 2.5em;
       margin-top: 15px;
       padding-right: 40%;
       margin-bottom: 10px; }
-    .activity aside nav, .people aside nav, .partners aside nav, .transparency aside nav {
+    .activity aside nav, .people aside nav, .partners aside nav, .transparency aside nav, .contact aside nav {
       display: block;
       padding-left: 15px;
       background-color: #00519C;
       color: white !important;
       float: right;
       min-height: 50px; }
-      .activity aside nav p, .people aside nav p, .partners aside nav p, .transparency aside nav p {
+      .activity aside nav p, .people aside nav p, .partners aside nav p, .transparency aside nav p, .contact aside nav p {
         margin-bottom: 15px;
         margin-top: -15px; }
-      .activity aside nav ul, .people aside nav ul, .partners aside nav ul, .transparency aside nav ul {
+      .activity aside nav ul, .people aside nav ul, .partners aside nav ul, .transparency aside nav ul, .contact aside nav ul {
         display: flex; }
-  .activity nav > li > p, .people nav > li > p, .partners nav > li > p, .transparency nav > li > p {
-    padding-left: 25px;
-    margin-right: -10px; }
-  .activity img, .people img, .partners img, .transparency img {
+  .activity .activity-sections li, .people .activity-sections li, .partners .activity-sections li, .transparency .activity-sections li, .contact .activity-sections li {
+    border-bottom: none;
+    padding: 15px;
+    margin: 0; }
+    .activity .activity-sections li p, .people .activity-sections li p, .partners .activity-sections li p, .transparency .activity-sections li p, .contact .activity-sections li p {
+      padding-left: 25px;
+      margin-right: -10px; }
+  .activity img, .people img, .partners img, .transparency img, .contact img {
     margin-bottom: -5px; }
 
   .social {
@@ -437,11 +493,7 @@ article {
   .desc {
     padding-top: 10px !important;
     padding-left: 25px !important;
-    max-width: 85% !important; }
-
-  nav li {
-    padding: 15px;
-    margin: 0; } }
+    max-width: 85% !important; } }
 .people {
   display: flex;
   width: 100%; }
@@ -522,7 +574,7 @@ article {
   resize: none;
   background-color: #EFEFEF;
   border: none;
-  padding-bottom: 8px; }
+  padding-bottom: 55px; }
 
 .contactForm p {
   margin-bottom: 5px; }
@@ -547,6 +599,41 @@ article {
   padding-top: 3px;
   width: 35px; }
 
+@media only screen and (max-width: 640px) {
+  .contact {
+    flex-direction: column; }
+    .contact aside h3 {
+      padding-left: 0;
+      padding-right: 0; }
+    .contact article h1 {
+      display: block; }
+
+  .headContact {
+    text-align: center; }
+
+  .info {
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: -5px;
+    margin-right: 0; }
+
+  .formSection {
+    max-width: 75%;
+    float: right;
+    font-size: 1.3em;
+    margin-right: 2em;
+    margin-top: 0; }
+
+  .contactForm {
+    flex-direction: column; }
+
+  .formInput {
+    width: 75% !important;
+    height: 3em; }
+
+  .formTextArea {
+    width: 103%;
+    padding-right: 15px; } }
 .partners {
   display: flex;
   width: 100%; }
@@ -593,7 +680,8 @@ article {
   float: right; }
 
 .logosRow {
-  display: flex; }
+  display: flex;
+  margin-left: -20%; }
 
 .logoImg {
   width: 20%;
@@ -761,6 +849,9 @@ body {
   max-width: 860px;
   margin: auto;
   overflow-x: hidden; }
+
+.bbn {
+  border-bottom: none !important; }
 
 .mb0 {
   margin-bottom: 0; }

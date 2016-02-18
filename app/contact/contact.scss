@@ -49,7 +49,7 @@
   resize: none;
   background-color: #EFEFEF;
   border: none;
-  padding-bottom: 8px;
+  padding-bottom: 55px;
 }
 
 .contactForm p {
@@ -77,4 +77,48 @@
   padding-bottom: 3px;
   padding-top: 3px;
   width: 35px;
+}
+
+@media only screen and (max-width: 640px) {
+  .contact {
+    flex-direction: column;
+    aside {
+      h3 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    article {
+      h1 {
+        display: block;
+      }
+    }
+  }
+  .headContact {
+    text-align: center;
+  }
+  .info {
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: -5px;
+    margin-right: 0;
+  }
+  .formSection {
+    max-width: 75%;
+    float: right;
+    font-size: 1.3em;
+    margin-right: 2em;
+    margin-top: 0;
+  }
+  .contactForm {
+    flex-direction: column;
+  }
+  .formInput {
+    width: 75% !important;
+    height: 3em;
+  }
+  .formTextArea {
+    width: 103%;
+    padding-right: 15px;
+  }
 }

@@ -1,14 +1,10 @@
 <div class="people">
     <aside>
-        <h3>אנשים</h3>
+        <h3>{{data.pageTitle}}</h3>
         <nav>
-            <ul class="mt-15">
-                <li>
-                    <a href="#/people"><p class="cb regular fs18"> האנשים שלנו</p></a>
-                </li>
-                <hr/>
-                <li>
-                    <a href="#/partners"><p class="cb light fs18">השותפים שלנו</p></a>
+            <ul class="mt-15 activity-sections">
+                <li ng-repeat="section in data.sections" ng-click="sectionClicked(section)">
+                    <a ng-href="#/{{section.engPageTitle}}"><p class="cb regular fs18" ng-class="{regular: section.selected}">{{section.title}}</p></a>
                 </li>
             </ul>
         </nav>
@@ -18,55 +14,13 @@
     </article>
 </div>
 
-<div class="peopleDesc">
+<div ng-repeat="section in data.sections" class="peopleDesc">
     <div class="boxImg">
         <img src="img/people.jpg" alt="" class="interviewImg"/>
     </div>
     <article>
-        <p class="strong light weight">
-            אברהם חיון
-        </p>
-
-        <p class="strong light mb-20 mt-20">
-            מנכ"ל סח"י
-        </p>
-
-        <p class="descParagraph regular">
-            סח"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת
-            שותפות עם נוער בסיכון, הלומד לקחת אחריות
-            על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר
-            שינוי חיובי הן אצל הנער והן בקהילה מסביבו.
-            סח"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת
-            שותפות עם נוער בסיכון, הלומד לקחת אחריות
-            על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר
-            שינוי חיובי הן אצל הנער והן בקהילה מסביבו.
-        </p>
-    </article>
-</div>
-
-<div class="peopleDesc">
-    <div class="boxImg">
-        <img src="img/people.jpg" alt="" class="interviewImg mt30"/>
-    </div>
-
-    <article class="second">
-        <p class="strong light weight">
-            אברהם חיון
-        </p>
-
-        <p class="strong light mb-20 mt-20">
-            מנכ"ל סח"י
-        </p>
-
-        <p class="descParagraph regular">
-            סח"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת
-            שותפות עם נוער בסיכון, הלומד לקחת אחריות
-            על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר
-            שינוי חיובי הן אצל הנער והן בקהילה מסביבו.
-            סח"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת
-            שותפות עם נוער בסיכון, הלומד לקחת אחריות
-            על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר
-            שינוי חיובי הן אצל הנער והן בקהילה מסביבו.
-        </p>
+        <p class="strong light weight">{{section.titlePrimary}}</p>
+        <p class="strong light mb-20 mt-20">{{section.titleSecondary}}</p>
+        <p class="descParagraph regular">{{section.textPrimaryPeople}}</p>
     </article>
 </div>
