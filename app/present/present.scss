@@ -8,6 +8,7 @@
       border-bottom: 1px dotted #6f6c6d;
       display: block;
       p {
+        cursor: pointer;
         margin-bottom: 3px;
         margin-top: 3px;
       }
@@ -97,7 +98,7 @@ article {
         background-color: #00519C;
         color: white !important;
         float: right;
-        min-height: 50px;
+        max-height: 50px;
         p {
           margin-bottom: 15px;
           margin-top: -15px;
@@ -107,19 +108,19 @@ article {
         }
       }
     }
-
-
-    .activity-sections li {
+    .activity-sections {
+      width: 30%;
+      float: none;
+      li {
         border-bottom: none;
         padding: 15px;
         margin: 0;
         p {
-          padding-left: 25px;
-          margin-right: -10px;
+          padding-left: 0;
+          margin-right: 0;
         }
       }
-
-
+    }
     img {
       margin-bottom: -5px;
     }

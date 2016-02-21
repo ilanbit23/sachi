@@ -16,12 +16,12 @@
         <h1 class="light">{{section.title}}</h1>
 
         <div ng-repeat="section in data.sections" ng-if="section.selected" class="desc">
-            <p class="strong light weight mb0">
+            <p contenteditable="true" class="strong light weight mb0">
                 {{section.textPrimary}}
             </p>
             <br/>
 
-            <p class="descParagraph regular">
+            <p contenteditable="true" class="descParagraph regular">
                 {{section.textSecondary}}
             </p>
         </div>
