@@ -3,11 +3,11 @@
 @import "nav";
 @import "../components/donation/donation";
 @import "../home/home";
-@import "../present/present";
-@import "../people/people";
+@import "../present/_present";
+@import "../people/_people";
 @import "../contact/contact";
-@import "../partners/partners";
-@import "../transparency/transparency";
+@import "../partners/_partners";
+@import "../transparency/_transparency";
 
 
 
@@ -18,6 +18,7 @@
 
 body {
   font-family: 'NextExitRound-Regular', sans-serif !important;
+  font-size: 1.0em;
   direction: rtl;
   max-width: 860px;
   margin: auto;
@@ -60,7 +61,7 @@ body {
 }
 
 .fs18 {
-  font-size: 18px;
+  font-size: 1.3em;
 }
 
 .ml15 {

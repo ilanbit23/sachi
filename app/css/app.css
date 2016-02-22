@@ -34,6 +34,24 @@ a {
   a:hover {
     color: #00519c; }
 
+.accFontSize {
+  color: #939597;
+  position: absolute;
+  left: 2em;
+  top: 5px; }
+  .accFontSize span {
+    border: 1px solid #939597;
+    padding: 0 2px 0 1px;
+    cursor: pointer; }
+  .accFontSize .fontSizeText {
+    border: none; }
+  .accFontSize .squareOne {
+    font-size: 80%; }
+  .accFontSize .squareTwo {
+    font-size: 90%; }
+  .accFontSize .squareThree {
+    font-size: 100%; }
+
 .nav {
   font-size: 1.3em;
   display: flex; }
@@ -429,7 +447,7 @@ aside {
     padding-left: 22px;
     color: #00519c;
     font-weight: normal;
-    font-size: 1.5em;
+    font-size: 2.2em;
     margin-top: 10px;
     margin-bottom: 25px; }
   aside nav > li > p {
@@ -621,8 +639,9 @@ article {
   width: 35px; }
 
 @media only screen and (min-width: 640px) and (max-width: 860px) {
-  aside {
-    max-width: 35%; } }
+  .contact aside {
+    max-width: 35%;
+    z-index: -1; } }
 @media only screen and (max-width: 640px) {
   .contact {
     flex-direction: column; }
@@ -872,6 +891,7 @@ article {
       display: block; } }
 body {
   font-family: 'NextExitRound-Regular', sans-serif !important;
+  font-size: 1.0em;
   direction: rtl;
   max-width: 860px;
   margin: auto;
@@ -905,7 +925,7 @@ body {
   color: black; }
 
 .fs18 {
-  font-size: 18px; }
+  font-size: 1.3em; }
 
 .ml15 {
   margin-left: 15px; }

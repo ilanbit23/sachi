@@ -79,8 +79,11 @@
   width: 35px;
 }
 @media only screen and (min-width: 640px) and (max-width: 860px) {
-  aside {
-    max-width: 35%;
+  .contact {
+    aside {
+      max-width: 35%;
+      z-index: -1;
+    }
   }
 }
 @media only screen and (max-width: 640px) {

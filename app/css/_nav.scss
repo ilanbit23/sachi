@@ -5,7 +5,29 @@ a {
     color: $lightBlue;
   }
 }
-
+.accFontSize {
+  color: $lightGray;
+  position: absolute;
+  left: 2em;
+  top: 5px;
+  span {
+    border: 1px solid $lightGray;
+    padding: 0 2px 0 1px;
+    cursor: pointer;
+  }
+  .fontSizeText {
+    border: none;
+  }
+  .squareOne{
+    font-size: 80%;
+  }
+  .squareTwo{
+    font-size: 90%;
+  }
+  .squareThree{
+    font-size: 100%;
+  }
+}
 .nav {
   font-size: 1.3em;
   display: flex;

@@ -15,13 +15,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/fonts/font-awesome/scss/font-awesome.css">
-    <link rel="stylesheet" href="css/jquery.html5_editor.css">
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
 
 </head>
 <body>
 <header>
     <nav class="nav">
+        <div class="accFontSize">
+            <span class="fontSizeText">שנה גודל גופן</span>
+            <span onclick="accFontSizeDefault()" class="squareOne">א</span>
+            <span onclick="accFontSizePlusOne()" class="squareTwo">א</span>
+            <span onclick="accFontSizePlusTwo()" class="squareThree">א</span>
+        </div>
         <a ng-click="isShown = !isShown"><i class="fa fa-bars" id="menu-icon"></i></a>
         <a href="#/home"><img src="img/logo.jpg" alt="logo" class="logo"/></a>
         <ul ng-show="!isShown">
@@ -55,7 +60,6 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="lib/jquery/jquery.js"></script>
 <script src="app.js"></script>
-<script src="js/jquery.html5_editor.js"></script>
 <script src="factories/data-factory.js"></script>
 <script src="home/home.js"></script>
 <script src="present/present.js"></script>
