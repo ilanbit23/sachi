@@ -98,7 +98,7 @@
                 return obj;
             },
             getDataForPage: function(pageName) {
-                return obj.present;
+                return angular.copy(obj[pageName]);
             },
             getDataForPeoplePage: function(pageName) {
                 return obj.people;

@@ -4,13 +4,14 @@
   .activity-sections {
     width: 30%;
     float: left;
+    margin-top: -2px;
     li {
       border-bottom: 1px dotted #6f6c6d;
       display: block;
       p {
         cursor: pointer;
-        margin-bottom: 3px;
-        margin-top: 3px;
+        margin-bottom: -3px;
+        margin-top: -1px;
       }
     }
   }
@@ -31,7 +32,7 @@ aside {
     font-weight: normal;
     font-size: 2.2em;
     margin-top: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
   }
   nav > li > p {
     margin-bottom: 0;

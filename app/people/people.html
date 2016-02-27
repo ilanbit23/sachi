@@ -2,9 +2,14 @@
     <aside>
         <h3>{{data.pageTitle}}</h3>
         <nav>
-            <ul class="mt-15 cb light fs18 activity-sections">
-                <li ng-repeat="section in data.sections" ng-click="sectionClicked(section)">
-                    <a ng-href="#/{{section.engPageTitle}}"><p class="cb" ng-class="{regular: section.selected}">{{section.title}}</p></a>
+            <ul class="mt-15 activity-sections">
+                <li>
+                    <p class="regular fs18">האנשים שלנו</p>
+                </li>
+                <li>
+                    <a ng-href="#partners">
+                        <p class="light fs18">השותפים שלנו</p>
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -20,7 +25,9 @@
     </div>
     <article>
         <p class="strong light weight">{{section.titlePrimary}}</p>
+
         <p class="strong light mb-20 mt-20">{{section.titleSecondary}}</p>
+
         <p class="descParagraph regular">{{section.textPrimaryPeople}}</p>
     </article>
 </div>

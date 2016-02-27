@@ -2,7 +2,7 @@
     <aside>
         <h3>{{data.pageTitle}}</h3>
         <nav>
-            <ul class="mt-15 cb light fs18 activity-sections">
+            <ul class="mt-15 light fs18 activity-sections">
                 <li ng-repeat="section in data.sections" ng-click="sectionClicked(section)">
                     <p ng-class="{regular: section.selected}">{{section.title}}</p>
                 </li>

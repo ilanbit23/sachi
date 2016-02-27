@@ -22,8 +22,7 @@ function slideIn(el) {
     donation.style.transition = "left 1.1s ease 0s";
     donation.style.left = "0px";
     var donationBtn = document.querySelector("#d1");
-    donationBtn.style.transition = "left 1.1s ease 0s";
-    donationBtn.style.left = "85.5%";
+    donationBtn.style.display = "none";
 }
 
 function slideOut(el) {
@@ -31,8 +30,7 @@ function slideOut(el) {
     elem.style.transition = "left 1.1s ease 0s";
     elem.style.left = "-92%";
     var donationBtn = document.querySelector("#d1");
-    donationBtn.style.transition = "left 1.1s ease 0s";
-    donationBtn.style.left = "-60px";
+    donationBtn.style.display = "block";
 }
 
 function myFunction() {
@@ -52,16 +50,23 @@ window.onclick = function(event) {
         }
     }
 };
-var logo = document.querySelector(".logo")
+
+var logo = document.querySelector(".logo");
 function accFontSizeDefault() {
     document.body.style.fontSize = "1em";
     logo.style.marginLeft = "3em";
 }
 function accFontSizePlusOne() {
-    document.body.style.fontSize = "1.2em"
+    document.body.style.fontSize = "1.2em";
     logo.style.marginLeft = "0";
 }
 function accFontSizePlusTwo() {
-    document.body.style.fontSize = "1.4em"
+    document.body.style.fontSize = "1.4em";
     logo.style.marginLeft = "-2em";
+}
+function changeColor() {
+    var image = document.querySelectorAll('img');
+    for (var i=0; i < image.length; i++) {
+        image[i].classList.toggle("grayscale");
+    }
 }

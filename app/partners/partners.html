@@ -3,13 +3,17 @@
         <h3>{{data.pageTitle}}</h3>
         <nav>
             <ul class="mt-15 activity-sections">
-                <li ng-repeat="section in data.sections" ng-click="sectionClicked(section)">
-                    <a ng-href="#/{{section.engPageTitle}}">
-                        <p class="cb regular fs18" ng-class="{regular: section.selected}">{{section.title}}</p>
+                <li>
+                    <a ng-href="#people">
+                        <p class="light fs18">האנשים שלנו</p>
                     </a>
+                </li>
+                <li>
+                    <p class="regular fs18">השותפים שלנו</p>
                 </li>
             </ul>
         </nav>
+
     </aside>
     <article>
         <h1 class="light">{{data.pageTitle}}</h1>
@@ -18,7 +22,9 @@
 <div class="recommendation">
     <div ng-repeat="recommendations in data.recommendations" class="recommendationRight">
         <i class="fa fa-quote-right fa-4x quote"></i>
+
         <p class="cg light mw90">{{recommendations.textPrimaryPartners}}</p>
+
         <p class="partnerName">שם שותף גוף או חברה</p>
         <i class="fa fa-quote-left fa-4x quote fl ml30"></i>
     </div>

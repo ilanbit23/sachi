@@ -5,6 +5,7 @@ a {
     color: $lightBlue;
   }
 }
+
 .accFontSize {
   color: $lightGray;
   position: absolute;
@@ -18,16 +19,17 @@ a {
   .fontSizeText {
     border: none;
   }
-  .squareOne{
+  .squareOne {
     font-size: 80%;
   }
-  .squareTwo{
+  .squareTwo {
     font-size: 90%;
   }
-  .squareThree{
+  .squareThree {
     font-size: 100%;
   }
 }
+
 .nav {
   font-size: 1.3em;
   display: flex;
@@ -41,6 +43,7 @@ a {
     padding-left: 0;
     &:before {
       content: "|";
+      color: $lightGray;
       padding-right: 0.3em;
       padding-left: 0.3em;
     }
@@ -130,6 +133,12 @@ li {
     font-size: 1.3em;
     display: block;
     margin-top: 20px;
+  }
+  .accColor {
+    left: 65% !important;
+  }
+  .accFontSize {
+    left: 20%;
   }
 
   .social {
@@ -237,7 +246,7 @@ li {
     ul {
       margin-left: -3em;
       flex: 1.5;
-      margin-right: -6em;
+      margin-right: -5em;
     }
     li:before {
       padding-right: 0.2em;

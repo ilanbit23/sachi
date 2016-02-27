@@ -21,6 +21,13 @@
 <body>
 <header>
     <nav class="nav">
+        <span class="accColor" onclick="changeColor()">
+            <i class="fa fa-eye">
+                <p class="blackAndWhite regular">
+                    שחור/לבן
+                </p>
+            </i>
+        </span>
         <div class="accFontSize">
             <span class="fontSizeText">שנה גודל גופן</span>
             <span onclick="accFontSizeDefault()" class="squareOne">א</span>
@@ -55,6 +62,12 @@
 <![endif]-->
 
 <div ng-view></div>
+
+<footer>
+    <!-- Accessibility -  Add script Above </body> tag -->
+    <!--<script type="text/javascript"> window.interdeal={sitekey:"5c91aadd7a2bee8e90f84ba2af3c733f",Position:"Right",Menulang:"HE",iconsSize:"big",sideMargin:0,topMargin:0}</script>-->
+    <!--<script  id="passargs" type="text/javascript" src="http://js.nagich.co.il/accessibility.js"></script>-->
+</footer>
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>

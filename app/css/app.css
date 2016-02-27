@@ -20,7 +20,8 @@
   font-weight: normal;
   font-style: normal; }
 .light {
-  font-family: "nextExitRound-Light", sans-serif; }
+  font-family: "nextExitRound-Light", sans-serif;
+  font-weight: normal; }
 
 .regular {
   font-family: "nextExitRound-Regular", sans-serif; }
@@ -64,6 +65,7 @@ a {
     padding-left: 0; }
     .nav li:before {
       content: "|";
+      color: #939597;
       padding-right: 0.3em;
       padding-left: 0.3em; }
     .nav li:first-child:before {
@@ -134,6 +136,12 @@ li {
     font-size: 1.3em;
     display: block;
     margin-top: 20px; }
+
+  .accColor {
+    left: 65% !important; }
+
+  .accFontSize {
+    left: 20%; }
 
   .social {
     margin-left: -1.5em; }
@@ -223,7 +231,7 @@ li {
   .nav ul {
     margin-left: -3em;
     flex: 1.5;
-    margin-right: -6em; }
+    margin-right: -5em; }
   .nav li:before {
     padding-right: 0.2em;
     padding-left: 0.2em; }
@@ -245,7 +253,13 @@ li {
   transform: rotate(-90deg);
   left: -60px;
   padding-top: 15px;
-  top: 50%; }
+  top: 50%;
+  z-index: 2; }
+
+.title h4 {
+  font-size: 1.7em; }
+.title h3 {
+  display: none; }
 
 .checkDetails {
   padding-right: 45px;
@@ -261,55 +275,64 @@ li {
   float: left;
   padding-left: 72px;
   margin-top: -48px; }
+  .donationDetails h6 {
+    display: none; }
 
 .donationRightSide {
   float: right; }
 
 .donationFormRight {
   float: right;
-  margin-left: 10px; }
+  margin-left: 20px;
+  margin-top: -15px; }
+  .donationFormRight p {
+    margin-bottom: 3px; }
 
 .donationFormLeft {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  margin-top: -15px; }
+  .donationFormLeft p {
+    margin-bottom: 3px; }
 
-.donationFormRight p {
-  margin-bottom: 3px; }
+.donationAmount {
+  margin-left: 17px; }
 
-.donationFormLeft p {
+.donateOptions {
   margin-bottom: 3px; }
 
 .donationLast {
   margin-top: 50px; }
 
-.fl {
-  float: left; }
-
 .arrow {
-  position: relative;
-  bottom: 46px;
-  left: 118px; }
+  margin-top: -93px;
+  margin-left: 80px; }
 
 .clickable {
   cursor: pointer; }
 
-form {
+.donationDetails form {
   display: table-caption;
   margin-top: -28px;
   width: 380px; }
-
-form h5 {
+.donationDetails form h5 {
   margin: 0;
   margin-top: 35px;
   margin-bottom: 10px; }
-
-input[type="radio"] {
-  margin-left: 5px; }
-
-input[type="text"] {
-  width: 105px;
+.donationDetails input[type="radio"] {
+  margin-left: 8px;
+  margin-bottom: 10px; }
+.donationDetails input[type="text"] {
+  width: 80px;
   color: black;
   margin-left: 4px;
   padding-right: 15px; }
+
+.reDonate {
+  display: inline-flex;
+  margin-right: 15px; }
+
+.inputBtn {
+  display: none; }
 
 #msg {
   position: absolute;
@@ -326,13 +349,14 @@ input[type="text"] {
   padding-right: 45px; }
 
 .btnContinue {
-  padding-top: 2px;
+  padding: 5px;
   float: left;
   background-color: #001a5f;
   border: none;
   color: white;
-  margin-left: 136px;
-  font-family: "nextExitRound-Regular", sans-serif; }
+  margin-left: 110px;
+  font-family: "nextExitRound-Regular", sans-serif;
+  margin-top: -35px; }
 
 .bankDetailsMargin {
   margin-top: -10px; }
@@ -343,7 +367,38 @@ input[type="text"] {
   cursor: pointer;
   width: 10px; }
 
+.donateDetails {
+  display: none; }
+
+.payment {
+  display: flex; }
+
+.visa p {
+  float: left; }
+.visa input[type="radio"] {
+  float: right;
+  margin-top: 20px; }
+
+.paypal {
+  margin-right: 1em; }
+  .paypal p {
+    margin-bottom: -38px;
+    margin-right: 25px; }
+
+.visaIcon {
+  display: none; }
+
+.paypalIcon {
+  display: none; }
+
+@media only screen and (min-width: 640px) and (max-width: 860px) {
+  .donationRightSide {
+    display: none; } }
 @media only screen and (max-width: 640px) {
+  .title {
+    background-color: #00519c;
+    height: 285px; }
+
   .dd {
     position: fixed;
     height: 50px;
@@ -362,17 +417,69 @@ input[type="text"] {
     top: 0;
     z-index: 100; }
 
+  .donationDetails form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+    width: 100%;
+    color: #403d3e;
+    padding-right: 45px;
+    padding-left: 45px; }
+    .donationDetails form h5 {
+      margin: 0;
+      margin-bottom: 10px; }
+
+  .inputRadioBtn input[type="radio"] {
+    display: none; }
+
+  .inputBtn {
+    display: block;
+    margin-bottom: -20px; }
+
+  .donationTextArea {
+    margin-right: 9px;
+    padding: 10px 15px 10px 15px;
+    background-color: #eeeeee;
+    border: none;
+    width: 50px !important; }
+
+  .inputBtnBorder {
+    padding: 5px 15px 5px 15px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+    border: 1px solid #939597;
+    font-size: 1em;
+    color: #403d3e;
+    font-family: 'NextExitRound-Regular', sans-serif !important; }
+    .inputBtnBorder:hover {
+      background-color: #00519c;
+      color: white;
+      cursor: pointer; }
+
   .donation {
     text-align: center;
     margin-left: 0;
-    margin-top: 4em;
-    margin-bottom: 0; }
+    margin-top: 2.5em;
+    margin-bottom: 25px; }
+
+  .donationRightSide {
+    display: none; }
+
+  .inputRadioBtn {
+    display: none; }
 
   .donationDetails {
-    display: flex;
-    flex-direction: column;
     float: none;
-    padding-right: 45px; }
+    margin-top: -145px; }
+    .donationDetails h3 {
+      padding-right: 45px; }
+    .donationDetails h6 {
+      margin-top: 5px;
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.7em; }
 
   .closeDonation {
     position: relative;
@@ -381,7 +488,9 @@ input[type="text"] {
     top: 5em; }
 
   #msg {
-    font-size: 1.5em; }
+    background-color: transparent;
+    font-size: 1.5em;
+    width: 100%; }
 
   .bankDetails {
     padding-top: 0; }
@@ -390,7 +499,62 @@ input[type="text"] {
     margin-top: -65px; }
 
   .donationFormRight {
-    float: none; }
+    margin-left: 0;
+    float: none;
+    margin-top: 15px;
+    color: #939597; }
+    .donationFormRight p {
+      margin-bottom: 2px;
+      margin-top: 5px; }
+
+  .donationFormLeft {
+    margin-bottom: 0;
+    margin-top: -15px;
+    width: 100%; }
+    .donationFormLeft p {
+      margin-bottom: 2px;
+      margin-top: 20px;
+      color: #939597; }
+
+  .mail {
+    margin-top: 5px; }
+
+  .reDonate {
+    margin-top: 5px;
+    display: block;
+    margin-right: 0;
+    margin-bottom: 10px; }
+
+  .donateDetails {
+    display: block;
+    margin-top: 0;
+    margin-bottom: -20px; }
+
+  .payment {
+    display: block; }
+
+  .visa {
+    margin-right: 1em;
+    float: right;
+    text-align: center; }
+    .visa p {
+      margin-top: -5px;
+      margin-bottom: -10px;
+      float: none; }
+    .visa .visaIcon {
+      display: block; }
+    .visa input[type="radio"] {
+      float: none; }
+
+  .paypal {
+    float: left;
+    margin-left: 50px;
+    text-align: center; }
+    .paypal p {
+      margin-top: 0;
+      margin-bottom: -30px; }
+    .paypal .paypalIcon {
+      display: block; }
 
   .btnContinue {
     padding-top: 15px;
@@ -398,12 +562,17 @@ input[type="text"] {
     font-size: 1.5em;
     width: 100%;
     margin-top: 20px;
-    border-radius: 5px;
-    float: none; }
+    margin-bottom: 60px;
+    float: none;
+    background-color: #00519c; }
+    .btnContinue:hover {
+      cursor: pointer; }
 
   .arrow {
-    bottom: 60px;
-    left: 180px; } }
+    display: none !important; }
+
+  .donationLast {
+    display: none; } }
 .imgSection {
   background-color: #001a5f;
   width: 100%;
@@ -427,14 +596,15 @@ input[type="text"] {
   width: 100%; }
   .activity .activity-sections, .people .activity-sections, .partners .activity-sections {
     width: 30%;
-    float: left; }
+    float: left;
+    margin-top: -2px; }
     .activity .activity-sections li, .people .activity-sections li, .partners .activity-sections li {
       border-bottom: 1px dotted #6f6c6d;
       display: block; }
       .activity .activity-sections li p, .people .activity-sections li p, .partners .activity-sections li p {
         cursor: pointer;
-        margin-bottom: 3px;
-        margin-top: 3px; }
+        margin-bottom: -3px;
+        margin-top: -1px; }
 
 aside {
   flex: 1.4;
@@ -449,7 +619,7 @@ aside {
     font-weight: normal;
     font-size: 2.2em;
     margin-top: 10px;
-    margin-bottom: 25px; }
+    margin-bottom: 5px; }
   aside nav > li > p {
     margin-bottom: 0;
     margin-top: 0; }
@@ -559,7 +729,7 @@ article {
       max-height: 65px; }
     .people aside p, .partners aside p {
       margin-bottom: 15px !important;
-      margin-top: -15px !important; }
+      margin-top: -10px !important; }
   .people .mt-15, .partners .mt-15 {
     margin-top: 15px; }
 
@@ -582,7 +752,7 @@ article {
   line-height: 1em; }
 
 .headContact {
-  padding-right: 20px;
+  padding-right: 40px;
   padding-top: 20px;
   padding-bottom: 20px; }
 
@@ -599,11 +769,13 @@ article {
 
 .formRight {
   flex: 1;
-  float: right; }
+  float: right;
+  padding-left: 10px; }
 
 .formMiddle {
   flex: 1;
-  float: right; }
+  float: right;
+  padding-left: 10px; }
 
 .formLeft {
   flex: 1;
@@ -619,6 +791,7 @@ article {
   margin-bottom: 5px; }
 
 .formInput {
+  width: 100px;
   background-color: #EFEFEF;
   border: none;
   line-height: 1.7em; }
@@ -643,6 +816,9 @@ article {
     max-width: 35%;
     z-index: -1; } }
 @media only screen and (max-width: 640px) {
+  .contactForm {
+    max-width: 125% !important; }
+
   .contact {
     flex-direction: column; }
     .contact aside h3 {
@@ -652,9 +828,10 @@ article {
       display: block; }
 
   .headContact {
-    text-align: center; }
+    text-align: right; }
 
   .info {
+    display: none;
     text-align: center;
     font-size: 1.3em;
     margin-top: -5px;
@@ -671,12 +848,22 @@ article {
     flex-direction: column; }
 
   .formInput {
-    width: 75% !important;
+    width: 95% !important;
     height: 3em; }
 
   .formTextArea {
-    width: 103%;
-    padding-right: 15px; } }
+    width: 89%;
+    padding-right: 15px; }
+
+  .formSend {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+    font-size: 1.3em; }
+
+  .note {
+    display: none; } }
 .partners {
   display: flex;
   width: 100%; }
@@ -724,7 +911,7 @@ article {
 
 .logosRow {
   display: flex;
-  margin-left: -20%; }
+  margin-left: -15%; }
 
 .logoImg {
   width: 20%;
@@ -773,7 +960,10 @@ article {
       margin-bottom: 0px; }
     .partners aside p {
       margin-bottom: 22px !important;
-      margin-top: -10px !important; } }
+      margin-top: -10px !important; }
+
+  .logosRow {
+    margin-left: -10%; } }
 .transparency {
   display: flex;
   width: 100%; }
@@ -895,10 +1085,37 @@ body {
   direction: rtl;
   max-width: 860px;
   margin: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  color: #403d3e; }
+
+.accColor {
+  position: absolute;
+  left: 10em;
+  top: 2px;
+  font-family: 'NextExitRound-Light', sans-serif !important;
+  color: gray; }
+  .accColor .fa {
+    font: 14px/1 FontAwesome; }
+  .accColor:hover {
+    cursor: pointer; }
+  .accColor p {
+    display: inline;
+    font-size: 1.4em;
+    color: #939597; }
+
+img.grayscale {
+  -webkit-filter: grayscale(1);
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='gs'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#gs");
+  filter: grayscale(1); }
 
 .bbn {
   border-bottom: none !important; }
+
+.dn {
+  display: none; }
+
+.fl {
+  float: left; }
 
 .mb0 {
   margin-bottom: 0; }
@@ -985,5 +1202,9 @@ ul {
   color: white;
   background-color: #00519c;
   max-width: 720px; }
+
+@media only screen and (max-width: 640px) {
+  a:hover {
+    color: white !important; } }
 
 /*# sourceMappingURL=app.css.map */

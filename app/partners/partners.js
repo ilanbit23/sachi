@@ -10,7 +10,7 @@ angular.module('myApp.partners', ['ngRoute'])
     }])
 
     .controller('partnersCtrl', ['$scope', 'DataFactory', function ($scope, DataFactory){
-        $scope.data = DataFactory.getDataForPartnersPage('partners');
+        $scope.data = DataFactory.getDataForPage('partners');
         var activeSection = $scope.data.sections[0];
         activeSection.selected = true;
 
