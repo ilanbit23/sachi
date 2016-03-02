@@ -4,11 +4,105 @@
 
     var module = angular.module('myApp.factories', []);
 
-    module.factory('DataFactory', function () {
+    module.factory('DataFactory', function ($q, $sce) {
         var obj =
         {
 
-            homePage: [{videoId: "vimeo-78907398", name: "Arik", role: "" }],
+            home: {
+              videos:   [
+                  {
+                      url: "https://player.vimeo.com/video/157043566",
+                      img: "1",
+                      name: "אבי שלום",
+                      role: "לידר"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043567",
+                      img: "2",
+                      name: "משה בלנגה ",
+                      role: "לידר"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043568",
+                      img: "3",
+                      name: "דויד ששון",
+                      role: "מנהל"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043569",
+                      img: "4",
+                      name: "אבי שלום",
+                      role: "לידר"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043570",
+                      img: "5",
+                      name: "משה בלנגה ",
+                      role: "לידר"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043571",
+                      img: "6",
+                      name: "דויד ששון",
+                      role: "מנהל"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043572",
+                      img: "7",
+                      name: "אבי שלום",
+                      role: "לידר"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043573",
+                      img: "8",
+                      name: "משה בלנגה ",
+                      role: "לידר"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043574",
+                      img: "9",
+                      name: "דויד ששון",
+                      role: "מנהל"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043575",
+                      img: "10",
+                      name: "אבי שלום",
+                      role: "לידר"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043576",
+                      img: "11",
+                      name: "משה בלנגה ",
+                      role: "לידר"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043577",
+                      img: "12",
+                      name: "דויד ששון",
+                      role: "מנהל"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043578",
+                      img: "13",
+                      name: "אבי שלום",
+                      role: "לידר"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043579",
+                      img: "14",
+                      name: "משה בלנגה ",
+                      role: "לידר"
+                  },
+                  {
+                      url: "https://player.vimeo.com/video/157043580",
+                      img: "15",
+                      name: "דויד ששון",
+                      role: "מנהל"
+                  },
+              ]
+            },
+
             past: [{}],
             present: {
                 pageTitle: "הווה",
@@ -93,20 +187,35 @@
             }
         };
 
-        var dataFactory = {
-            getAll: function () {
-                return obj;
-            },
-            getDataForPage: function(pageName) {
-                return angular.copy(obj[pageName]);
-            },
-            getDataForPeoplePage: function(pageName) {
-                return obj.people;
-            },
-            getDataForPartnersPage: function(pageName) {
-                return obj.partners;
-            }
 
+        obj.home.videos = obj.home.videos.map(function (video) {
+            video.url = $sce.trustAsResourceUrl(video.url);
+            return video;
+        });
+        console.log('obj.home', obj.home);
+
+        var dataFactory = {
+
+            getDataForPage: function(pageName) {
+                return $q(function(resolve, reject) {
+                    setTimeout(function() {
+                        if (true) {
+                            resolve(angular.copy(obj[pageName]));
+                        } else {
+                            reject('Cannot load data');
+                        }
+                    }, 0);
+                });
+
+            },
+            updatePage: function(pageName, data) {
+                var self = this;
+                return $q(function(resolve, reject) {
+                    obj[pageName] = data;
+                    return self.getDataForPage(pageName);
+                });
+
+            }
         };
         return dataFactory;
 

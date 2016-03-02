@@ -2,6 +2,7 @@
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
+    'xeditable',
     'ngRoute',
     'myApp.factories',
     'myApp.home',
@@ -11,7 +12,6 @@ angular.module('myApp', [
     'myApp.partners',
     'myApp.transparency',
     'myApp.contact'
-    //'myApp.version'
 ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/home'});
@@ -28,7 +28,7 @@ function slideIn(el) {
 function slideOut(el) {
     var elem = document.getElementById(el);
     elem.style.transition = "left 1.1s ease 0s";
-    elem.style.left = "-92%";
+    elem.style.left = "-100%";
     var donationBtn = document.querySelector("#d1");
     donationBtn.style.display = "block";
 }
@@ -37,9 +37,8 @@ function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
-    //console.log('click');
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
@@ -50,6 +49,7 @@ window.onclick = function(event) {
         }
     }
 };
+
 
 var logo = document.querySelector(".logo");
 function accFontSizeDefault() {
@@ -66,7 +66,18 @@ function accFontSizePlusTwo() {
 }
 function changeColor() {
     var image = document.querySelectorAll('img');
-    for (var i=0; i < image.length; i++) {
+    for (var i = 0; i < image.length; i++) {
         image[i].classList.toggle("grayscale");
     }
+    document.querySelector('.dd').classList.toggle("bw");
+    document.querySelector('#msg').classList.toggle("bw");
+    document.querySelector('.title').classList.toggle("bw");
+    document.querySelector('.btnContinue').classList.toggle("buttonbw");
+    if (!document.querySelector('h1')) return;
+    document.querySelector('h1').classList.toggle("bw");
+    if (!document.querySelector('aside')) return;
+    document.querySelector('aside h3').classList.toggle("cg");
+    document.querySelector('aside').classList.toggle("asidebw");
+    if (!document.querySelector('.formSend')) return;
+    document.querySelector('.formSend').classList.toggle("bw");
 }

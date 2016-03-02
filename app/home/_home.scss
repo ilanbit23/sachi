@@ -1,14 +1,58 @@
 .imgSection {
+  float: right;
   background-color: $darkBlue;
-  width: 100%;
-  display: flex;
+  height: 190px;
+  width: 286px;
+  .name {
+    color: $lighterGray;
+    display: block;
+    margin-top: 1em;
+    margin-right: 15px;
+  }
+  .role {
+    margin-top: 0 !important
+  }
+
+  .playCircle {
+    display: flex;
+    justify-content: center;
+    margin-top: -6em;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .moreInfo {
+    position: relative;
+    left: -16.3em;
+    bottom: 1.4em;
+    a {
+      color: $lighterGray;
+    }
+  }
+  .more {
+    position: relative;
+    right: 11em;
+    color: $lighterGray;
+    bottom: 3em;
+    font-size: 1.3em;
+  }
+  .imgInfo {
+    display: none;
+  }
+  &:hover {
+    .imgInfo {
+      display: block;
+    }
+  }
 }
 
+iframe {
+  border: none !important;
+  margin-bottom: -5px;
+}
 .gal {
   flex: 1;
-  width: 33.3%;
-  margin-bottom: -5px;
-  height: 214px;
+  margin-bottom: -21px;
+  height: 190px;
+  width: 286px;
   &:hover {
     cursor: pointer;
     opacity: 0.5;
@@ -16,8 +60,38 @@
 }
 
 @media only screen and (max-width: 640px) {
+  .imgSection {
+    display: inline-table;
+    float: none;
+    height: inherit;
+    width: 100%;
+    margin-bottom: 20px;
+    .imgInfo {
+      display: block;
+      margin-top: 8em;
+      margin-bottom: -3.8em;
+    }
+  }
   .gal {
     width: 100%;
     height: 400px;
+    margin-bottom: -60px;
+  }
+  iframe {
+    width: 100% !important;
+    height: 400px !important;
+  }
+  .playCircle {
+    margin-top: -11em;
+    font-size: 1.4em;
+  }
+  .name {
+    margin-top: 4em;
+  }
+  .more {
+    right: 85% !important;
+  }
+  .moreInfo {
+    right: 92%;
   }
 }

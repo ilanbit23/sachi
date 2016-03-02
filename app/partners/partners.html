@@ -1,6 +1,6 @@
 <div class="partners">
     <aside>
-        <h3>{{data.pageTitle}}</h3>
+        <h3>{{vm.data.pageTitle}}</h3>
         <nav>
             <ul class="mt-15 activity-sections">
                 <li>
@@ -16,11 +16,11 @@
 
     </aside>
     <article>
-        <h1 class="light">{{data.pageTitle}}</h1>
+        <h1 class="light">{{vm.data.pageTitle}}</h1>
     </article>
 </div>
 <div class="recommendation">
-    <div ng-repeat="recommendations in data.recommendations" class="recommendationRight">
+    <div ng-repeat="recommendations in vm.data.recommendations" class="recommendationRight">
         <i class="fa fa-quote-right fa-4x quote"></i>
 
         <p class="cg light mw90">{{recommendations.textPrimaryPartners}}</p>

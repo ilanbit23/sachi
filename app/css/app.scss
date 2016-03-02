@@ -169,11 +169,11 @@ ul {
 }
 
 .rightSide > ul > li > a > p {
-  color: black;
+  color: $darkGray;
 }
 
 .headLeftSide {
-  color: white;
+  color: $lighterGray;
   background-color: $lightBlue;
   max-width: 720px;
 }
@@ -181,7 +181,17 @@ ul {
 @media only screen and (max-width: 640px) {
   a {
     &:hover {
-      color: white !important;
+      color: $lightBlue !important;
     }
   }
+}
+
+.bw {
+    background-color: $lightGray !important;
+}
+.buttonbw {
+  background-color: $darkGray !important;
+}
+.asidebw {
+  border-top: 15px solid $lightGray;
 }

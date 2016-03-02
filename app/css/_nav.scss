@@ -1,8 +1,8 @@
 a {
-  color: $lightGray;
+  color: $lighterGray;
   text-decoration: none;
   &:hover {
-    color: $lightBlue;
+    color: $lightBlue !important;
   }
 }
 
@@ -37,7 +37,7 @@ a {
     flex: 1.5;
   }
   li {
-    padding-right: 0px;
+    padding-right: 0;
     padding-top: 20px;
     list-style: none;
     padding-left: 0;
@@ -85,17 +85,26 @@ li {
   color: $lightBlue;
 }
 
+.nochach {
+  cursor: pointer;
+  width: 50px;
+  float: right;
+  margin-right: -65px;
+  margin-left: 20px;
+  margin-top: -15px;
+}
+
 .social {
   flex: 0.5;
   margin-top: 2em;
-  margin-left: -2.5em;
+  margin-left: -3.2em;
 }
 
 .logo {
-  margin-top: 0.5em;
+  margin-top: 0.3em;
   flex: 1;
   height: 85px;
-  margin-left: 3em;
+  margin-left: 0;
   margin-right: -10px;
   &:hover {
     cursor: pointer;
@@ -179,7 +188,7 @@ li {
     display: none;
   }
   .cb {
-    color: white !important;
+    color: $lighterGray !important;
   }
   .nav > ul {
     display: none;
@@ -215,7 +224,7 @@ li {
     max-width: 80px;
     flex-direction: column;
     padding: 0;
-    margin-top: 4px;
+    margin-top: -6px;
     padding-left: 10px;
   }
   header > nav ul li {
@@ -229,7 +238,7 @@ li {
   .logo {
     text-align: center;
     float: none;
-    height: 85px;
+    height: 74px;
     margin: auto;
     width: 208px;
     padding-left: 10%;
@@ -237,16 +246,17 @@ li {
 
   #menu-icon {
     float: right;
-    margin-top: 50px;
+    margin-top: 34px;
   }
 }
 
 @media only screen and (min-width: 640px) and (max-width: 860px) {
   .nav {
     ul {
-      margin-left: -3em;
+      margin-left: 4em;
       flex: 1.5;
-      margin-right: -5em;
+      margin-right: -2em;
+      z-index: 2;
     }
     li:before {
       padding-right: 0.2em;
@@ -254,7 +264,7 @@ li {
     }
   }
   .social {
-    margin-left: -1.2em;
+    margin-left: 0;
   }
   .fb {
     margin-right: 10px;

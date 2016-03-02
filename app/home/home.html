@@ -1,9 +1,13 @@
 <section>
-    <div class="imgSection">
-        <!--<i class="fa fa-play-circle-o fa-3x play"></i>-->
-        <a href="#/people">
-            <img ng-repeat="i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]"
-                 ng-src="./img/faces/{{i}}.jpg" alt="faces" class="gal"/>
-        </a>
-    </div>
+        <div ng-repeat="video in vm.data.videos track by video.url" class="imgSection">
+            <img ng-if="!video.playNow"
+                   ng-src="./img/faces/{{video.img}}.jpg" alt="faces" class="gal" ng-click="vm.playVideo(video)"/>
+            <div ng-if="!video.playNow" class="playCircle"><i class="fa fa-play-circle-o fa-3x play"></i></div>
+            <span ng-if="!video.playNow" class="imgInfo">
+                <span class="name">{{video.name}}</span>
+                <span class="name role">{{video.role}}</span>
+                <span class="moreInfo"><a href=""><i class="fa fa-arrow-left"></i></a></span><p class="more">עוד</p>
+            </span>
+            <iframe ng-if="video.isPlaying" ng-show="video.playNow" ng-src="{{video.url}}" width="286" height="190" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
 </section>

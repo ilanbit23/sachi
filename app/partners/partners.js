@@ -5,19 +5,16 @@ angular.module('myApp.partners', ['ngRoute'])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/partners', {
             templateUrl: 'partners/partners.html',
-            controller: 'partnersCtrl'
+            controller: 'partnersCtrl as vm'
         });
     }])
 
-    .controller('partnersCtrl', ['$scope', 'DataFactory', function ($scope, DataFactory){
-        $scope.data = DataFactory.getDataForPage('partners');
-        var activeSection = $scope.data.sections[0];
-        activeSection.selected = true;
+    .controller('partnersCtrl', ['DataFactory', function (DataFactory){
 
-        $scope.sectionClicked = function (section) {
-            if (section === activeSection) return;
-            section.selected = true;
-            activeSection.selected = false;
-            activeSection = section;
-        }
+        var ctrl = this;
+        var prmData = DataFactory.getDataForPage('partners');
+        prmData.then(function (data) {
+            ctrl.data = data;
+        });
+
     }]);

@@ -16,6 +16,16 @@
     }
   }
 }
+.editable-click, a.editable-click {
+  text-decoration: none;
+  color: $darkGray;
+  border-bottom: none;
+
+}
+.editable-click:hover, a.editable-click:hover {
+  text-decoration: none;
+  color: $darkGray;
+}
 
 aside {
   flex: 1.4;
@@ -58,7 +68,7 @@ article {
     background-color: #00519c;
     padding-top: 70px;
     margin-top: 0px;
-    color: white;
+    color: $lighterGray;
     padding-right: 25px;
     padding-bottom: 5px;
     font-weight: normal;
@@ -97,12 +107,18 @@ article {
         display: block;
         padding-left: 15px;
         background-color: #00519C;
-        color: white !important;
+        color: $lighterGray !important;
         float: right;
         max-height: 50px;
         p {
           margin-bottom: 15px;
           margin-top: -15px;
+          &:hover {
+            border-bottom: 4px solid $lighterGray;
+            padding-bottom: 5px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+          }
         }
         ul {
           display: flex;

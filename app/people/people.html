@@ -1,6 +1,6 @@
 <div class="people">
     <aside>
-        <h3>{{data.pageTitle}}</h3>
+        <h3>{{vm.data.pageTitle}}</h3>
         <nav>
             <ul class="mt-15 activity-sections">
                 <li>
@@ -19,7 +19,7 @@
     </article>
 </div>
 
-<div ng-repeat="section in data.sections" class="peopleDesc">
+<div ng-repeat="section in vm.data.sections" class="peopleDesc">
     <div class="boxImg">
         <img src="img/people.jpg" alt="" class="interviewImg"/>
     </div>
