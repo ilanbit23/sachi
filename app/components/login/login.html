@@ -1,0 +1,9 @@
+<form name="myForm">
+    <label for="pw1">Set a password:</label>
+    <input type="password" id="pw1" name="pw1" ng-model="pw1" ng-required="" />
+    <label for="pw2">Confirm the password:</label>
+    <input type="password" id="pw2" name="pw2" ng-model="pw2" ng-required="" pw-check="pw1" />
+    <div class="msg-block" ng-show="myForm.$error">
+        <span class="msg-error" ng-show="myForm.pw2.$error.pwmatch">Passwords don't match.</span>
+    </div>
+</form>

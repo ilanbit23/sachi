@@ -1,7 +1,10 @@
 
 @import "vars";
 @import "nav";
+@import "general";
+
 @import "../components/donation/donation";
+@import "../components/login/login";
 @import "../home/home";
 @import "../present/_present";
 @import "../people/_people";
@@ -45,147 +48,59 @@ body {
   }
 }
 
-
-img.grayscale {
-  -webkit-filter: grayscale(1);
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'gs\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#gs");
-  filter: grayscale(1);
-  //$darkBlue: rgb(148, 150, 152);
-  //$lightBlue: #c7c9cb;
-}
-
-.bbn {
-  border-bottom: none !important;
-}
-
-.dn {
-  display: none;
-}
-
-.fl {
-  float: left;
-}
-
-.mb0 {
-  margin-bottom: 0;
-}
-
-.mt-15 {
-  margin-top: -15px;
-}
-
-.mt8 {
-  margin-top: 8px;
-}
-
-.mb-20 {
-  margin-bottom: -20px;
-}
-
-.mt-20 {
-  margin-top: -20px;
-}
-
-.second {
-  margin-top: 0px !important;
-}
-
-.mt30 {
-  margin-top: 30px !important;
-}
-
-.cb {
-  color: black;
-}
-
-.fs18 {
-  font-size: 1.3em;
-}
-
-.ml15 {
-  margin-left: 15px;
-}
-
-.strong {
-  font-size: 1.5em;
-}
-
-.weight {
-  font-weight: 600;
-}
-
-a {
-  font-family: 'NextExitRound-Regular', sans-serif !important;
-  color: $lightGray;
-  text-decoration: none;
+.editable-buttons button, .btnEdit {
+  margin-left: 5px;
+  border-radius: 3px;
+  border: none;
+  padding: 5px;
+  margin-right: 3px;
+  margin-top: 5px;
   &:hover {
-    color: $lightBlue !important;
-    text-decoration: none;
+    background-color: $lightBlue;
+    color: white;
   }
 }
 
-ul {
-  list-style-type: none;
-}
-
-.w70 {
+input[type="text"] {
   width: 70px;
 }
 
-.pr10 {
-  padding-right: 10px;
-}
-
-.rightSide {
-  background-color: rgb(239, 239, 239);
-  text-align: left;
-  width: 43%;
-  border-top: 10px solid $lightBlue;
-  float: right;
-  line-height: 0.2;
-  margin-left: 20px;
-  color: black;
-}
-
-.rightSide hr {
-  border-top: 1px solid black;
-  margin-right: 70%;
-}
-
-.rightSide li {
-  :hover {
-    text-decoration: none;
-  }
-  :visited {
-    font-weight: 600;
-  }
-}
-
-.rightSide h3 {
-  color: $lightBlue;
-  font-family: "nextExitRound-Regular", sans-serif !important;
-  text-decoration: none;
-  margin-bottom: 20px;
-}
-
-.rightSide > ul > li > a > p {
-  color: $darkGray;
-}
-
-.headLeftSide {
-  color: $lighterGray;
-  background-color: $lightBlue;
-  max-width: 720px;
-}
-
-@media only screen and (max-width: 640px) {
+@media only screen and (min-width: 640px) and (max-width: 860px){
   a {
     &:hover {
       color: $lightBlue !important;
     }
   }
+
+  .login {
+    input[type="text"] {
+      width: 45px;
+    }
+  }
+  .accColor p {
+    display: inline-block;
+    margin-left: -11em;
+  }
+  .editable-buttons {
+    float: right;
+    margin-bottom: 15px;
+    margin-top: 3px;
+  }
 }
 
+@media only screen and (max-width: 640px) {
+  .editable-buttons {
+    float: right;
+    margin-bottom: 15px;
+    margin-top: 3px;
+  }
+  .accColor p {
+    display: inline-block;
+    margin-left: -11em;
+  }
+}
+
+//acc definitions
 .bw {
     background-color: $lightGray !important;
 }
@@ -194,4 +109,9 @@ ul {
 }
 .asidebw {
   border-top: 15px solid $lightGray;
+}
+img.grayscale {
+  -webkit-filter: grayscale(1);
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'gs\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#gs");
+  filter: grayscale(1);
 }

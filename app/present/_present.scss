@@ -29,6 +29,7 @@
 
 aside {
   flex: 1.4;
+  margin-bottom: 15px;
   background-color: $lighterGray;
   text-align: left;
   border-top: 15px solid $lightBlue;
@@ -87,7 +88,6 @@ article {
   padding-left: 50px;
 }
 
-/*MEDIA-QUERY PRESENT*/
 @media only screen and (max-width: 640px) {
   .activity, .people, .partners, .transparency, .contact {
     aside {
@@ -132,7 +132,9 @@ article {
         border-bottom: none;
         padding: 15px;
         margin: 0;
+        margin-bottom: -5px;
         p {
+          color: white;
           padding-left: 0;
           margin-right: 0;
         }

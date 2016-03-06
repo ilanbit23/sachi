@@ -1,4 +1,7 @@
 <section>
+    <!--<a href="#" editable-text="user.name" onbeforesave="vm.updateUser($data)">-->
+        <!--{{ user.name || 'הכנס ססמא' }}-->
+    <!--</a>-->
         <div ng-repeat="video in vm.data.videos track by video.url" class="imgSection">
             <img ng-if="!video.playNow"
                    ng-src="./img/faces/{{video.img}}.jpg" alt="faces" class="gal" ng-click="vm.playVideo(video)"/>

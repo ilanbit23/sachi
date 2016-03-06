@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
     'xeditable',
+    //'myApp.directives',
     'ngRoute',
     'myApp.factories',
     'myApp.home',
@@ -16,6 +17,10 @@ angular.module('myApp', [
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/home'});
     }]);
+/* Controllers */
+
+
+
 
 function slideIn(el) {
     var donation = document.getElementById(el);

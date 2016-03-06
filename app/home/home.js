@@ -10,7 +10,7 @@ angular.module('myApp.home', ['ngRoute'])
     }])
 
 
-    .controller('homeCtrl', ['$timeout','DataFactory', function ($timeout, DataFactory) {
+    .controller('homeCtrl', ['$timeout', 'DataFactory', function ($timeout, DataFactory) {
 
         var ctrl = this;
 
@@ -20,8 +20,6 @@ angular.module('myApp.home', ['ngRoute'])
         prmData.then(function (data) {
             console.log('data', data);
             ctrl.data = data;
-
-
 
 
             ctrl.playVideo = function (video) {
@@ -36,26 +34,17 @@ angular.module('myApp.home', ['ngRoute'])
                 $timeout(function () {
                     video.playNow = true;
                 }, 500);
+            };
+
+            ctrl.checkName = function (data) {
+                console.log('data', data);
+                if (data !== 'admin') {
+                    console.log('data', data);
+                    return "ססמא שגויה";
+                }
+                return "ברוך הבא"
+
             }
 
-
-
         });
-
-        //ctrl.hoverIn = function(){
-        //    this.hoverText = true;
-        //};
-        //
-        //ctrl.hoverOut = function(){
-        //    this.hoverText = false;
-        //};
-
-        //ctrl.showText = function () {
-        //    var imgInfo = document.querySelector(".imgInfo");
-        //    console.log('', imgInfo);
-        //    imgInfo.style.display = 'block';
-        //}
-
-        //video.isPlaying=true
-
     }]);

@@ -19,13 +19,13 @@
             <p editable-textarea="section.textPrimary" e-rows="7" e-cols="40" e-form="textBtnForm"  onaftersave="vm.updateModel()" class="strong light weight mb0">
                 {{section.textPrimary}}
             </p>
-            <button class="btnEdit" ng-if="user.isAdmin" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">ערוך</button>
+            <button class="btnEdit" ng-if="user.isAdmin == 'admin'" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">ערוך</button>
             <br/>
 
             <p editable-textarea="section.textSecondary" e-rows="7" e-cols="40" e-form="textBtnForm"  onaftersave="vm.updateModel()" class="descParagraph regular">
                 {{section.textSecondary}}
             </p>
-            <button class="btnEdit" ng-if="user.isAdmin" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">ערוך</button>
+            <button class="btnEdit" ng-if="user.isAdmin == 'admin'" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">ערוך</button>
         </div>
     </article>
 </section>
