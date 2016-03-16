@@ -20,44 +20,37 @@
 
 </head>
 <body>
+<toaster-container toaster-options="{'time-out': 2000}"></toaster-container>
 <header>
-    <span class="login">ססמא? <input type="text" ng-model="user.isAdmin"/></span>
     <nav class="nav">
-        <span class="accColor" onclick="changeColor()">
-            <i class="fa fa-eye">
-                <p class="blackAndWhite regular">
-                    שחור/לבן
-                </p>
-            </i>
-        </span>
-        <div class="accFontSize">
-            <span class="fontSizeText">שנה גודל גופן</span>
-            <span onclick="accFontSizeDefault()" class="squareOne">א</span>
-            <span onclick="accFontSizePlusOne()" class="squareTwo">א</span>
-            <span onclick="accFontSizePlusTwo()" class="squareThree">א</span>
-        </div>
         <a ng-click="isShown = !isShown"><i class="fa fa-bars" id="menu-icon"></i></a>
-        <a href="#/home"><img src="img/logo.jpg" alt="logo" class="logo"/></a>
+        <a href="#/home"><img tabindex="1"  src="img/logo.jpg" alt="sachi logo link to home page" class="logo"/></a>
         <ul ng-show="!isShown">
             <!--<li><a class="current" href="#/home">ENG</a></li>-->
-            <li><a href="#/home">עבר</a></li>
-            <li><a href="#/present">הווה</a></li>
-            <li><a href="#/present">עתיד</a></li>
-            <li><a href="#/home">נתינה</a></li>
-            <li><a href="#/people">אנשים</a></li>
-            <li><a href="#/transparency">שקיפות</a></li>
-            <li><a href="#/contact">קשר</a></li>
+            <li><a tabindex="2" ng-class="getClass('past')" href="#/activity/past">עבר</a></li>
+            <li><a tabindex="3" ng-class="getClass('present')" href="#/activity/present">הווה</a></li>
+            <li><a tabindex="4" ng-class="getClass('future')" href="#/activity/future">עתיד</a></li>
+            <li><a tabindex="5" ng-class="getClass('giving')" href="#/activity/giving">נתינה</a></li>
+            <li><a tabindex="6" ng-class="getClass('people')" href="#/people">אנשים</a></li>
+            <li><a tabindex="7" ng-class="getClass('transparency')" href="#/transparency">שקיפות</a></li>
+            <li><a tabindex="8" ng-class="getClass('contact')" href="#/contact">קשר</a></li>
         </ul>
         <span class="social">
-            <img src="img/logos/nochach.png" alt="nochach logo" class="nochach"/>
-            <img src="img/fb-circ.png" alt="fb" class="fb"/>
-            <img src="img/youtube_circ.png" alt="yt" class="yt"/>
-            <a href="#/home" class="trans">ENG</a>
+            <a href="http://www.israeltoremet.org/amuta/580485233" target="_blank">
+                <img tabindex="9" src="img/logos/nochach.png" alt="nochach logo" class="nochach"/>
+            </a>
+            <a tabindex="10" target="_blank" href="https://www.facebook.com/%D7%A1%D7%97%D7%99-%D7%A1%D7%99%D7%99%D7%A8%D7%AA-%D7%97%D7%A1%D7%93-%D7%99%D7%97%D7%95%D7%93%D7%99%D7%AA-275095383548/?fref=ts">
+                <img src="img/fb-circ.png" alt="facebook link" class="fb"/>
+            </a>
+            <a tabindex="11" target="_blank" href="https://www.youtube.com/user/SahiIsrael">
+                <img src="img/youtube_circ.png" alt="youtube link" class="yt"/>
+            </a>
+            <a tabindex="12" href="#/home" alt="english version link" class="trans">ENG</a>
         </span>
     </nav>
 </header>
 
-<donation></donation>
+<donation tabindex="99"></donation>
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -67,26 +60,26 @@
 <div ng-view></div>
 
 <footer>
-    <login></login>
-    <!-- Accessibility -  Add script Above </body> tag -->
-    <!--<script type="text/javascript"> window.interdeal={sitekey:"5c91aadd7a2bee8e90f84ba2af3c733f",Position:"Right",Menulang:"HE",iconsSize:"big",sideMargin:0,topMargin:0}</script>-->
-    <!--<script  id="passargs" type="text/javascript" src="http://js.nagich.co.il/accessibility.js"></script>-->
+    <span class="login"><input type="checkbox" ng-model="user.isAdmin"/></span>
 </footer>
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/javascripts/ui-bootstrap-tpls-0.14.3.min.js"></script>
+<script src="lib/jquery/jquery-2.2.1.min.js"></script>
 <script src="app.js"></script>
+<script src="js/aria.js"></script>
+<script src="js/froogaloop.js"></script>
+<script src="bower_components/angularjs-toaster/toaster.js"></script>
 <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
 <script src="factories/data-factory.js"></script>
 <script src="home/home.js"></script>
-<script src="present/present.js"></script>
+<script src="activity/activity.js"></script>
 <script src="people/people.js"></script>
 <script src="partners/partners.js"></script>
 <script src="contact/contact.js"></script>
 <script src="transparency/transparency.js"></script>
 <script src="components/donation/donation.js"></script>
-<script src="components/login/login.js"></script>
 </body>
 </html>

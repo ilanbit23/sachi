@@ -1,6 +1,18 @@
 .people {
   display: flex;
   width: 100%;
+  aside {
+    margin-bottom: 0;
+    padding-bottom: 50px;
+  }
+
+  .activity-sections {
+    margin-top: -10px;
+    p {
+      margin-top: -7px !important;
+    }
+  }
+
 }
 
 .peopleDesc {
@@ -11,9 +23,15 @@
     flex: 1.4;
     margin-bottom: 30px;
     img {
-      width: 105%;
+      width: 106%;
     }
   }
+
+  .btnEdit {
+    margin-top: 10px !important;
+    margin-bottom: -3px !important;
+  }
+
   article {
     flex: 1.6;
     margin-top: -30px;
@@ -25,6 +43,7 @@
   .people, .partners {
     aside {
       flex: none !important;
+      padding-bottom: 0;
       nav {
         width: 100%;
         max-height: 65px;
@@ -32,6 +51,18 @@
       p {
         margin-bottom: 15px !important;
         margin-top: -10px !important;
+      }
+      .activity-sections {
+        li {
+          width: 50%;
+          margin-top: 10px;
+          &:before {
+            content: "" !important;
+          }
+        }
+        p {
+          margin-top: -5px;
+        }
       }
     }
     .mt-15 {

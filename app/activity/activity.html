@@ -1,0 +1,47 @@
+<section class="activity">
+    <aside>
+        <h3>{{vm.data.pageTitle}}</h3>
+        <nav>
+            <ul class="mt-15 light fs18 activity-sections">
+                <li class="activity-sections-nav" tabindex="{{$index+12}}" ng-repeat="section in vm.data.sections" ng-click="vm.sectionClicked(section)">
+                    <p ng-class="{regular: section.selected}">{{section.title}}</p>
+                    <img src="img/hr.PNG" class="myHr" alt=""/>
+                </li>
+            </ul>
+        </nav>
+
+        <iframe ng-src="{{vm.currVideo.urlFull}}"
+                width="401" height="227" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe>
+<!--ng-hide="!vm.firstVideo"-->
+        <div class="arrows">
+            <span tabindex="16" title="right arrow for previous video" class="arrowRight"><a ng-click="vm.prevVideo()"><i class="fa fa-arrow-right"></i></a></span>
+            <span tabindex="17" title="left arrow for next video" class="arrowLeft"><a ng-click="vm.nextVideo()"><i class="fa fa-arrow-left"></i></a></span>
+        </div>
+
+        <p tabindex="18" class="interviewName">שם המתראיין / תפקיד המתראיין</p>
+    </aside>
+    <article ng-repeat="section in vm.data.sections" ng-if="section.selected">
+
+        <h1 tabindex="{{$index+18}}" class="light">{{section.title}}</h1>
+
+        <div ng-repeat="section in vm.data.sections" ng-if="section.selected" class="desc">
+            <!--section.showTextPrimaryInput
+            ng-click="vm.pop()"-->
+            <p tabindex="{{$index+19}}" editable-textarea="section.textPrimary" e-rows="7" e-cols="40" e-form="textBtnForm1"  onaftersave="vm.updateModel()"
+               class="strong light weight mb0">
+                {{section.textPrimary}}
+            </p>
+            <button class="btnEdit" ng-if="user.isAdmin" ng-click="textBtnForm1.$show()" ng-hide="textBtnForm1.$visible">ערוך</button>
+            <br/>
+
+            <p tabindex="{{$index+20}}" editable-textarea="section.textSecondary" e-rows="7" e-cols="40" e-form="textBtnForm2"  onaftersave="vm.updateModel()" class="descParagraph regular">
+                {{section.textSecondary}}
+            </p>
+            <button class="btnEdit" ng-if="user.isAdmin" ng-click="textBtnForm2.$show()" ng-hide="textBtnForm2.$visible">ערוך</button>
+            <!--<iframe ng-src="{{section[3].textSecondary}}" width="400" height="280"></iframe>-->
+        </div>
+    </article>
+</section>
+
+

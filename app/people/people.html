@@ -1,33 +1,41 @@
 <div class="people">
     <aside>
-        <h3>{{vm.data.pageTitle}}</h3>
+        <h3 tabindex="14">{{vm.data.pageTitle}}</h3>
         <nav>
             <ul class="mt-15 activity-sections">
                 <li>
-                    <p class="regular fs18">האנשים שלנו</p>
+                    <p tabindex="15" class="regular fs18">האנשים שלנו</p>
                 </li>
+                <img src="img/hr.PNG" class="myHr" alt=""/>
                 <li>
                     <a ng-href="#partners">
-                        <p class="light fs18">השותפים שלנו</p>
+                        <p tabindex="16" class="light fs18">השותפים שלנו</p>
                     </a>
                 </li>
             </ul>
         </nav>
     </aside>
     <article>
-        <h1 class="light">האנשים שלנו</h1>
+        <h1 tabindex="17" class="light">האנשים שלנו</h1>
     </article>
 </div>
 
 <div ng-repeat="section in vm.data.sections" class="peopleDesc">
     <div class="boxImg">
-        <img src="img/people.jpg" alt="" class="interviewImg"/>
+        <img tabindex="18" ng-src="{{section.img}}" alt="image of sachi manager" class="interviewImg"/>
     </div>
     <article>
-        <p class="strong light weight">{{section.titlePrimary}}</p>
-
-        <p class="strong light mb-20 mt-20">{{section.titleSecondary}}</p>
-
-        <p class="descParagraph regular">{{section.textPrimaryPeople}}</p>
+        <p tabindex="19" e-rows="1" e-cols="40" e-form="textBtnForm"  onaftersave="vm.updateModel()" editable-textarea="section.titlePrimary" class="strong light weight">
+            {{section.titlePrimary}}
+        </p>
+        <button class="btnEdit" ng-if="user.isAdmin == 'admin'" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">ערוך</button>
+        <p tabindex="19" e-rows="1" e-cols="40" e-form="textBtnForm"  onaftersave="vm.updateModel()" editable-textarea="section.titleSecondary" class="strong light mb-20 mt-20">
+            {{section.titleSecondary}}
+        </p>
+        <button class="btnEdit" ng-if="user.isAdmin == 'admin'" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">ערוך</button>
+        <p tabindex="19" e-rows="7" e-cols="40" e-form="textBtnForm"  onaftersave="vm.updateModel()"  editable-textarea="section.textPrimaryPeople" class="descParagraph regular">
+            {{section.textPrimaryPeople}}
+        </p>
+        <button class="btnEdit" ng-if="user.isAdmin == 'admin'" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">ערוך</button>
     </article>
 </div>

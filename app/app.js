@@ -3,12 +3,13 @@
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
     'xeditable',
-    //'myApp.directives',
+    'ngAria',
+    'toaster',
     'ngRoute',
     'myApp.factories',
     'myApp.home',
     'myApp.donation',
-    'myApp.present',
+    'myApp.activity',
     'myApp.people',
     'myApp.partners',
     'myApp.transparency',
@@ -16,26 +17,43 @@ angular.module('myApp', [
 ])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/home'});
-    }]);
-/* Controllers */
+    }])
+    .run(['$location', '$rootScope', function ($location, $rootScope) {
+
+
+        $rootScope.user = {isAdmin: false};
+        if ($location.search().secret === 'GivingIsLiving') {
+            $rootScope.user.isAdmin = true;
+            console.log('$rootScope', $rootScope);
+        }
+
+
+
+        $rootScope.getClass = function (path) {
+            var className = ($location.path().substr(-path.length) === path) ? 'active' : '';
+            return className;
+        }
+    }])
 
 
 
 
 function slideIn(el) {
     var donation = document.getElementById(el);
-    donation.style.transition = "left 1.1s ease 0s";
-    donation.style.left = "0px";
+    donation.style.transition = "left 1s";
+    donation.style.left = "0";
     var donationBtn = document.querySelector("#d1");
-    donationBtn.style.display = "none";
+    donationBtn.style.transition = "left 0.9s";
+    donationBtn.style.left = "86%";
 }
 
 function slideOut(el) {
     var elem = document.getElementById(el);
-    elem.style.transition = "left 1.1s ease 0s";
+    elem.style.transition = "left 1s";
     elem.style.left = "-100%";
     var donationBtn = document.querySelector("#d1");
-    donationBtn.style.display = "block";
+    elem.style.transition = "left 1s";
+    donationBtn.style.left = "-52px";
 }
 
 function myFunction() {
@@ -55,34 +73,3 @@ window.onclick = function (event) {
     }
 };
 
-
-var logo = document.querySelector(".logo");
-function accFontSizeDefault() {
-    document.body.style.fontSize = "1em";
-    logo.style.marginLeft = "3em";
-}
-function accFontSizePlusOne() {
-    document.body.style.fontSize = "1.2em";
-    logo.style.marginLeft = "0";
-}
-function accFontSizePlusTwo() {
-    document.body.style.fontSize = "1.4em";
-    logo.style.marginLeft = "-2em";
-}
-function changeColor() {
-    var image = document.querySelectorAll('img');
-    for (var i = 0; i < image.length; i++) {
-        image[i].classList.toggle("grayscale");
-    }
-    document.querySelector('.dd').classList.toggle("bw");
-    document.querySelector('#msg').classList.toggle("bw");
-    document.querySelector('.title').classList.toggle("bw");
-    document.querySelector('.btnContinue').classList.toggle("buttonbw");
-    if (!document.querySelector('h1')) return;
-    document.querySelector('h1').classList.toggle("bw");
-    if (!document.querySelector('aside')) return;
-    document.querySelector('aside h3').classList.toggle("cg");
-    document.querySelector('aside').classList.toggle("asidebw");
-    if (!document.querySelector('.formSend')) return;
-    document.querySelector('.formSend').classList.toggle("bw");
-}

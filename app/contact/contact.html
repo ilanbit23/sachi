@@ -1,8 +1,8 @@
 <section class="contact">
     <aside>
-        <h3>קשר</h3>
+        <h3 tabindex="14">קשר</h3>
 
-        <p class="info">
+        <p tabindex="15" class="info">
             למידע נוסף על עמותת נכח ופעילויות סח"י,<br/>
             לשיתופי פעולה, הצטרפות ולפתיחת סיירות חדשות –<br/><br/>
             פנו אלינו ל:&nbsp;<a href="sahi.gives@gmail.com">sahi.gives@gmail.com</a> <br/><br/>
@@ -10,7 +10,7 @@
         </p>
     </aside>
     <article>
-        <h1 class="light headContact">
+        <h1 tabindex="16" class="light headContact">
             אתם מוזמנים להצטרף למשפחת
             סח"י, <br/>למעגל הנתינה ולפעילות
             לשינוי <br/> פני החברה בישראל
@@ -18,34 +18,39 @@
     </article>
 </section>
 <div class="formSection">
-    <p>ליצירת קשר, אנא מלאו את הפרטים ונחזור אליכם בהקדם</p>
+    <p tabindex="17">ליצירת קשר, אנא מלאו את הפרטים ונחזור אליכם בהקדם</p>
 
-    <form class="contactForm">
+    <form name="contactForm" class="contactForm">
         <div class="formRight">
-            <p class="name">*שם</p>
-            <input type="text" class="formInput"/>
+            <label tabindex="18" for="contactName" class="name">*שם</label>
+            <span class="validation" ng-show="contactForm.contactName.$touched && contactForm.contactName.$invalid">שדה חובה</span>
+            <input tabindex="19" name="contactName"  ng-model="contactName" id="contactName" type="text" class="formInput" required/>
 
-            <p class="name">טלפון</p>
-            <input type="text" class="formInput"/>
 
-            <p class="name">נושא</p>
-            <input type="text" class="formInput"/>
+            <label tabindex="20" for="contactPhone" class="name">טלפון</label>
+            <span class="validation" ng-show="contactForm.contactPhone.$touched && contactForm.contactPhone.$invalid">שדה חובה</span>
+            <input tabindex="21" name="contactPhone" ng-model="contactPhone" id="contactPhone" type="tel" class="formInput" required/>
+
+            <label tabindex="22" for="contactSubject" class="name">נושא</label>
+            <input tabindex="23" id="contactSubject" type="text" class="formInput"/>
         </div>
         <div class="formMiddle">
-            <p class="name">*מייל</p>
-            <input type="text" class="formInput"/>
+            <label tabindex="24" for="contactEmail" class="name">*מייל</label>
+            <span class="validation" ng-show="contactForm.contactEmail.$touched && contactForm.contactEmail.$invalid">שדה חובה</span>
+            <input tabindex="25" name="contactEmail" ng-model="contactEmail" id="contactEmail" type="email" class="formInput" required/>
 
-            <p class="name">חברה/ארגון</p>
-            <input type="text" class="formInput"/>
+            <label tabindex="26" for="contactCompany" class="name">חברה/ארגון</label>
+            <input tabindex="27" id="contactCompany" type="text" class="formInput"/>
 
-            <p class="name">מקום יישוב</p>
-            <input type="text" class="formInput"/>
+            <label tabindex="28" for="contactAddress" class="name">מקום יישוב</label>
+            <input tabindex="29" id="contactAddress" type="text" class="formInput"/>
         </div>
         <div class="formLeft">
-            <p class="name">תוכן הפנייה</p>
-            <textarea cols="19" rows="6" class="formTextArea"></textarea>
+            <label tabindex="30" for="contactMsg" class="name">תוכן הפנייה</label>
+            <span class="validation" ng-show="contactForm.contactMsg.$touched && contactForm.contactMsg.$invalid">שדה חובה</span>
+            <textarea tabindex="31" name="contactMsg" ng-model="contactMsg" id="contactMsg" cols="19" rows="6" class="formTextArea" required></textarea>
         </div>
     </form>
     <p class="note">*שדה חובה</p>
-    <button class="formSend">שלח</button>
+    <button tabindex="32" class="formSend">שלח</button>
 </div>

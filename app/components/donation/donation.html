@@ -2,7 +2,6 @@
     <div class="title">
         <div class="closeDonation" onclick="slideOut('msg')" id="d2">X</div>
         <h4 class="donation light"> תרומה</h4>
-
         <div class="donationRightSide">
             <div class="bankDetails">
                 <h5 class="regular">
@@ -26,82 +25,139 @@
                 </h5>
             </div>
         </div>
-        <!--<h3>עכשיו אתם! <br/>כל זה לא יכול לקרות <br/> בלי עזרתכם הנדיבה:</h3>-->
     </div>
+
     <div class="donationDetails">
+        <h3 class="mb-25">
+            עכשיו אתם!
+        </h3>
+        <h3 class="mb-25">
+            כל זה לא יכול לקרות
 
-        <h3>עכשיו אתם! <br/>כל זה לא יכול לקרות <br/> בלי עזרתכם הנדיבה:</h3>
+        </h3>
+        <h3>
+            בלי עזרתכם הנדיבה:
 
-        <form action="">
+        </h3>
+
+        <form name="donationForm" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="59MFPTRMRTVZC">
+            <input type="hidden" name="yaron" value="{{donation.amount}}"/>
+            donation.amount: {{donation.amount}}
             <h6>כל התרומות לעמותה מוכרות לצרכי מס לפי סעיף 46 לפקודת מס הכנסה</h6>
             <h5>סכום התרומה:</h5>
+
             <span class="inputRadioBtn">
-                <input type="radio"><span class="donationAmount">50 &#8362;</span>
-                <input type="radio"><span class="donationAmount">100 &#8362;</span>
-                <input type="radio"><span class="donationAmount">200 &#8362;</span>
-                <input type="radio"><span class="donationAmount">500 &#8362;</span>
+                <input id="donationAmount50"  value="50" type="radio" ng-model="donation.amount" name="donationAmount">
+                <label class="donationAmount" for="donationAmount50">50 &#8362;</label>
+                <input id="donationAmount100" value="100" type="radio" ng-model="donation.amount" name="donationAmount">
+                <label class="donationAmount" for="donationAmount100">100 &#8362;</label>
+                <input id="donationAmount200" value="200" type="radio" ng-model="donation.amount" name="donationAmount">
+                <label class="donationAmount" for="donationAmount200">200 &#8362;</label>
+                <input id="donationAmount500" value="500" type="radio" ng-model="donation.amount" name="donationAmount">
+                <label class="donationAmount" for="donationAmount500">500 &#8362;</label>
+                <input type="hidden" name="currency_code" value="ILS">
             </span>
             <span class="inputBtn">
-                <button class="inputBtnBorder">50 &#8362;</button>
-                <button class="inputBtnBorder">100 &#8362;</button>
-                <button class="inputBtnBorder">200 &#8362;</button>
-                <button class="inputBtnBorder">500 &#8362;</button>
+                <button id="donationAmount50Mobile" value="50" ng-model="donation.amount"
+                        class="inputBtnBorder" name="donationAmount">50 &#8362;
+                </button>
+                <button id="donationAmount100Mobile" value="100" ng-model="donation.amount"
+                        class="inputBtnBorder" name="donationAmount">100 &#8362;
+                </button>
+                <button id="donationAmount200Mobile" value="200" ng-model="donation.amount"
+                        class="inputBtnBorder" name="donationAmount">200 &#8362;
+                </button>
+                <button id="donationAmount500Mobile" value="500" ng-model="donation.amount"
+                        class="inputBtnBorder" name="donationAmount">500 &#8362;
+                </button>
             </span>
             <br/>
             <span>
-                <input class="inputRadioBtn" type="radio">סכום אחר:
+                <input id="other" class="inputRadioBtn" type="radio">
+                <label class="otherSum" for="other"> סכום אחר:</label>
                 <input class="donationTextArea" type="text"/>&#8362;
-                <p class="reDonate"><input type="radio"> תרומה מתחדשת כל חודש <br/></p>
+                <span class="donationMonthly">
+                    <input id="reDonation" type="radio">
+                    <label for="reDonation"> תרומה מתחדשת כל חודש</label>
+                </span>
             </span>
 
             <p class="donateDetails regular">פרטי המשלם:</p>
 
             <div class="donationFormRight">
-                <p class="name">שם/חברה</p>
-                <input type="text" class="formInput"/>
+                <label for="donateName" class="name">שם/חברה</label>
+                <span class="validation" ng-show="donationForm.name.$touched && donationForm.name.$invalid">שדה חובה</span>
+                <input id="donateName" type="text" class="formInput" required/>
 
-                <p class="phone">טלפון</p>
-                <input type="text" class="formInput"/>
-            </div>
+                <label for="donatePhone" class="phone">טלפון</label>
+                <input id="donatePhone" type="text" class="formInput"/>
+            </div><br/>
             <div class="donationFormLeft">
-                <p class="id">ת.ז./ח.פ</p>
-                <input type="text" class="formInput"/>
+                <label for="donateId" class="id">ת.ז./ח.פ</label>
+                <input id="donateId" type="text" class="formInput" required/>
 
-                <p class="mail">מייל</p>
-                <input type="text" class="formInput"/>
+                <label for="donateMail" class="mail">מייל</label>
+                <input id="donateMail" type="text" class="formInput" required/>
             </div>
             <div class="donationFooter">
                 <p class="donateOptions"> תשלום באמצעות: </p>
                 <span class="payment">
                     <span class="visa">
                         <img class="visaIcon" src="img/logos/visa.png" alt=""/>
-                        <p>כרטיס אשראי</p>
-                        <input type="radio"/>
+                        <label for="visa">כרטיס אשראי</label>
+                        <input name="paymentOption" id="visa" type="radio"/>
                     </span>
                     <span class="paypal">
+                        <!--<input type="image" src="https://www.paypalobjects.com/en_US/IL/i/btn/btn_donateCC_LG.gif" border="0"-->
+                        <!--name="submit" alt="PayPal - The safer, easier way to pay online!">-->
+                        <!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
                         <img class="paypalIcon" src="img/logos/paypal.png" alt=""/>
-                        <p>paypal</p><br/>
-                        <input type="radio">
-                        <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">-->
-                            <!--<input type="hidden" name="cmd" value="_donations">-->
-                            <!--<input type="hidden" name="business" value="ilanbit23@gmail.com">-->
-                            <!--<input type="hidden" name="lc" value="IL">-->
-                            <!--<input type="hidden" name="item_name" value="SachiChaeck">-->
-                            <!--<input type="hidden" name="item_number" value="1234">-->
-                            <!--<input type="hidden" name="no_note" value="0">-->
-                            <!--<input type="hidden" name="currency_code" value="ILS">-->
-                            <!--<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">-->
-                            <!--<input type="image" src="https://www.paypalobjects.com/he_IL/IL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - הדרך הקלה והבטוחה לשלם באינטרנט!">-->
-                            <!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
-                        <!--</form>-->
-
+                        <label for="paypal">paypal</label>
+                        <input name="paymentOption" id="paypal" type="radio">
                     </span>
                 </span>
-                <input type="button" class="btnContinue" value="המשך">
+                <input type="button" class="btnContinue" ng-click="donate()" value="המשך">
+
                 <h5 class="donationLast"> כל התרומות מוכרות לצרכי מס לפי סעיף 46 לפקודת מס הכנסה</h5>
                 <i class="fa fa-arrow-left fl arrow"></i>
             </div>
         </form>
     </div>
 </div>
-<div onclick="slideIn('msg')" id="d1" class="dd clickable">תרומה</div>
+<div onclick="slideIn('msg')" id="d1" class="dd donationOpen clickable">תרומה</div>
+
+
+<!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post">-->
+<!--<input type="hidden" name="cmd" value="_s-xclick">-->
+<!--<input type="hidden" name="hosted_button_id" value="59MFPTRMRTVZC">-->
+<!--<table>-->
+<!--<tr><td><input type="hidden" name="on0" value=""></td></tr><tr><td><select name="os0">-->
+<!--<option value="10">$10.00 USD - monthly</option>-->
+<!--<option value="20">$20.00 USD - monthly</option>-->
+<!--<option value="50">$50.00 USD - monthly</option>-->
+<!--<option value="100">$100.00 USD - monthly</option>-->
+<!--<option value="150">$150.00 USD - monthly</option>-->
+<!--</select> </td></tr>-->
+<!--</table>-->
+<!--<input type="hidden" name="currency_code" value="USD">-->
+<!--<input type="image" src="https://www.paypalobjects.com/en_US/IL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">-->
+<!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
+<!--</form>-->
+
+<!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">-->
+<!--<input type="hidden" name="cmd" value="_s-xclick">-->
+<!--<input type="hidden" name="hosted_button_id" value="D3Q8P8SHYJEL6">-->
+<!--<table>-->
+<!--<tr><td><input type="hidden" name="on0" value="תרומות">תרומות</td></tr><tr><td><select name="os0">-->
+<!--<option value="50">50 ₪50.00 ILS</option>-->
+<!--<option value="100">100 ₪100.00 ILS</option>-->
+<!--<option value="200">200 ₪200.00 ILS</option>-->
+<!--<option value="500">500 ₪500.00 ILS</option>-->
+<!--</select> </td></tr>-->
+<!--</table>-->
+<!--<input type="hidden" name="currency_code" value="ILS">-->
+<!--<input type="image" src="https://www.paypalobjects.com/en_US/IL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - הדרך הקלה והבטוחה לשלם באינטרנט!">-->
+<!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
+<!--</form>-->

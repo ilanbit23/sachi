@@ -3,6 +3,14 @@
   width: 100%;
   aside {
     max-height: 89px;
+    padding-bottom: 0;
+  }
+  .activity-sections {
+    margin-top: -10px;
+    p {
+      margin-top: -7px !important;
+    }
+
   }
   .recommendationRight {
     p {
@@ -20,8 +28,8 @@
   color: #77787a;
 }
 
-.mw90 {
-  max-width: 90%;
+.mw80 {
+  max-width: 80%;
 }
 
 .partners nav {
@@ -52,7 +60,8 @@
 }
 
 .quote {
-  color: #b4b4b4;
+  float: left;
+  margin-left: 15px;
 }
 
 .partnerName {
@@ -60,32 +69,51 @@
   float: right;
 }
 
-.logosRow {
+.logos {
   display: flex;
-  margin-left: -15%;
+  float: right;
+  margin-top: 1em;
+  margin-bottom: -20px;
+}
+
+.partnersHr {
+  height: 1px;
+  width: 100%;
+  margin-bottom: -25px;
+}
+.vr {
+  margin-bottom: 15px;
+}
+.last {
+  display: none !important;
+}
+.logosVr:last-of-type  {
+  //display: none;
 }
 
 .logoImg {
-  width: 20%;
-  height: 75px;
-  margin: 5px;
-  border-right: 1px dotted #e0e0e0;
-  margin-top: 56px;
+  margin-top: -10px;
+  height: 95px;
+  width: 95%;
+  //border-right: 1px dotted #b4b4b4;
+  padding-right: 3px;
+  &:hover {
+    cursor: pointer;
+  }
+
 }
 
 .brn {
   border-right: none;
 }
-
-.logosHr {
-  border: none;
-  border-top: 1px dotted #e0e0e0;
-  background-color: #fff;
-  height: 1px;
-  width: 100%;
-  margin-top: -18px;
-  margin-bottom: -50px;
-}
+//.logosHr {
+//  border: none;
+//  border-top: 1px dotted #b4b4b4;
+//  background-color: #fff;
+//  height: 1px;
+//  width: 100%;
+//  margin-bottom: -1em;
+//}
 
 @media only screen and (max-width: 640px) {
   .recommendation {
@@ -108,18 +136,19 @@
   .partners {
     aside {
       margin-top: 0 !important;
+      .activity-sections {
+        li {
+          width: 50%;
+          margin-top: 10px;
+        }
+      }
       h3 {
         margin-top: 115px;
         background-color: $lighterGray;
         padding-bottom: 10px;
         padding-top: 15px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
-      p {
-        margin-bottom: 22px !important;
-        margin-top: -10px !important;
-      }
-
     }
   }
   .logosRow {

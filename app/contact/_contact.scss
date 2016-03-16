@@ -19,54 +19,57 @@
 
 .formSection {
   float: left;
-  margin-top: -95px;
+  margin-top: -10em;
   margin-left: 0;
+  p {
+    margin-top: 0;
+  }
 }
 
 .contactForm {
   display: flex;
-  margin-top: -5px;
+  margin-top: 0;
   width: 420px;
   color: $lightGray;
-}
+  .formRight {
+    flex: 1;
+    float: right;
+    padding-left: 10px;
+  }
+  .formMiddle {
+    flex: 1;
+    float: right;
+    padding-left: 10px;
+  }
+  .formLeft {
+    flex: 1;
+    float: left;
+  }
+  .formTextArea {
+    padding-right: 5px;
+    resize: none;
+    background-color: #EFEFEF;
+    border: none;
+    padding-bottom: 55px;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+  .formInput {
+    margin-bottom: 22px;
+    padding-right: 5px;
+    width: 100px;
+    background-color: #EFEFEF;
+    border: none;
+    line-height: 1.7em;
+  }
+  .validation {
+    margin-right: 17%;
+    color: red;
+  }
 
-.formRight {
-  flex: 1;
-  float: right;
-  padding-left: 10px;
-}
 
-.formMiddle {
-  flex: 1;
-  float: right;
-  padding-left: 10px;
 }
-
-.formLeft {
-  flex: 1;
-  float: left;
-}
-
-.formTextArea {
-  padding-right: 5px;
-  resize: none;
-  background-color: #EFEFEF;
-  border: none;
-  padding-bottom: 55px;
-}
-
-.contactForm p {
-  margin-bottom: 5px;
-}
-
-.formInput {
-  padding-right: 5px;
-  width: 100px;
-  background-color: #EFEFEF;
-  border: none;
-  line-height: 1.7em;
-}
-
 .note {
   color: $lightGray;
   margin-top: 15px;
@@ -82,7 +85,10 @@
   padding-bottom: 3px;
   padding-top: 3px;
   width: 35px;
+  cursor: pointer;
 }
+
+
 
 @media only screen and (min-width: 640px) and (max-width: 860px) {
   .contact {
@@ -124,31 +130,41 @@
     margin-right: 0;
   }
   .formSection {
-    max-width: 75%;
+    max-width: 85%;
     float: right;
     font-size: 1.3em;
     margin-right: 2em;
     margin-top: 0;
+    p {
+      margin-top: 0;
+    }
   }
   .contactForm {
     flex-direction: column;
+    margin-top: 1em;
+    width: inherit;
   }
   .formInput {
     width: 95% !important;
     height: 3em;
   }
   .formTextArea {
-    width: 89%;
+    width: 92.5%;
     padding-right: 15px;
   }
   .formSend {
+    float: none;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 100%;
+    width: 94%;
     height: 40px;
     font-size: 1.3em;
   }
   .note {
     display: none;
+  }
+  .validation {
+    margin-left: 1em;
+    float: left;
   }
 }

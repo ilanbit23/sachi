@@ -2,12 +2,16 @@
   float: right;
   background-color: $darkBlue;
   height: 190px;
-  width: 286px;
+  width: 33%;
   .name {
     color: $lighterGray;
     display: block;
     margin-top: 1em;
     margin-right: 15px;
+    outline: none;
+    &:hover {
+      color: $lightBlue;
+    }
   }
   .role {
     margin-top: 0 !important
@@ -20,19 +24,27 @@
     color: rgba(255, 255, 255, 0.75);
   }
   .moreInfo {
-    position: relative;
-    left: -16.3em;
-    bottom: 1.4em;
+    float: left;
+    margin-top: -22px;
+    margin-left: 10px;
+    &:hover {
+      color: $lightBlue;
+    }
     a {
       color: $lighterGray;
+
     }
+
   }
   .more {
-    position: relative;
-    right: 11em;
     color: $lighterGray;
-    bottom: 3em;
-    font-size: 1.3em;
+    display: inline-block;
+    float: left;
+    margin-top: 1px;
+    margin-left: 32px;
+    &:hover {
+      color: $lightBlue;
+    }
   }
   .imgInfo {
     display: none;
@@ -40,25 +52,33 @@
   &:hover {
     .imgInfo {
       display: block;
+      position: relative;
     }
+  }
+  .arrowMore {
+    float: left;
+    margin-left: 15px;
+    margin-right: -25px;
   }
 }
 
 iframe {
   border: none !important;
   margin-bottom: -5px;
+  width: 100%;
 }
 .gal {
-  flex: 1;
   margin-bottom: -21px;
   height: 190px;
-  width: 286px;
+  width: 100%;
   &:hover {
     cursor: pointer;
     opacity: 0.5;
   }
 }
+@media only screen and (min-width: 640px) and (max-width: 880px){
 
+}
 @media only screen and (max-width: 640px) {
   .imgSection {
     display: inline-table;

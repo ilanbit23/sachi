@@ -2,35 +2,79 @@
   display: flex;
   width: 100%;
   .activity-sections {
-    width: 30%;
+    width: 33%;
     float: left;
     margin-top: -2px;
+    .myHr {
+      width: 6em;
+    }
     li {
-      border-bottom: 1px dotted #6f6c6d;
+      margin-bottom: -10px;
       display: block;
       p {
+        outline: none;
         cursor: pointer;
-        margin-bottom: -3px;
-        margin-top: -1px;
+        margin-bottom: 1px;
+        margin-top: 0;
       }
     }
   }
 }
+
 .editable-click, a.editable-click {
   text-decoration: none;
   color: $darkGray;
   border-bottom: none;
-
 }
+
 .editable-click:hover, a.editable-click:hover {
   text-decoration: none;
   color: $darkGray;
 }
 
+.activity {
+  iframe {
+    margin-bottom: -2em;
+  }
+  .activity-sections {
+    li {
+      p {
+        margin-bottom: -15px;
+      }
+    }
+  }
+}
+
+.arrows {
+  bottom: 4em;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  position: relative;
+  //bottom: 3em;
+  .arrowRight {
+    flex: 1.5;
+    float: right;
+    outline: none;
+  }
+  .arrowLeft {
+    outline: none;
+    flex: 1.5;
+    margin-right: 13em;
+    margin-left: 0.5em;
+  }
+  i {
+    cursor: pointer;
+    color: $lighterGray;
+    outline: none;
+  }
+}
+
 aside {
   flex: 1.4;
-  margin-bottom: 15px;
+  margin-bottom: 4em;
   background-color: $lighterGray;
+  padding-bottom: 0;
   text-align: left;
   border-top: 15px solid $lightBlue;
   ul {
@@ -38,37 +82,36 @@ aside {
   }
 
   h3 {
-    padding-left: 22px;
+    padding-left: 19px;
     color: $lightBlue;
     font-weight: normal;
     font-size: 2.2em;
     margin-top: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
   }
   nav > li > p {
     margin-bottom: 0;
     margin-top: 0;
   }
-  img {
-    width: 100%;
 
-  }
   .interviewName {
-  text-align: right;
-  font-size: 1.3em;
-  background-color: white;
-  margin-top: -5px;
-  padding-top: 10px;
-  margin-bottom: -10px;
+    text-align: right;
+    font-size: 1.3em;
+    background-color: white;
+    margin-top: -5px;
+    padding-top: 10px;
+    margin-bottom: -10px;
   }
 }
-
+.controls {
+  display: none !important;
+}
 article {
   flex: 1.6;
   h1 {
     background-color: #00519c;
     padding-top: 70px;
-    margin-top: 0px;
+    margin-top: 0;
     color: $lighterGray;
     padding-right: 25px;
     padding-bottom: 5px;
@@ -80,12 +123,45 @@ article {
     padding-right: 25px;
     max-width: 70%;
     line-height: 0.9;
+    height: 356px;
+    overflow-y: auto;
+    direction: ltr;
+    margin-right: 15px;
+    p {
+      margin-left: 1em;
+      direction: rtl;
+    }
   }
+}
+::-webkit-scrollbar {
+  width: 0.1em;
+  height: 0.1em
+}
+::-webkit-scrollbar-button {
+  background: white;
+}
+::-webkit-scrollbar-track-piece {
+  background: #ccc;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
 }
 
 .descParagraph {
   font-size: 1.3em;
   padding-left: 50px;
+}
+
+
+@media only screen and (min-width: 640px) and (max-width: 860px) {
+  .activity {
+    aside {
+      margin-bottom: 162px !important;
+    }
+  }
+  footer {
+    margin-top: -10em;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -95,6 +171,10 @@ article {
       margin-top: 115px;
       text-align: center;
       border-top: none;
+      .interviewName {
+        margin-bottom: -7em;
+        margin-top: 9em;
+      }
       h3 {
         padding-left: 88%;
         font-weight: normal;
@@ -115,7 +195,6 @@ article {
           margin-top: -15px;
           &:hover {
             border-bottom: 4px solid $lighterGray;
-            padding-bottom: 5px;
             border-bottom-left-radius: 2px;
             border-bottom-right-radius: 2px;
           }
@@ -128,11 +207,26 @@ article {
     .activity-sections {
       width: 30%;
       float: none;
+      margin-top: 20px !important;
+      .myHr {
+        display: none;
+      }
       li {
         border-bottom: none;
         padding: 15px;
         margin: 0;
         margin-bottom: -5px;
+        &:before {
+          content: "|" !important;
+          color: white;
+          padding-right: 0.3em;
+          padding-left: 0.3em;
+          float: right;
+
+        }
+        &:first-child:before {
+          content: "" !important;
+        }
         p {
           color: white;
           padding-left: 0;
@@ -144,6 +238,9 @@ article {
       margin-bottom: -5px;
     }
   }
+  .activity iframe {
+    margin-bottom: -13.7em;
+  }
   .social {
     display: none;
   }
@@ -153,9 +250,40 @@ article {
   }
 
   .desc {
+    margin-top: 6em;
     padding-top: 10px !important;
     padding-left: 25px !important;
     max-width: 85% !important;
+  }
+
+  .arrows {
+    bottom: 0;
+  }
+
+  .activity {
+    flex-direction: column;
+    aside {
+      border-top: none !important;
+      h3 {
+        padding-left: 50% !important;
+        font-size: 2.5em !important;
+      }
+      nav {
+        float: right !important;
+        width: 100% !important;
+        padding-bottom: 15px !important;
+        .mt-15 {
+          margin-top: 0;
+        }
+        li {
+          text-align: right;
+          width: 100%;
+        }
+      }
+    }
+    .activity-sections-nav {
+      text-align: center;
+    }
   }
 
 }

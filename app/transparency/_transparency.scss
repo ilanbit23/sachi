@@ -4,6 +4,11 @@
   aside {
     margin-bottom: 20px;
   }
+
+}
+
+.transHr {
+  width: 12em;
 }
 
 .transparencyContent {
@@ -53,7 +58,6 @@
   background-color: $lightGray
 }
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
   display: block;
 }
@@ -72,13 +76,10 @@
 
 .docList {
   color: #322e2f;
-  width: 260px;
+  width: 230px;
   float: left;
   margin-right: 38%;
   margin-top: 1em;
-  hr {
-    border: 0.2px dotted #656363;
-  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -119,6 +120,7 @@
     height: 20px;
     margin-top: -29px;
     margin-right: 4px;
+    color: $lightGray;
   }
   .dropdown-content {
     width: 94%;
@@ -130,8 +132,8 @@
     font-size: 1.5em;
     margin-right: 0;
     margin-top: 1em;
-    hr {
-      display: block;
+    .transHr {
+      width: 100%;
     }
   }
 

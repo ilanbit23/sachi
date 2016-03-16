@@ -11,10 +11,15 @@ angular.module('myApp.people', ['ngRoute'])
 
     .controller('peopleCtrl', ['DataFactory', function (DataFactory) {
         var ctrl = this;
+        var pageName = 'people';
 
-        var prmData = DataFactory.getDataForPage('people');
+        var prmData = DataFactory.getDataForPage(pageName);
         prmData.then(function (data) {
             ctrl.data = data;
+            ctrl.updateModel = function () {
+                console.log('Model updated: ', ctrl.data);
+                DataFactory.updatePage(pageName, ctrl.data);
+            }
         });
         
     }]);

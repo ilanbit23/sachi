@@ -31,12 +31,28 @@
   margin-bottom: -20px;
 }
 
+.mb-25 {
+  margin-bottom: -25px;
+}
+
 .mt-20 {
   margin-top: -20px;
 }
 
+.cg {
+  color: #77787a;
+}
+
+.mw90 {
+  max-width: 90%;
+}
+
+.ml30 {
+  margin-left: 30px;
+}
+
 .second {
-  margin-top: 0px !important;
+  margin-top: 0 !important;
 }
 
 .mt30 {
@@ -67,6 +83,7 @@ a {
   font-family: 'NextExitRound-Regular', sans-serif !important;
   color: $lightGray;
   text-decoration: none;
+  outline: none !important;
   &:hover {
     color: $lightBlue !important;
     text-decoration: none;

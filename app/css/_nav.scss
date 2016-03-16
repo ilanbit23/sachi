@@ -6,6 +6,10 @@ a {
   }
 }
 
+.active {
+  color: $lightBlue;
+}
+
 .accFontSize {
   color: $lightGray;
   position: absolute;
@@ -75,6 +79,7 @@ a:hover#menu-icon {
 }
 
 li {
+  outline: none;
   display: inline-block;
   &:last-child {
     border-bottom: 0;
@@ -86,6 +91,7 @@ li {
 }
 
 .nochach {
+  outline: none;
   cursor: pointer;
   width: 50px;
   float: right;
@@ -106,6 +112,7 @@ li {
   height: 85px;
   margin-left: 0;
   margin-right: -10px;
+  outline: none;
   &:hover {
     cursor: pointer;
   }
@@ -130,8 +137,17 @@ li {
   width: 20px;
   cursor: pointer;
 }
+.paypalDonationNav {
+  input[type="image"] {
+    position: absolute;
+    left: 23em;
+    margin-left: 10px;
+    margin-top: 3px;
+    width: 70px;
+  }
 
-/*MEDIA QUERY NAV*/
+}
+
 @media only screen and (max-width: 640px) {
   header {
     position: fixed;
@@ -143,12 +159,6 @@ li {
     display: block;
     margin-top: 20px;
   }
-  .accColor {
-    left: 65% !important;
-  }
-  .accFontSize {
-    left: 20%;
-  }
 
   .social {
     margin-left: -1.5em;
@@ -156,25 +166,6 @@ li {
 
   #menu-icon {
     display: inline-block;
-  }
-
-  .activity {
-    flex-direction: column;
-    aside {
-      border-top: none !important;
-      h3 {
-        padding-left: 50% !important;
-        font-size: 2.5em !important;
-      }
-      nav {
-        float: right !important;
-        width: 100% !important;
-        padding-bottom: 15px !important;
-        .mt-15 {
-          margin-top: 0;
-        }
-      }
-    }
   }
 
   li {
@@ -210,10 +201,7 @@ li {
       padding-left: 0.3em;
     }
   }
-  nav li {
-    text-align: center;
-    width: 100%;
-  }
+
   .fs18 {
     font-size: 22px !important;
   }
@@ -224,7 +212,7 @@ li {
     max-width: 80px;
     flex-direction: column;
     padding: 0;
-    margin-top: -6px;
+    margin-top: 4px;
     padding-left: 10px;
   }
   header > nav ul li {
@@ -238,15 +226,14 @@ li {
   .logo {
     text-align: center;
     float: none;
-    height: 74px;
     margin: auto;
-    width: 208px;
     padding-left: 10%;
   }
 
   #menu-icon {
     float: right;
-    margin-top: 34px;
+    margin-top: 55px;
+    cursor: pointer;
   }
 }
 

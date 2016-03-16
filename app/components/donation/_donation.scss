@@ -29,16 +29,24 @@
 }
 
 .donation {
-  text-align: center;
-  margin-left: 273px;
   margin-top: 0;
+  margin-right: 28%;
+}
+
+.donationOpen {
+  outline: none !important;
+  text-decoration: none;
 }
 
 .donationDetails {
   font-family: "nextExitRound-Light", sans-serif;
   float: left;
-  padding-left: 72px;
-  margin-top: -48px;
+  padding-left: 22em;
+  margin-top: -5.7em;
+  h3 {
+    font-size: 1.5em;
+    font-weight: normal;
+  }
   h6 {
     display: none;
   }
@@ -46,27 +54,46 @@
 
 .donationRightSide {
   float: right;
+  font-size: 1.3em;
+  margin-top: -3em;
 }
 
 .donationFormRight {
-  float: right;
+  display: flex;
   margin-left: 20px;
-  margin-top: -15px;
+  margin-top: 15px;
+  flex-direction: column;
   p {
     margin-bottom: 3px;
+  }
+  label {
+    display: block;
+  }
+  #donateName {
+    margin-bottom: 10px;
   }
 }
 
 .donationFormLeft {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
-  margin-top: -15px;
+  margin-top: -99px;
+  margin-right: 7.5em;
+  .id {
+    margin-top: -10px;
+  }
+  #donateId {
+    margin-bottom: 10px;
+  }
   p {
     margin-bottom: 3px;
   }
 }
 
 .donationAmount {
-  margin-left: 17px;
+  margin-left: 12px;
+  vertical-align: top;
 }
 
 .donateOptions {
@@ -78,8 +105,9 @@
 }
 
 .arrow {
-  margin-top: -93px;
+  margin-top: -75px;
   margin-left: 80px;
+  cursor: pointer;
 }
 
 .donationDetails {
@@ -91,7 +119,7 @@
 
   form h5 {
     margin: 0;
-    margin-top: 35px;
+    margin-top: 25px;
     margin-bottom: 10px;
   }
 
@@ -103,22 +131,27 @@
     width: 80px;
     color: black;
     margin-left: 4px;
-    padding-right: 15px;
+    padding-right: 5px;
   }
 }
 
 .reDonate {
   display: inline-flex;
-  margin-right: 15px;
+}
+#reDonation {
+  margin-right: 20px;
 }
 
+.donationTextArea {
+  margin-right: 5px ;
+}
 .inputBtn {
   display: none;
 }
 
 #msg {
   position: absolute;
-  min-height: 421px;
+  min-height: 495px;
   left: -1236px;
   background-color: $lightBlue;
   color: white;
@@ -133,6 +166,7 @@
 }
 
 .btnContinue {
+  cursor: pointer;
   padding: 5px;
   float: left;
   background-color: $darkBlue;
@@ -140,7 +174,8 @@
   color: white;
   margin-left: 110px;
   font-family: "nextExitRound-Regular", sans-serif;
-  margin-top: -35px;
+  margin-top: -27px;
+  outline: none;
 }
 
 .bankDetailsMargin {
@@ -168,7 +203,6 @@
   }
   input[type="radio"] {
     float: right;
-    margin-top: 20px;
   }
 
 }
@@ -178,6 +212,10 @@
   p {
     margin-bottom: -38px;
     margin-right: 25px;
+  }
+  label {
+    vertical-align: top;
+    float: left;
   }
 }
 
@@ -189,10 +227,20 @@
   display: none;
 }
 
-@media only screen and (min-width: 640px) and (max-width: 860px) {
+@media only screen and (min-width: 860px) and (max-width: 1260px) {
+  .donationDetails {
+    padding-left: 3em;
+  }
+}
+@media only screen and (min-width: 640px) and (max-width: 960px) {
   .donationRightSide {
     display: none;
   }
+  .donationDetails {
+    padding-left: 11em;
+    margin-top: -3.7em;
+  }
+
 }
 
 @media only screen and (max-width: 640px) {
@@ -218,19 +266,28 @@
     top: 0;
     z-index: 100;
   }
+  .donationMonthly {
+    display: block;
+  }
+  #reDonation {
+    margin-right: 0;
+  }
   .donationDetails {
     form {
       background-color: white;
       display: flex;
       flex-direction: column;
-      margin-top: -10px;
-      width: 100%;
+      margin-top: -38px;
+      width: 85%;
       color: $darkGray;
       padding-right: 45px;
       padding-left: 45px;
       h5 {
         margin: 0;
         margin-bottom: 10px;
+      }
+      input[type="text"] {
+        padding-right: 15px;
       }
     }
   }
@@ -267,18 +324,20 @@
   }
   .donation {
     text-align: center;
-    margin-left: 0;
+    margin-left: 4em;
     margin-top: 2.5em;
     margin-bottom: 25px;
   }
+
   .donationRightSide {
-    display: none;
+    display: none !important;
   }
   .inputRadioBtn {
     display: none;
   }
 
   .donationDetails {
+    width: 100%;
     float: none;
     margin-top: -145px;
     h3 {
@@ -289,6 +348,9 @@
       display: block;
       margin-bottom: 5px;
       font-size: 0.7em;
+    }
+    .mb-25 {
+      margin-bottom: -45px;
     }
   }
 
@@ -316,7 +378,7 @@
   .donationFormRight {
     margin-left: 0;
     float: none;
-    margin-top: 15px;
+    margin-top: -60px;
     color: $lightGray;
     p {
       margin-bottom: 2px;
@@ -325,8 +387,9 @@
   }
   .donationFormLeft {
     margin-bottom: 0;
-    margin-top: -15px;
+    margin-top: -5px;
     width: 100%;
+    margin-right: 0;
     p {
       margin-bottom: 2px;
       margin-top: 20px;
@@ -345,7 +408,7 @@
 
   .donateDetails {
     display: block;
-    margin-top: 0;
+    margin-top: 1em;
     margin-bottom: -20px;
   }
   .payment {
@@ -365,6 +428,8 @@
     }
     input[type="radio"] {
       float: none;
+      display: block;
+      margin-right: 4em;
     }
   }
   .paypal {
@@ -377,7 +442,17 @@
     }
     .paypalIcon {
       display: block;
+      margin-bottom: 5px;
     }
+    input[type="radio"] {
+      float: none;
+      display: block;
+      margin-right: 4em;
+    }
+    label {
+      float: none;
+    }
+
   }
   .btnContinue {
     padding-top: 15px;

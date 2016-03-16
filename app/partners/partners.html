@@ -8,6 +8,7 @@
                         <p class="light fs18">האנשים שלנו</p>
                     </a>
                 </li>
+                <img src="img/hr.PNG" class="myHr" alt=""/>
                 <li>
                     <p class="regular fs18">השותפים שלנו</p>
                 </li>
@@ -16,25 +17,34 @@
 
     </aside>
     <article>
-        <h1 class="light">{{vm.data.pageTitle}}</h1>
+        <h1 class="light">השותפים שלנו</h1>
     </article>
 </div>
 <div class="recommendation">
     <div ng-repeat="recommendations in vm.data.recommendations" class="recommendationRight">
-        <i class="fa fa-quote-right fa-4x quote"></i>
-
-        <p class="cg light mw90">{{recommendations.textPrimaryPartners}}</p>
+        <img src="img/quoteR.PNG" alt="quote"/>
+        <p class="cg light mw80">{{recommendations.textPrimaryPartners}}</p>
 
         <p class="partnerName">שם שותף גוף או חברה</p>
-        <i class="fa fa-quote-left fa-4x quote fl ml30"></i>
+        <img class="quote" src="img/quoteL.PNG" alt="quote"/>
     </div>
 </div>
 <!--<img ng-repeat="i in [1, 2, 3, 4]" ng-src="./img/logos/{{i}}.jpg" alt="company logos" class="gal"/>-->
-<div class="logosRow">
-    <img ng-repeat="i in [1, 2, 3, 4]" ng-src="./img/logos/{{i}}.jpg" alt="company logos" class="logoImg"/>
+<div class="logos">
+    <div ng-repeat="logos in vm.data.logos" class="logos">
+        <a target="_blank" ng-href="{{logos.url}}"><img ng-src="./img/logos/{{logos.id}}.jpg" alt="{{logos.name}}" class="logoImg"/></a>
+        <img ng-class="vm.isLast($last)" src="img/vr.PNG" class="vr" alt=""/>
+    </div>
 </div>
-<br/>
-<hr class="logosHr"/>
-<div class="logosRow">
-    <img ng-repeat="i in [4, 3, 2, 1]" ng-src="./img/logos/{{i}}.jpg" alt="company logos" class="logoImg"/>
+<!--<hr class="logosHr"/>-->
+<img src="img/hr.PNG" class="partnersHr" alt=""/>
+<div class="logos">
+    <div ng-repeat="logos in vm.data.logos" class="logos">
+        <a target="_blank" ng-href="{{logos.url}}"><img ng-src="./img/logos/{{logos.id}}.jpg" alt="{{logos.name}}" class="logoImg"/></a>
+        <img ng-class="vm.isLast($last)" src="img/vr.PNG" class="vr" alt=""/>
+    </div>
 </div>
+
+<!--<div class="logosRow">-->
+<!--<img ng-repeat="i in [4, 3, 2, 1]" ng-src="./img/logos/{{i}}.jpg" alt="company logos" class="logoImg"/>-->
+<!--</div>-->

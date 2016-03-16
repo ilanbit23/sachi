@@ -1,16 +1,28 @@
 <section>
-    <!--<a href="#" editable-text="user.name" onbeforesave="vm.updateUser($data)">-->
-        <!--{{ user.name || 'הכנס ססמא' }}-->
-    <!--</a>-->
-        <div ng-repeat="video in vm.data.videos track by video.url" class="imgSection">
-            <img ng-if="!video.playNow"
-                   ng-src="./img/faces/{{video.img}}.jpg" alt="faces" class="gal" ng-click="vm.playVideo(video)"/>
-            <div ng-if="!video.playNow" class="playCircle"><i class="fa fa-play-circle-o fa-3x play"></i></div>
+
+    {{}}
+
+    <!--<iframe src="//player.vimeo.com/video/55874553?api=1&player_id=video123&title=0&byline=0&portrait=0&color=c9ff23;autoplay=1" width="720" height="405"  id="video123" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>-->
+        <div ng-repeat="video in vm.data.videos track by video.id" class="imgSection">
+            <!--<a tabindex="{{video.id+13}}" ng-href="#/activity/{{vm.data.videosData[video.id].page}}?videoId={{video.id}}">Go</a>-->
+            <img tabindex="{{video.id+13}}" ng-if="!video.playNow"
+                   ng-src="./img/faces/{{video.id}}.jpg" alt="{{video.name}}" class="gal" ng-click="vm.playVideo(video)"/>
+            <div tabindex="{{video.id+14}}" ng-if="!video.playNow" class="playCircle"><i class="fa fa-play-circle-o fa-3x play"></i></div>
             <span ng-if="!video.playNow" class="imgInfo">
-                <span class="name">{{video.name}}</span>
-                <span class="name role">{{video.role}}</span>
-                <span class="moreInfo"><a href=""><i class="fa fa-arrow-left"></i></a></span><p class="more">עוד</p>
+                <span title="{{video.name}}" tabindex="{{video.id+15}}" class="name">{{video.name}}</span>
+                <span title="{{video.role}}" tabindex="{{video.id+16}}" class="name role">{{video.role}}</span>
+                <span title="מידע נוסף" tabindex="{{video.id+17}}" class="moreInfo">
+                    <a ng-href="#/activity/{{vm.data.videosData[video.id].page}}?videoId={{video.id}}">
+                        <span class="imgLeft">
+                            <i class="fa fa-arrow-left arrowMore"></i>
+                            <p class="more">עוד</p>
+                        </span>
+                    </a>
+                </span>
             </span>
-            <iframe ng-if="video.isPlaying" ng-show="video.playNow" ng-src="{{video.url}}" width="286" height="190" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+            <iframe id="video{{video.id}}" ng-if="video.isPlaying" ng-show="video.playNow" ng-src="{{vm.getVideo(video.id).urlShort}}"
+                    width="286" height="190" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            </iframe>
         </div>
 </section>
