@@ -1,18 +1,17 @@
 <section>
-
-    {{}}
-
     <!--<iframe src="//player.vimeo.com/video/55874553?api=1&player_id=video123&title=0&byline=0&portrait=0&color=c9ff23;autoplay=1" width="720" height="405"  id="video123" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>-->
-        <div ng-repeat="video in vm.data.videos track by video.id" class="imgSection">
-            <!--<a tabindex="{{video.id+13}}" ng-href="#/activity/{{vm.data.videosData[video.id].page}}?videoId={{video.id}}">Go</a>-->
-            <img tabindex="{{video.id+13}}" ng-if="!video.playNow"
-                   ng-src="./img/faces/{{video.id}}.jpg" alt="{{video.name}}" class="gal" ng-click="vm.playVideo(video)"/>
-            <div tabindex="{{video.id+14}}" ng-if="!video.playNow" class="playCircle"><i class="fa fa-play-circle-o fa-3x play"></i></div>
+    <div ng-repeat="video in vm.data.videos track by video.id" class="imgSection">
+        <!--<a tabindex="{{video.id+13}}" ng-href="#/activity/{{vm.data.videosData[video.id].page}}?videoId={{video.id}}">Go</a>-->
+        <img tabindex="{{video.id+13}}" ng-if="!video.playNow"
+             ng-src="./img/faces/{{video.id}}.jpg" alt="{{video.name}}" class="gal" ng-click="vm.playVideo(video)"/>
+
+        <div tabindex="{{video.id+14}}" ng-if="!video.playNow" class="playCircle"><i
+                class="fa fa-play-circle-o fa-3x play"></i></div>
             <span ng-if="!video.playNow" class="imgInfo">
                 <span title="{{video.name}}" tabindex="{{video.id+15}}" class="name">{{video.name}}</span>
                 <span title="{{video.role}}" tabindex="{{video.id+16}}" class="name role">{{video.role}}</span>
                 <span title="מידע נוסף" tabindex="{{video.id+17}}" class="moreInfo">
-                    <a ng-href="#/activity/{{vm.data.videosData[video.id].page}}?videoId={{video.id}}">
+                    <a ng-href="#/activity/{{vm.getVideo(video.id).page}}?videoId={{video.id}}">
                         <span class="imgLeft">
                             <i class="fa fa-arrow-left arrowMore"></i>
                             <p class="more">עוד</p>
@@ -21,8 +20,41 @@
                 </span>
             </span>
 
-            <iframe id="video{{video.id}}" ng-if="video.isPlaying" ng-show="video.playNow" ng-src="{{vm.getVideo(video.id).urlShort}}"
-                    width="286" height="190" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-            </iframe>
-        </div>
+        <iframe id="video{{video.id}}" ng-if="video.isPlaying" ng-show="video.playNow"
+                ng-src="{{vm.getVideo(video.id).urlShort}}"
+                width="286" height="190" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe>
+    </div>
+    <div class="editHomePage" ng-if="user.isAdmin">
+        <table style="width:400px">
+            <tr ng-repeat="video in vm.data.videos track by video.id">
+                <td>{{video.id}}</td>
+                <td>{{video.name}} ({{video.role}})</td>
+                <td>
+                    <button ng-hide="$first" ng-click="vm.moveVideo(video, -1)">Up</button>
+                    <button ng-hide="$last" ng-click="vm.moveVideo(video, 1)">Down</button>
+                    <button ng-click="vm.deleteVideo(video)">x</button>
+                </td>
+            </tr>
+        </table>
+        <button ng-click="vm.showAddVideo = true">Add Video</button>
+        <form ng-show="vm.showAddVideo" ng-submit="vm.saveVideo()">
+            <label class="videoUrl" for="videoUrlShort">כתובת סרטון קצר</label>
+            <input id="videoUrlShort" type="text" ng-model="vm.newVideo.urlShort" required/>
+            <label class="videoUrl" for="videoUrlFull">כתובת סרטון ארוך</label>
+            <input id="videoUrlFull" type="text" ng-model="vm.newVideo.urlFull" required/>
+            <label class="videoUrl" for="personName">שם</label>
+            <input id="personName" type="text" ng-model="vm.newVideo.personName" required/>
+            <label class="videoUrl" for="personRole">תפקיד</label>
+            <input id="personRole" type="text" ng-model="vm.newVideo.personRole" required/>
+            בחר מחלקה
+            <select ng-model="vm.newVideo.page" required>
+                <option value="past" selected="selected" >עבר</option>
+                <option value="present">הווה</option>
+                <option value="future">עתיד</option>
+                <option value="giving">נתינה</option>
+            </select>
+            <input type="submit" ng-click="vm.showAddVideo = false" value="שמור"/>
+        </form>
+    </div>
 </section>

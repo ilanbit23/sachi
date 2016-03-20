@@ -13,19 +13,26 @@ angular.module('myApp.activity', ['ngRoute'])
 
         var ctrl = this;
         var pageName = $routeParams.pageName;
-        ctrl.videoId = $routeParams.videoId;
+        var currVideoId = $routeParams.videoId;
         ctrl.firstVideo = true;
+        ctrl.lastVideo = true;
 
         //ctrl.currVideo = 'https://player.vimeo.com/video/157099080?autoplay=0&title=0&byline=0&portrait=0&watchlater=0';
+
+        function setCurrVideo(videoId) {
+            ctrl.currVideo = DataFactory.getVideo(videoId);
+            if (ctrl.currVideo === ctrl.data.videosData[0]) ctrl.firstVideo = true;
+            else ctrl.firstVideo = false;
+            if (ctrl.currVideo === ctrl.data.videosData[ctrl.data.videosData.length-1]) ctrl.lastVideo = true;
+            else ctrl.lastVideo = false;
+        }
 
         var prmData = DataFactory.getDataForPage(pageName);
         prmData.then(function (data) {
             ctrl.data = data;
-            ctrl.currVideo = data.videosData[0];
-            if (ctrl.videoId) {
-                ctrl.currVideo = DataFactory.getVideo(ctrl.videoId);
-                if (ctrl.currVideo !== ctrl.data.videosData[0]) ctrl.firstVideo = false;
-            }
+            if (!currVideoId) currVideoId = data.videosData[0].id;
+            setCurrVideo(currVideoId);
+
 
             var activeSection = ctrl.data.sections[0];
             activeSection.selected = true;
@@ -35,17 +42,31 @@ angular.module('myApp.activity', ['ngRoute'])
                 section.selected = true;
                 activeSection.selected = false;
                 activeSection = section;
+                var w = window.innerWidth;
+                var h = window.innerHeight;
+                var winUrl = 'http://www.google.com/maps/d/u/1/viewer?authuser=1&mid=z3oXywwnQlYo.kq5dhi0856sM&t=' + Date.now();
+                if (section.type === 'showActivityMap') {
+                    if (w>860) {
+                        window.open(winUrl, "", "top=100, left=100,width=1200, height=500");
+                    }
+                    else {
+                        window.open(winUrl, "", "top=0, left=0,width=" + w + ", height=500");
+                    }
+
+                    //ctrl.showActivityMap = true;
+                }
             },
 
             ctrl.prevVideo = function () {
                 var idx = ctrl.data.videosData.indexOf(ctrl.currVideo);
-                if (idx > 0) ctrl.currVideo = ctrl.data.videosData[--idx];
-                else ctrl.firstVideo = true;
+                var prevVideo = ctrl.data.videosData[--idx];
+                setCurrVideo(prevVideo.id);
             },
 
             ctrl.nextVideo = function () {
                 var idx = ctrl.data.videosData.indexOf(ctrl.currVideo);
-                if (idx < ctrl.data.videosData.length-1) ctrl.currVideo = ctrl.data.videosData[++idx];
+                var nextVideo = ctrl.data.videosData[++idx];
+                setCurrVideo(nextVideo.id);
             }
         });
 
@@ -62,5 +83,6 @@ angular.module('myApp.activity', ['ngRoute'])
             //toaster.pop('warning', "title", "text");
             //toaster.pop('note', "title", "text");
         };
+        //ctrl.showActivityMap = false;
 
     }]);

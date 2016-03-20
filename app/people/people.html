@@ -25,17 +25,18 @@
         <img tabindex="18" ng-src="{{section.img}}" alt="image of sachi manager" class="interviewImg"/>
     </div>
     <article>
-        <p tabindex="19" e-rows="1" e-cols="40" e-form="textBtnForm"  onaftersave="vm.updateModel()" editable-textarea="section.titlePrimary" class="strong light weight">
+        <p tabindex="19" editable-textarea="section.titlePrimary" e-rows="7" e-cols="40" e-form="textBtnForm1"  onaftersave="vm.updateModel()" class="strong light weight">
             {{section.titlePrimary}}
         </p>
-        <button class="btnEdit" ng-if="user.isAdmin == 'admin'" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">ערוך</button>
-        <p tabindex="19" e-rows="1" e-cols="40" e-form="textBtnForm"  onaftersave="vm.updateModel()" editable-textarea="section.titleSecondary" class="strong light mb-20 mt-20">
+        <button ng-if="user.isAdmin" class="btnEdit" ng-click="textBtnForm1.$show()" ng-hide="textBtnForm1.$visible">ערוך</button>
+        <p tabindex="19" e-rows="1" e-cols="40" e-form="textBtnForm2"  onaftersave="vm.updateModel()" editable-textarea="section.titleSecondary" class="strong light mb-20 mt-20">
             {{section.titleSecondary}}
         </p>
-        <button class="btnEdit" ng-if="user.isAdmin == 'admin'" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">ערוך</button>
-        <p tabindex="19" e-rows="7" e-cols="40" e-form="textBtnForm"  onaftersave="vm.updateModel()"  editable-textarea="section.textPrimaryPeople" class="descParagraph regular">
+        <button ng-if="user.isAdmin" class="btnEdit btnEdit2" ng-click="textBtnForm2.$show()" ng-hide="textBtnForm2.$visible">ערוך</button>
+        <p tabindex="19" e-rows="7" e-cols="40" e-form="textBtnForm3"  onaftersave="vm.updateModel()"  editable-textarea="section.textPrimaryPeople" class="descParagraph regular">
             {{section.textPrimaryPeople}}
         </p>
-        <button class="btnEdit" ng-if="user.isAdmin == 'admin'" ng-click="textBtnForm.$show()" ng-hide="textBtnForm.$visible">ערוך</button>
+        <button ng-if="user.isAdmin" class="btnEdit" ng-click="textBtnForm3.$show()" ng-hide="textBtnForm3.$visible">ערוך</button>
+        <!-- ng-if="user.isAdmin == 'admin'"-->
     </article>
 </div>

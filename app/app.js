@@ -20,8 +20,7 @@ angular.module('myApp', [
     }])
     .run(['$location', '$rootScope', function ($location, $rootScope) {
 
-
-        $rootScope.user = {isAdmin: false};
+        $rootScope.user = {isAdmin: true};
         if ($location.search().secret === 'GivingIsLiving') {
             $rootScope.user.isAdmin = true;
             console.log('$rootScope', $rootScope);

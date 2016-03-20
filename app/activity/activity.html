@@ -13,10 +13,9 @@
         <iframe ng-src="{{vm.currVideo.urlFull}}"
                 width="401" height="227" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
         </iframe>
-<!--ng-hide="!vm.firstVideo"-->
         <div class="arrows">
-            <span tabindex="16" title="right arrow for previous video" class="arrowRight"><a ng-click="vm.prevVideo()"><i class="fa fa-arrow-right"></i></a></span>
-            <span tabindex="17" title="left arrow for next video" class="arrowLeft"><a ng-click="vm.nextVideo()"><i class="fa fa-arrow-left"></i></a></span>
+            <span  ng-hide="vm.firstVideo" tabindex="16" title="right arrow for previous video" class="arrowRight"><a ng-click="vm.prevVideo()"><i class="fa fa-arrow-right"></i></a></span>
+            <span  ng-style="{visibility: vm.lastVideo && 'hidden' || 'visible'}" ng-hide1="vm.lastVideo" tabindex="17" title="left arrow for next video" class="arrowLeft"><a ng-click="vm.nextVideo()"><i class="fa fa-arrow-left"></i></a></span>
         </div>
 
         <p tabindex="18" class="interviewName">שם המתראיין / תפקיד המתראיין</p>
@@ -42,6 +41,10 @@
             <!--<iframe ng-src="{{section[3].textSecondary}}" width="400" height="280"></iframe>-->
         </div>
     </article>
+
+
+    <div class="mapPopup" ng-if="vm.showActivityMap"></div>
+
 </section>
 
 

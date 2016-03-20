@@ -23,9 +23,15 @@
 <div class="recommendation">
     <div ng-repeat="recommendations in vm.data.recommendations" class="recommendationRight">
         <img src="img/quoteR.PNG" alt="quote"/>
-        <p class="cg light mw80">{{recommendations.textPrimaryPartners}}</p>
+        <p editable-textarea="recommendations.textPrimaryPartners" e-rows="7" e-cols="40" e-form="textBtnForm1" onaftersave="vm.updateModel()"
+           class="cg light mw80">{{recommendations.textPrimaryPartners}}
+        </p>
+        <button ng-if="user.isAdmin" class="btnEdit" ng-click="textBtnForm1.$show()" ng-hide="textBtnForm1.$visible">ערוך</button>
 
-        <p class="partnerName">שם שותף גוף או חברה</p>
+        <p editable-textarea="recommendations.companyName" e-rows="7" e-cols="40" e-form="textBtnForm2" onaftersave="vm.updateModel()"
+           class="partnerName">{{recommendations.companyName}}
+        </p>
+        <button ng-if="user.isAdmin" class="btnEdit" ng-click="textBtnForm2.$show()" ng-hide="textBtnForm2.$visible">ערוך</button>
         <img class="quote" src="img/quoteL.PNG" alt="quote"/>
     </div>
 </div>

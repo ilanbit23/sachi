@@ -14,7 +14,7 @@ angular.module('myApp.donation', [])
 
             scope.donate = function () {
                 //console.log('scope', scope.donation.amount);
-                alert('Thanks for Donating: ' + scope.donation.amount );
+                //alert('Thanks for Donating: ' + scope.donation.amount );
             }
         }
 

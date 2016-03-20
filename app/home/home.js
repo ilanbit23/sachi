@@ -25,7 +25,8 @@ angular.module('myApp.home', ['ngRoute'])
         prmData.then(function (data) {
             console.log('data', data);
             ctrl.data = data;
-            console.log('data.videosData', data.videosData);
+            ctrl.newVideo = {};
+            //console.log('data.videosData', data.videosData);
 
 
             ctrl.playVideo = function (video) {
@@ -67,7 +68,22 @@ angular.module('myApp.home', ['ngRoute'])
                 }, 500);
             };
 
+            ctrl.saveVideo = function () {
+                console.log('newvideo', ctrl.newVideo);
+                DataFactory.addVideo(ctrl.newVideo);
+            }
+            ctrl.moveVideo = function (video, dir) {
+                var idx = ctrl.data.videos.indexOf(video);
 
+                // temp = x, x=y, y=temp
+                var temp = ctrl.data.videos[idx+dir];
+                ctrl.data.videos[idx+dir] = video;
+                ctrl.data.videos[idx] = temp;
+                DataFactory.updatePage('home', ctrl.data);
+            }
+            ctrl.deleteVideo = function (video) {
+                DataFactory.deleteVideo(video)
+            }
 
 
 

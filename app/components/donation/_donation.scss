@@ -29,7 +29,7 @@
 }
 
 .donation {
-  margin-top: 0;
+  margin-top: 1em;
   margin-right: 28%;
 }
 
@@ -183,14 +183,29 @@
 }
 
 .closeDonation {
-  margin-right: 5px;
-  margin-top: 3px;
+  position: absolute;
+  right: 4%;
+  top: 17em;
+  height: 8em;
   cursor: pointer;
-  width: 10px;
+  width: 60px;
+  outline: none;
+  z-index: 100;
 }
 
 .donateDetails {
   display: none;
+}
+.donationForm {
+
+}
+.donationValidation {
+  width: 48px;
+  margin-right: 2.5em;
+  color: red;
+  font-size: 2em;
+  margin-bottom: -13px;
+  margin-top: -25px;
 }
 
 .payment {
@@ -246,14 +261,17 @@
 @media only screen and (max-width: 640px) {
   .title {
     background-color: $lightBlue;
-    height: 285px;
+    height: 185px;
+    h4 {
+      padding-top: 20px;
+    }
   }
   .dd {
     position: fixed;
     height: 50px;
     margin-top: 22px;
-    width: 115px;
-    margin-left: -24px;
+    width: 116px;
+    margin-left: -30px;
     text-align: center;
     background-color: #00519c;
     color: white;
@@ -291,6 +309,11 @@
       }
     }
   }
+  .donationValidation {
+    margin-right: 1.5em;
+    margin-bottom: -10px;
+    margin-top: -38px;
+  }
   .inputRadioBtn {
     input[type="radio"] {
       display: none;
@@ -307,7 +330,7 @@
     border: none;
     width: 50px !important;
   }
-  .inputBtnBorder {
+  .mobileDonationAmount {
     padding: 5px 15px 5px 15px;
     margin-left: 5px;
     margin-bottom: 5px;
@@ -321,6 +344,11 @@
       color: white;
       cursor: pointer;
     }
+  }
+
+  .selected {
+    background-color: $lightBlue;
+    color: white;
   }
   .donation {
     text-align: center;
@@ -355,10 +383,8 @@
   }
 
   .closeDonation {
-    position: relative;
-    margin-right: 15px;
-    width: 10px;
-    top: 5em;
+    position: absolute;
+    top: 0;
   }
 
   #msg {

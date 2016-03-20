@@ -38,6 +38,9 @@
 
 .recommendation {
   display: flex;
+  .btnEdit {
+    display: inherit;
+  }
 }
 
 .recommendationRight {
