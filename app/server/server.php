@@ -1,6 +1,9 @@
 <?php
 
-$fileName = 'data.json';
+$fileName = 'data-he.json';
+if (isset($_REQUEST['lang'])) {
+   $fileName = 'data-' . $_REQUEST['lang'] . '.json'; 
+}
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

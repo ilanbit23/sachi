@@ -1,175 +1,142 @@
 {
   "videosData": {
     "1": {
-      "id": "1",
-      "page": "giving",
+      "id": 1,
+      "page": "past",
       "urlShort": "https://player.vimeo.com/video/157043566?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043566?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043566?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 1
     },
     "2": {
-      "id": "2",
+      "id": 2,
       "page": "past",
       "urlShort": "https://player.vimeo.com/video/157043567?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043567?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043567?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 2
     },
     "3": {
-      "id": "3",
-      "page": "present",
-      "urlShort": "https://player.vimeo.com/video/157043568?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043568?autoplay=1"
+      "id": 3,
+      "page": "past",
+      "urlShort": "https://player.vimeo.com/video/157043598?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/157043598?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 3
     },
     "4": {
-      "id": "4",
-      "page": "giving",
+      "id": 4,
+      "page": "present",
       "urlShort": "https://player.vimeo.com/video/157043569?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043569?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043569?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 4
     },
     "5": {
-      "id": "5",
+      "id": 5,
       "page": "present",
       "urlShort": "https://player.vimeo.com/video/157043570?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043571?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043570?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 5
     },
     "6": {
-      "id": "6",
-      "page": "future",
+      "id": 6,
+      "page": "present",
       "urlShort": "https://player.vimeo.com/video/157043572?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043573?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043572?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 6
     },
     "7": {
-      "id": "7",
-      "page": "present",
+      "id": 7,
+      "page": "future",
       "urlShort": "https://player.vimeo.com/video/157043574?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043574?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043574?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 7
     },
     "8": {
-      "id": "8",
+      "id": 8,
       "page": "future",
       "urlShort": "https://player.vimeo.com/video/157043575?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043575?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043575?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 8
     },
     "9": {
-      "id": "9",
-      "page": "giving",
+      "id": 9,
+      "page": "future",
       "urlShort": "https://player.vimeo.com/video/157043576?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043576?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043576?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 9
     },
     "10": {
-      "id": "10",
-      "page": "past",
+      "id": 10,
+      "page": "giving",
       "urlShort": "https://player.vimeo.com/video/157043577?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043577?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043577?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 10
     },
     "11": {
-      "id": "11",
-      "page": "future",
+      "id": 11,
+      "page": "giving",
       "urlShort": "https://player.vimeo.com/video/157043578?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043578?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043578?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 11
     },
     "12": {
-      "id": "12",
-      "page": "past",
+      "id": 12,
+      "page": "giving",
       "urlShort": "https://player.vimeo.com/video/157043579?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043579?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043579?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 12
     },
     "13": {
-      "id": "13",
-      "page": "future",
+      "id": 13,
+      "page": "giving",
       "urlShort": "https://player.vimeo.com/video/157043580?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043580?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043580?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 13
     },
     "14": {
-      "id": "14",
+      "id": 14,
       "page": "giving",
       "urlShort": "https://player.vimeo.com/video/157043581?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043581?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043581?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 14
     },
     "15": {
-      "id": "15",
-      "page": "future",
+      "id": 15,
+      "page": "giving",
       "urlShort": "https://player.vimeo.com/video/157043582?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043582?autoplay=1"
+      "urlFull": "https://player.vimeo.com/video/157043582?autoplay=1",
+      "name": "אבי שלום",
+      "role": "לידר",
+      "order": 15
     }
   },
-  "home": {
-    "videos": [
-      {
-        "id": "1",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "2",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "3",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "4",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "5",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "6",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "7",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "8",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "9",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "10",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "11",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "12",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "13",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "14",
-        "name": "אבי שלום",
-        "role": "לידר"
-      },
-      {
-        "id": "15",
-        "name": "אבי שלום",
-        "role": "לידר"
-      }
-    ]
-  },
+  "home": {},
   "past": {
     "pageTitle": "עבר",
     "sections": [
@@ -318,41 +285,40 @@
     "recommendations": [
       {
         "textPrimaryPartners": "סח\"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת שותפות עם נוער בסיכון, הלומד לקחת אחריות על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר שינוי חיובי הן אצל הנער והן בקהילה מסביבו.",
-        "companyName": "שם שותף גוף או חברה"
-
+        "companyName": "שם גוף או חברה"
       },
       {
         "textPrimaryPartners": " \"לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לפרומי בלוף קינץ תתיח לרעח. לת צשחמי צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. ",
-        "companyName": "שם שותף גוף או חברה"
+        "companyName": "שם גוף או חברה"
       },
       {
         "textPrimaryPartners": "סח\"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת שותפות עם נוער בסיכון, הלומד לקחת אחריות על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר שינוי חיובי הן אצל הנער והן בקהילה מסביבו.",
-        "companyName": "שם שותף גוף או חברה"
+        "companyName": "שם גוף או חברה"
       }
     ],
     "logos": [
       {
-        "id": "1",
+        "id": 1,
         "name": "steinmetz-foundation",
         "url": "http://www.steinmetz-foundation.co.il"
       },
       {
-        "id": "2",
+        "id": 2,
         "name": "keren hayesod",
         "url": "http://www.kh-uia.org.il/En/Pages/default.aspx"
       },
       {
-        "id": "3",
+        "id": 3,
         "name": "good people fund",
         "url": "http://www.goodpeoplefund.org/"
       },
       {
-        "id": "4",
+        "id": 4,
         "name": "tmura",
         "url": "http://www.tmura.org/"
       },
       {
-        "id": "5",
+        "id": 5,
         "name": "keren azrieli",
         "url": "http://www.azrielifoundation.org.il/"
       }

@@ -8,7 +8,6 @@ angular.module('myApp.donation', [])
         link: function (scope, el, attr) {
 
             scope.donation = {
-
                 amount: 0
             };
 

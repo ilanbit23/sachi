@@ -9,7 +9,7 @@ angular.module('myApp.people', ['ngRoute'])
         });
     }])
 
-    .controller('peopleCtrl', ['DataFactory', function (DataFactory) {
+    .controller('peopleCtrl', ['DataFactory', function (DataFactory, toaster) {
         var ctrl = this;
         var pageName = 'people';
 
@@ -20,6 +20,12 @@ angular.module('myApp.people', ['ngRoute'])
                 console.log('Model updated: ', ctrl.data);
                 DataFactory.updatePage(pageName, ctrl.data);
             }
+            ctrl.pop = function(){
+                toaster.pop('success', "הצלחה", "הטקסט עודכן בהצלחה");
+                //toaster.pop('error', "title", "text");
+                //toaster.pop('warning', "title", "text");
+                //toaster.pop('note', "title", "text");
+            };
         });
         
     }]);

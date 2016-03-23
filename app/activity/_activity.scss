@@ -172,7 +172,7 @@ article {
       text-align: center;
       border-top: none;
       .interviewName {
-        margin-bottom: -7em;
+        margin-bottom: -9em;
         margin-top: 9em;
       }
       h3 {
@@ -194,9 +194,10 @@ article {
           margin-bottom: 15px;
           margin-top: -15px;
           &:hover {
-            border-bottom: 4px solid $lighterGray;
+            border-bottom: 3px solid $lighterGray;
             border-bottom-left-radius: 2px;
             border-bottom-right-radius: 2px;
+            margin-bottom: -3px;
           }
         }
         ul {
@@ -212,7 +213,6 @@ article {
         display: none;
       }
       li {
-        border-bottom: none;
         padding: 15px;
         margin: 0;
         margin-bottom: -5px;
@@ -240,24 +240,29 @@ article {
   }
   .activity iframe {
     margin-bottom: -13.7em;
+    margin-top: 0;
   }
   .social {
     display: none;
   }
 
-  article > h1 {
-    display: none;
-  }
+  article {
+    h1 {
+      display: none;
+    }
 
-  .desc {
-    margin-top: 6em;
-    padding-top: 10px !important;
-    padding-left: 25px !important;
-    max-width: 85% !important;
+    .desc {
+      height: auto;
+      margin-top: 6em;
+      padding-top: 10px !important;
+      padding-left: 25px !important;
+      max-width: 85% !important;
+    }
+
   }
 
   .arrows {
-    bottom: 0;
+    bottom: -55px;
   }
 
   .activity {
@@ -287,6 +292,12 @@ article {
   }
   .mapPopup {
     width: 100px;
+  }
+  .selected {
+    border-bottom: 3px solid #eeeeee;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+
   }
 
 }

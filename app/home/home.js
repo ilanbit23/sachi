@@ -18,74 +18,85 @@ angular.module('myApp.home', ['ngRoute'])
 
         ctrl.getVideo = function (videoId) {
             return DataFactory.getVideo(videoId);
-        }
+        };
 
 
         var prmData = DataFactory.getDataForPage('home');
-        prmData.then(function (data) {
-            console.log('data', data);
-            ctrl.data = data;
-            ctrl.newVideo = {};
-            //console.log('data.videosData', data.videosData);
+        prmData.then(handleData);
+
+        function handleData(data) {
+                console.log('handleData', data);
+                ctrl.data = data;
+                ctrl.newVideo = {};
+                //console.log('data.videosData', data.videosData);
+        }
 
 
-            ctrl.playVideo = function (video) {
+        ctrl.playVideo = function (video) {
 
-                if (currPlayedVideo) {
-                    currPlayedVideo.playNow = false;
-                    currPlayedVideo.isPlaying = false;
-                }
-                currPlayedVideo = video;
+            console.log('PLAY VIDEO!!!');
+            if (currPlayedVideo) {
+                currPlayedVideo.playNow = false;
+                currPlayedVideo.isPlaying = false;
+            }
+            currPlayedVideo = video;
 
 
 
-                video.isPlaying = true;
-                $timeout(function () {
-                    video.playNow = true;
-                    var iframe = $('#video'+video.id)[0],
-                        player = $f(iframe);
+            video.isPlaying = true;
+            $timeout(function () {
+                video.playNow = true;
+                var iframe = $('#video'+video.id)[0];
+                console.log('iframe', iframe);
 
-                    player.addEvent('ready', function() {
-                        console.log('READYYY');
-                        player.addEvent('finish', onFinish);
+                var player = $f(iframe);
+
+                player.addEvent('ready', function() {
+                    console.log('READYYY');
+                    player.addEvent('finish', onFinish);
+                });
+
+                function onFinish(id) {
+                    $scope.$apply(function () {
+                        currPlayedVideo.playNow = false;
+                        currPlayedVideo.isPlaying = false;
                     });
 
-                    function onFinish(id) {
-                        $scope.$apply(function () {
-                            currPlayedVideo.playNow = false;
-                            currPlayedVideo.isPlaying = false;
-                        });
 
-
-                        console.log('video has ended');
-                        //$('#vimeoembed').addClass('finished');
-                    }
+                    console.log('video has ended');
+                    //$('#vimeoembed').addClass('finished');
+                }
 
 
 
 
 
-                }, 500);
-            };
+            }, 500);
+        };
 
-            ctrl.saveVideo = function () {
-                console.log('newvideo', ctrl.newVideo);
-                DataFactory.addVideo(ctrl.newVideo);
-            }
-            ctrl.moveVideo = function (video, dir) {
-                var idx = ctrl.data.videos.indexOf(video);
+        ctrl.saveVideo = function () {
+            console.log('newvideo', ctrl.newVideo);
+            DataFactory.addVideo(ctrl.newVideo).then(handleData);
+        }
+        ctrl.moveVideo = function (video, dir) {
+            var idx = getVideoIndex(video);
 
-                // temp = x, x=y, y=temp
-                var temp = ctrl.data.videos[idx+dir];
-                ctrl.data.videos[idx+dir] = video;
-                ctrl.data.videos[idx] = temp;
-                DataFactory.updatePage('home', ctrl.data);
-            }
-            ctrl.deleteVideo = function (video) {
-                DataFactory.deleteVideo(video)
-            }
+            // temp = x, x=y, y=temp
+            var temp = ctrl.data.videos[idx+dir];
+            ctrl.data.videos[idx+dir] = video;
+            ctrl.data.videos[idx] = temp;
+            DataFactory.updatePage('home', ctrl.data).then(handleData);
+        }
+        ctrl.deleteVideo = function (video) {
+            DataFactory.deleteVideo(video).then(handleData);
+        }
 
+        function getVideoIndex(video) {
+            var idx;
+            ctrl.data.videos.forEach(function (v, i) {
+                if ( v.id == video.id )  idx = i;
+            });
+            return idx;
+        }
 
-
-        });
     }]);

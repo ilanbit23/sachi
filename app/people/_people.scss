@@ -57,14 +57,15 @@
       }
       .activity-sections {
         li {
-          width: 50%;
-          margin-top: 10px;
+          width: 110px;
+          //margin-top: 0 !important;
+          margin: auto !important;
           &:before {
             content: "" !important;
           }
         }
         p {
-          margin-top: -5px;
+          margin-top: 0 !important;
         }
       }
     }

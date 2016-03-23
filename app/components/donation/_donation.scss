@@ -188,7 +188,7 @@
   top: 17em;
   height: 8em;
   cursor: pointer;
-  width: 60px;
+  width: 70px;
   outline: none;
   z-index: 100;
 }
@@ -385,6 +385,7 @@
   .closeDonation {
     position: absolute;
     top: 0;
+    right: 85%;
   }
 
   #msg {

@@ -1,8 +1,11 @@
 <section>
+  <!--<pre>-->
+      <!--{{vm.data.videos | json}}-->
+  <!--</pre>-->
+
     <!--<iframe src="//player.vimeo.com/video/55874553?api=1&player_id=video123&title=0&byline=0&portrait=0&color=c9ff23;autoplay=1" width="720" height="405"  id="video123" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>-->
     <div ng-repeat="video in vm.data.videos track by video.id" class="imgSection">
-        <!--<a tabindex="{{video.id+13}}" ng-href="#/activity/{{vm.data.videosData[video.id].page}}?videoId={{video.id}}">Go</a>-->
-        <img tabindex="{{video.id+13}}" ng-if="!video.playNow"
+        <img tabindex="{{video.id+13}}" ng-if="!video.playNow" ng-class="{mt7:$first}"
              ng-src="./img/faces/{{video.id}}.jpg" alt="{{video.name}}" class="gal" ng-click="vm.playVideo(video)"/>
 
         <div tabindex="{{video.id+14}}" ng-if="!video.playNow" class="playCircle"><i
@@ -14,16 +17,18 @@
                     <a ng-href="#/activity/{{vm.getVideo(video.id).page}}?videoId={{video.id}}">
                         <span class="imgLeft">
                             <i class="fa fa-arrow-left arrowMore"></i>
-                            <p class="more">עוד</p>
+                            <p class="more">{{'More' | translate}}</p>
                         </span>
                     </a>
                 </span>
             </span>
 
+
         <iframe id="video{{video.id}}" ng-if="video.isPlaying" ng-show="video.playNow"
                 ng-src="{{vm.getVideo(video.id).urlShort}}"
                 width="286" height="190" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
         </iframe>
+
     </div>
     <div class="editHomePage" ng-if="user.isAdmin">
         <table style="width:400px">
@@ -31,13 +36,13 @@
                 <td>{{video.id}}</td>
                 <td>{{video.name}} ({{video.role}})</td>
                 <td>
-                    <button ng-hide="$first" ng-click="vm.moveVideo(video, -1)">Up</button>
-                    <button ng-hide="$last" ng-click="vm.moveVideo(video, 1)">Down</button>
+                    <button ng-hide="$first" ng-click="vm.moveVideo(video, -1)">למעלה</button>
+                    <button ng-hide="$last" ng-click="vm.moveVideo(video, 1)">למטה</button>
                     <button ng-click="vm.deleteVideo(video)">x</button>
                 </td>
             </tr>
         </table>
-        <button ng-click="vm.showAddVideo = true">Add Video</button>
+        <button ng-click="vm.showAddVideo = true">הוסף וידאו</button>
         <form ng-show="vm.showAddVideo" ng-submit="vm.saveVideo()">
             <label class="videoUrl" for="videoUrlShort">כתובת סרטון קצר</label>
             <input id="videoUrlShort" type="text" ng-model="vm.newVideo.urlShort" required/>
@@ -55,6 +60,7 @@
                 <option value="giving">נתינה</option>
             </select>
             <input type="submit" ng-click="vm.showAddVideo = false" value="שמור"/>
+            <input type="button" ng-click="vm.showAddVideo = false" value="ביטול"/>
         </form>
     </div>
 </section>

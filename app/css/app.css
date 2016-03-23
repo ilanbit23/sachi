@@ -1,4 +1,7 @@
 @charset "UTF-8";
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
 @font-face {
   font-family: 'NextExitRound-Bold';
   src: url("fonts/NextExitRound-Bold_WEB/NextExitRound-Bold.eot");
@@ -128,6 +131,7 @@ li {
 .trans {
   vertical-align: top;
   font-size: 1.1em;
+  cursor: pointer;
   margin-right: 15px; }
 
 .fb {
@@ -202,7 +206,6 @@ li {
     max-width: 80px;
     flex-direction: column;
     padding: 0;
-    margin-top: 4px;
     padding-left: 10px; }
 
   header > nav ul li {
@@ -217,7 +220,8 @@ li {
     text-align: center;
     float: none;
     margin: auto;
-    padding-left: 10%; }
+    padding-left: 10%;
+    margin-bottom: -17px; }
 
   #menu-icon {
     float: right;
@@ -675,7 +679,7 @@ button.toast-close-button {
   top: 17em;
   height: 8em;
   cursor: pointer;
-  width: 60px;
+  width: 70px;
   outline: none;
   z-index: 100; }
 
@@ -834,7 +838,8 @@ button.toast-close-button {
 
   .closeDonation {
     position: absolute;
-    top: 0; }
+    top: 0;
+    right: 85%; }
 
   #msg {
     background-color: transparent;
@@ -1014,16 +1019,20 @@ iframe {
 
   .gal {
     width: 100%;
-    height: 400px;
-    margin-bottom: -50px;
+    height: 240px;
+    margin-bottom: -55px; }
+
+  .mt7 {
     margin-top: 7em; }
 
   iframe {
     width: 100% !important;
-    height: 400px !important; }
+    height: 290px !important;
+    margin-top: 6em; }
 
   .playCircle {
-    margin-top: -11em;
+    margin-top: -5em !important;
+    margin-bottom: -1em !important;
     font-size: 1.4em; }
 
   .name {
@@ -1170,7 +1179,7 @@ article {
     text-align: center;
     border-top: none; }
     .activity aside .interviewName, .people aside .interviewName, .partners aside .interviewName, .transparency aside .interviewName, .contact aside .interviewName {
-      margin-bottom: -7em;
+      margin-bottom: -9em;
       margin-top: 9em; }
     .activity aside h3, .people aside h3, .partners aside h3, .transparency aside h3, .contact aside h3 {
       padding-left: 88%;
@@ -1190,9 +1199,10 @@ article {
         margin-bottom: 15px;
         margin-top: -15px; }
         .activity aside nav p:hover, .people aside nav p:hover, .partners aside nav p:hover, .transparency aside nav p:hover, .contact aside nav p:hover {
-          border-bottom: 4px solid #eeeeee;
+          border-bottom: 3px solid #eeeeee;
           border-bottom-left-radius: 2px;
-          border-bottom-right-radius: 2px; }
+          border-bottom-right-radius: 2px;
+          margin-bottom: -3px; }
       .activity aside nav ul, .people aside nav ul, .partners aside nav ul, .transparency aside nav ul, .contact aside nav ul {
         display: flex; }
   .activity .activity-sections, .people .activity-sections, .partners .activity-sections, .transparency .activity-sections, .contact .activity-sections {
@@ -1202,7 +1212,6 @@ article {
     .activity .activity-sections .myHr, .people .activity-sections .myHr, .partners .activity-sections .myHr, .transparency .activity-sections .myHr, .contact .activity-sections .myHr {
       display: none; }
     .activity .activity-sections li, .people .activity-sections li, .partners .activity-sections li, .transparency .activity-sections li, .contact .activity-sections li {
-      border-bottom: none;
       padding: 15px;
       margin: 0;
       margin-bottom: -5px; }
@@ -1222,22 +1231,23 @@ article {
     margin-bottom: -5px; }
 
   .activity iframe {
-    margin-bottom: -13.7em; }
+    margin-bottom: -13.7em;
+    margin-top: 0; }
 
   .social {
     display: none; }
 
-  article > h1 {
+  article h1 {
     display: none; }
-
-  .desc {
+  article .desc {
+    height: auto;
     margin-top: 6em;
     padding-top: 10px !important;
     padding-left: 25px !important;
     max-width: 85% !important; }
 
   .arrows {
-    bottom: 0; }
+    bottom: -55px; }
 
   .activity {
     flex-direction: column; }
@@ -1259,7 +1269,12 @@ article {
       text-align: center; }
 
   .mapPopup {
-    width: 100px; } }
+    width: 100px; }
+
+  .selected {
+    border-bottom: 3px solid #eeeeee;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; } }
 .people {
   display: flex;
   width: 100%; }
@@ -1301,12 +1316,12 @@ article {
       margin-bottom: 15px !important;
       margin-top: -10px !important; }
     .people aside .activity-sections li, .partners aside .activity-sections li {
-      width: 50%;
-      margin-top: 10px; }
+      width: 110px;
+      margin: auto !important; }
       .people aside .activity-sections li:before, .partners aside .activity-sections li:before {
         content: "" !important; }
     .people aside .activity-sections p, .partners aside .activity-sections p {
-      margin-top: -5px; }
+      margin-top: 0 !important; }
   .people .mt-15, .partners .mt-15 {
     margin-top: 15px; }
 
@@ -1355,7 +1370,8 @@ article {
     padding-left: 10px; }
   .contactForm .formLeft {
     flex: 1;
-    float: left; }
+    float: left;
+    padding-left: 1em; }
   .contactForm .formTextArea {
     padding-right: 5px;
     resize: none;
@@ -1382,7 +1398,8 @@ article {
 .formSend {
   font-family: 'NextExitRound-Light', sans-serif !important;
   float: left;
-  margin-top: -31px;
+  margin-top: 15px;
+  margin-bottom: -20px;
   border: none;
   background-color: #00519c;
   color: white;
@@ -1475,19 +1492,22 @@ article {
 .cg {
   color: #77787a; }
 
-.mw80 {
-  max-width: 80%; }
+.mw85 {
+  max-width: 85%; }
 
 .partners nav {
   padding-bottom: 0; }
 
 .recommendation {
-  display: flex; }
+  width: 35%;
+  float: left;
+  margin-left: -1.7em; }
   .recommendation .btnEdit {
     display: inherit; }
 
 .recommendationRight {
-  flex: 1; }
+  flex: 1;
+  padding-right: 1em; }
 
 .recommendationMid {
   flex: 1;
@@ -1503,7 +1523,7 @@ article {
 
 .quote {
   float: left;
-  margin-left: 15px; }
+  margin-left: 25px; }
 
 .partnerName {
   color: #00519c;
@@ -1512,13 +1532,13 @@ article {
 .logos {
   display: flex;
   float: right;
-  margin-top: 1em;
-  margin-bottom: -20px; }
+  margin-top: 8em;
+  margin-bottom: -7.7em; }
 
 .partnersHr {
   height: 1px;
   width: 100%;
-  margin-bottom: -25px; }
+  margin-bottom: -14em; }
 
 .vr {
   margin-bottom: 15px; }
@@ -1534,20 +1554,27 @@ article {
   .logoImg:hover {
     cursor: pointer; }
 
+.rn-carousel-control {
+  display: none; }
+
 .brn {
   border-right: none; }
 
 @media only screen and (max-width: 640px) {
   .recommendation {
-    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
     margin-top: 9.5em; }
 
   .recommendationRight {
-    font-size: 1em;
-    margin-bottom: 2em;
+    font-size: 1.3em;
+    margin-bottom: 6em;
+    margin-top: -80px;
     background-color: #eeeeee;
     padding-right: 40px;
-    padding-top: 1em; }
+    padding-top: 1em;
+    padding-bottom: 3em;
+    padding-left: 20px; }
 
   .cg {
     color: #231f20; }
@@ -1555,10 +1582,12 @@ article {
   .light {
     font-family: "nextExitRound-Regular", sans-serif; }
 
+  .rn-carousel-control {
+    display: block; }
+
   .partners aside {
     margin-top: 0 !important; }
     .partners aside .activity-sections li {
-      width: 50%;
       margin-top: 10px; }
     .partners aside h3 {
       margin-top: 115px;
@@ -1739,7 +1768,6 @@ input[type="text"] {
     margin-top: -10px; }
 
   .editable-buttons {
-    float: right;
     margin-bottom: 15px;
     margin-top: 3px; } }
 @media only screen and (max-width: 640px) {

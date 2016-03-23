@@ -1,4 +1,6 @@
-
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
 @import "vars";
 @import "nav";
 @import "general";
@@ -21,6 +23,8 @@ body {
   overflow-x: hidden;
   color: $darkGray;
 }
+
+
 
 .accColor {
   position: absolute;
@@ -82,7 +86,6 @@ input[type="text"] {
     margin-top: -10px;
   }
   .editable-buttons {
-    float: right;
     margin-bottom: 15px;
     margin-top: 3px;
   }

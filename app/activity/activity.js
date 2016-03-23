@@ -21,16 +21,17 @@ angular.module('myApp.activity', ['ngRoute'])
 
         function setCurrVideo(videoId) {
             ctrl.currVideo = DataFactory.getVideo(videoId);
-            if (ctrl.currVideo === ctrl.data.videosData[0]) ctrl.firstVideo = true;
+            if (videoId == ctrl.data.videos[0].id) ctrl.firstVideo = true;
             else ctrl.firstVideo = false;
-            if (ctrl.currVideo === ctrl.data.videosData[ctrl.data.videosData.length-1]) ctrl.lastVideo = true;
+            if (videoId == ctrl.data.videos[ctrl.data.videos.length-1].id) ctrl.lastVideo = true;
             else ctrl.lastVideo = false;
+            console.log('ctrl.firstVideo', ctrl.firstVideo, 'ctrl.lastVideo', ctrl.lastVideo);
         }
 
         var prmData = DataFactory.getDataForPage(pageName);
         prmData.then(function (data) {
             ctrl.data = data;
-            if (!currVideoId) currVideoId = data.videosData[0].id;
+            if (!currVideoId) currVideoId = data.videos[0].id;
             setCurrVideo(currVideoId);
 
 
@@ -58,21 +59,24 @@ angular.module('myApp.activity', ['ngRoute'])
             },
 
             ctrl.prevVideo = function () {
-                var idx = ctrl.data.videosData.indexOf(ctrl.currVideo);
-                var prevVideo = ctrl.data.videosData[--idx];
+                var idx = getVideoIndex(ctrl.currVideo);
+                //console.log('ctrl.currVideo' ,ctrl.currVideo);
+                console.log('PREV idx' ,idx);
+                var prevVideo = ctrl.data.videos[--idx];
                 setCurrVideo(prevVideo.id);
-            },
+            };
 
             ctrl.nextVideo = function () {
-                var idx = ctrl.data.videosData.indexOf(ctrl.currVideo);
-                var nextVideo = ctrl.data.videosData[++idx];
+                var idx = getVideoIndex(ctrl.currVideo);
+                console.log('NEXT idx' ,idx);
+                var nextVideo = ctrl.data.videos[++idx];
                 setCurrVideo(nextVideo.id);
             }
         });
 
         ctrl.updateModel = function () {
             console.log('Model updated: ', ctrl.data);
-            DataFactory.updatePage(pageName, ctrl.data).then(function () {
+            DataFactory.updatePage(pageName, ctrl.data).then(function (res) {
                 console.log(pageName + ' Updated Succesfully');
             });
         };
@@ -84,5 +88,14 @@ angular.module('myApp.activity', ['ngRoute'])
             //toaster.pop('note', "title", "text");
         };
         //ctrl.showActivityMap = false;
+
+        function getVideoIndex(video) {
+            var idx;
+            ctrl.data.videos.forEach(function (v, i) {
+                if ( v.id == video.id )  idx = i;
+            });
+            return idx;
+        }
+
 
     }]);

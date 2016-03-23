@@ -23,13 +23,17 @@
 
   }
 }
+ul[rn-carousel] {
+  //-ms-touch-action: none;
+  //touch-action: none;
+}
 
 .cg {
   color: #77787a;
 }
 
-.mw80 {
-  max-width: 80%;
+.mw85 {
+  max-width: 85%;
 }
 
 .partners nav {
@@ -37,7 +41,9 @@
 }
 
 .recommendation {
-  display: flex;
+  width: 35%;
+  float: left;
+  margin-left: -1.7em;
   .btnEdit {
     display: inherit;
   }
@@ -45,6 +51,7 @@
 
 .recommendationRight {
   flex: 1;
+  padding-right: 1em;
 }
 
 .recommendationMid {
@@ -64,7 +71,7 @@
 
 .quote {
   float: left;
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
 .partnerName {
@@ -75,60 +82,55 @@
 .logos {
   display: flex;
   float: right;
-  margin-top: 1em;
-  margin-bottom: -20px;
+  margin-top: 8em;
+  margin-bottom: -7.7em;
 }
 
 .partnersHr {
   height: 1px;
   width: 100%;
-  margin-bottom: -25px;
+  margin-bottom: -14em;
 }
 .vr {
   margin-bottom: 15px;
 }
+
 .last {
   display: none !important;
-}
-.logosVr:last-of-type  {
-  //display: none;
 }
 
 .logoImg {
   margin-top: -10px;
   height: 95px;
   width: 95%;
-  //border-right: 1px dotted #b4b4b4;
   padding-right: 3px;
   &:hover {
     cursor: pointer;
   }
 
 }
-
+.rn-carousel-control {
+  display: none;
+}
 .brn {
   border-right: none;
 }
-//.logosHr {
-//  border: none;
-//  border-top: 1px dotted #b4b4b4;
-//  background-color: #fff;
-//  height: 1px;
-//  width: 100%;
-//  margin-bottom: -1em;
-//}
 
 @media only screen and (max-width: 640px) {
   .recommendation {
-    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
     margin-top: 9.5em;
   }
   .recommendationRight {
-    font-size: 1em;
-    margin-bottom: 2em;
+    font-size: 1.3em;
+    margin-bottom: 6em;
+    margin-top: -80px;
     background-color: $lighterGray;
     padding-right: 40px;
     padding-top: 1em;
+    padding-bottom: 3em;
+    padding-left: 20px;
   }
   .cg {
     color: #231f20;
@@ -136,12 +138,15 @@
   .light {
     font-family: "nextExitRound-Regular", sans-serif;
   }
+  .rn-carousel-control {
+    display: block;
+  }
   .partners {
     aside {
       margin-top: 0 !important;
       .activity-sections {
         li {
-          width: 50%;
+          //width: 50%;
           margin-top: 10px;
         }
       }

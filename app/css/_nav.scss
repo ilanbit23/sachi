@@ -121,6 +121,7 @@ li {
 .trans {
   vertical-align: top;
   font-size: 1.1em;
+  cursor: pointer;
   margin-right: 15px;
 }
 
@@ -212,7 +213,6 @@ li {
     max-width: 80px;
     flex-direction: column;
     padding: 0;
-    margin-top: 4px;
     padding-left: 10px;
   }
   header > nav ul li {
@@ -228,6 +228,7 @@ li {
     float: none;
     margin: auto;
     padding-left: 10%;
+    margin-bottom: -17px;
   }
 
   #menu-icon {
