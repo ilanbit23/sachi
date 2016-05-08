@@ -23,7 +23,7 @@
     flex: 1.4;
     margin-bottom: 30px;
     img {
-      width: 106%;
+      width: 104%;
     }
   }
 
@@ -54,6 +54,10 @@
       p {
         margin-bottom: 15px !important;
         margin-top: -10px !important;
+      }
+      h3 {
+        padding-right: 0;
+        padding-left: 0;
       }
       .activity-sections {
         li {

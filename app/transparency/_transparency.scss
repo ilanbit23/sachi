@@ -87,6 +87,10 @@
     flex-direction: column;
     aside {
       margin-bottom: 0 !important;
+      h3 {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
 
     article {

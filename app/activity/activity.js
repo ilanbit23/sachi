@@ -25,7 +25,7 @@ angular.module('myApp.activity', ['ngRoute'])
             else ctrl.firstVideo = false;
             if (videoId == ctrl.data.videos[ctrl.data.videos.length-1].id) ctrl.lastVideo = true;
             else ctrl.lastVideo = false;
-            console.log('ctrl.firstVideo', ctrl.firstVideo, 'ctrl.lastVideo', ctrl.lastVideo);
+            //console.log('ctrl.firstVideo', ctrl.firstVideo, 'ctrl.lastVideo', ctrl.lastVideo);
         }
 
         var prmData = DataFactory.getDataForPage(pageName);
@@ -36,12 +36,17 @@ angular.module('myApp.activity', ['ngRoute'])
 
 
             var activeSection = ctrl.data.sections[0];
-            activeSection.selected = true;
+            //activeSection.selected = true;
+
+            ctrl.isSelected = function (section) {
+                return section === activeSection;
+            }
 
             ctrl.sectionClicked = function (section) {
                 if (section === activeSection) return;
-                section.selected = true;
-                activeSection.selected = false;
+
+                //section.selected = true;
+                //activeSection.selected = false;
                 activeSection = section;
                 var w = window.innerWidth;
                 var h = window.innerHeight;

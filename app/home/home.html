@@ -25,10 +25,9 @@
 
 
         <iframe id="video{{video.id}}" ng-if="video.isPlaying" ng-show="video.playNow"
-                ng-src="{{vm.getVideo(video.id).urlShort}}"
-                width="286" height="190" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                ng-src="{{vm.getVideo(video.id).urlShort}}" width="286" height="190" frameborder="0"
+                title="0" byline="0" portrait="0"  webkitallowfullscreen mozallowfullscreen allowfullscreen>
         </iframe>
-
     </div>
     <div class="editHomePage" ng-if="user.isAdmin">
         <table style="width:400px">

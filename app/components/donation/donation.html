@@ -21,7 +21,7 @@
                 </h5>
                 <h5 class="light bankDetailsMargin">
                     ניתן לשלוח אלינו לכתובת: <br/>
-                    משהו משהו משהו משהו ירושלים.
+                    דיזנגוף 50, דירה 2410, ת"א
                     <br/>
                 </h5>
             </div>
@@ -85,37 +85,18 @@
 
             <p class="donateDetails regular">פרטי המשלם:</p>
 
-            <div class="donationFormRight">
-                <label for="donateName" class="name">שם/חברה</label>
-                <span class="donationValidation" ng-show="donationForm.donateName.$touched && donationForm.donateName.$invalid">*</span>
-                <input id="donateName" name="donateName" ng-model="donateName" type="text" class="formInput" required/>
-
-                <label for="donatePhone" class="phone">טלפון</label>
-                <span class="donationValidation" ng-show="donationForm.donatePhone.$touched && donationForm.donatePhone.$invalid">*</span>
-                <input id="donatePhone" name="donatePhone" ng-model="donatePhone" type="text" class="formInput" required/>
-            </div>
-            <br/>
-            <div class="donationFormLeft">
-                <label for="donateId" class="id">ת.ז./ח.פ</label>
-                <span class="donationValidation" ng-show="donationForm.donateId.$touched && donationForm.donateId.$invalid">*</span>
-                <input id="donateId" name="donateId" ng-model="donateId" type="text" class="formInput" required/>
-
-                <label for="donateMail" class="mail">מייל</label>
-                <span class="donationValidation" ng-show="donationForm.donateMail.$touched && donationForm.donateMail.$invalid">*</span>
-                <input id="donateMail" name="donateMail" ng-model="donateMail" type="text" class="formInput" required/>
-            </div>
             <div class="donationFooter">
                 <p class="donateOptions"> תשלום באמצעות: </p>
                 <span class="payment">
                     <span class="visa">
                         <img class="visaIcon" src="img/logos/visa.png" alt=""/>
-                        <label for="visa">כרטיס אשראי</label>
-                        <input name="paymentOption" id="visa" type="radio"/>
+                        <label for="jgive">J-GIVE</label>
+                        <input ng-model="donation.visa" name="paymentOption" id="jgive" type="radio"/>
                     </span>
                     <span class="paypal">
                         <img class="paypalIcon" src="img/logos/paypal.png" alt=""/>
-                        <label for="paypal">paypal</label>
-                        <input name="paymentOption" id="paypal" type="radio">
+                        <label for="paypal">PAYPAL</label>
+                        <input ng-model="donation.paypal" name="paymentOption" id="paypal" type="radio">
                     </span>
                 </span>
                 <input type="submit" class="btnContinue" ng-click="donate()" value="המשך">

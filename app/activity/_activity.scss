@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   .activity-sections {
-    width: 33%;
+    width: 40%;
     float: left;
     margin-top: -2px;
     .myHr {
@@ -12,7 +12,7 @@
       margin-bottom: -10px;
       display: block;
       p {
-        outline: none;
+        //outline: none;
         cursor: pointer;
         margin-bottom: 1px;
         margin-top: 0;
@@ -55,10 +55,10 @@
   .arrowRight {
     flex: 1.5;
     float: right;
-    outline: none;
+    //outline: none;
   }
   .arrowLeft {
-    outline: none;
+    //outline: none;
     flex: 1.5;
     margin-right: 13em;
     margin-left: 0.5em;
@@ -66,7 +66,7 @@
   i {
     cursor: pointer;
     color: $lighterGray;
-    outline: none;
+    //outline: none;
   }
 }
 
@@ -98,7 +98,7 @@ aside {
     text-align: right;
     font-size: 1.3em;
     background-color: white;
-    margin-top: -5px;
+    margin-top: 0;
     padding-top: 10px;
     margin-bottom: -10px;
   }
@@ -130,6 +130,7 @@ article {
     p {
       margin-left: 1em;
       direction: rtl;
+      margin-top: 12px;
     }
   }
 }
@@ -185,7 +186,6 @@ article {
       }
       nav {
         display: block;
-        padding-left: 15px;
         background-color: #00519C;
         color: $lighterGray !important;
         float: right;
@@ -293,11 +293,10 @@ article {
   .mapPopup {
     width: 100px;
   }
-  .selected {
-    border-bottom: 3px solid #eeeeee;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-
-  }
+  //.selected {
+  //  border-bottom: 3px solid #eeeeee;
+  //  border-bottom-left-radius: 2px;
+  //  border-bottom-right-radius: 2px;
+  //}
 
 }

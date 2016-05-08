@@ -12,10 +12,10 @@ angular.module('myApp.donation', [])
             };
 
             scope.donate = function () {
-                //console.log('scope', scope.donation.amount);
-                //alert('Thanks for Donating: ' + scope.donation.amount );
+                if(document.querySelector('#jgive').checked) {
+                        window.open('https://www.jgive.com/external_pages/charity_donate?charity_organization_id=274&currency=ILS&locale=he');
+                }
             }
         }
-
     }
 });

@@ -20,16 +20,16 @@
         <h1 class="light">השותפים שלנו</h1>
     </article>
 </div>
-<div class="recommendation">
+<div class="">
     <!--<input type="checkbox" ng-model="vm.lockCarousel"/>Lock the carousel {{vm.lockCarousel}}-->
     <!--<button ng-click="vm.lockCarousel=!vm.lockCarousel">LOCK!</button>-->
-    <ul class="partnersCarousel" rn-carousel rn-carousel-locked="vm.lockCarousel">
+    <ul class="recommendation">
         <li ng-repeat="recommendations in vm.data.recommendations">
-            <span class="rn-carousel-control rn-carousel-control-prev ng-scope" ng-click="nextSlide()"></span>
+            <!--<span class="rn-carousel-control rn-carousel-control-next ng-scope" ng-click="nextSlide()" ng-if="carouselIndex >= 0 || false"></span>-->
             <div class="recommendationRight">
                 <img src="img/quoteR.PNG" alt="quote"/>
                 <p editable-textarea="recommendations.textPrimaryPartners" e-rows="7" e-cols="40" e-form="textBtnForm1" onaftersave="vm.updateModel()"
-                   class="cg light mw85">{{recommendations.textPrimaryPartners}}
+                   class="cg light">{{recommendations.textPrimaryPartners}}
                 </p>
                 <button ng-if="user.isAdmin" class="btnEdit" ng-click="textBtnForm1.$show()" ng-hide="textBtnForm1.$visible">ערוך</button>
 
@@ -39,22 +39,15 @@
                 <button ng-if="user.isAdmin" class="btnEdit" ng-click="textBtnForm2.$show()" ng-hide="textBtnForm2.$visible">ערוך</button>
                 <img class="quote" src="img/quoteL.PNG" alt="quote"/>
             </div>
-            <span class="rn-carousel-control rn-carousel-control-next ng-scope" ng-click="prevSlide()" ></span>
-
+            <!--<span class="rn-carousel-control rn-carousel-control-prev ng-scope" ng-click="prevSlide()" ng-if="carouselIndex < slides.length - 1 || false"></span>-->
         </li>
     </ul>
 </div>
 <div class="logos">
-    <div ng-repeat="logos in vm.data.logos" class="logos">
+    <span ng-repeat="logos in vm.data.logos" class="">
         <a target="_blank" ng-href="{{logos.url}}"><img ng-src="./img/logos/{{logos.id}}.jpg" alt="{{logos.name}}" class="logoImg"/></a>
-        <img ng-class="vm.isLast($last)" src="img/vr.PNG" class="vr" alt=""/>
-    </div>
+        <!--<img ng-class="vm.isLast($last)" src="img/vr.PNG" class="vr" alt=""/>-->
+    </span>
 </div>
-<img src="img/hr.PNG" class="partnersHr" alt=""/>
-<div class="logos">
-    <div ng-repeat="logos in vm.data.logos" class="logos">
-        <a target="_blank" ng-href="{{logos.url}}"><img ng-src="./img/logos/{{logos.id}}.jpg" alt="{{logos.name}}" class="logoImg"/></a>
-        <img ng-class="vm.isLast($last)" src="img/vr.PNG" class="vr" alt=""/>
-    </div>
-</div>
+<!--<img src="img/hr.PNG" class="partnersHr" alt=""/>-->
 

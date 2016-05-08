@@ -11,7 +11,7 @@ angular.module('myApp.partners', ['ngRoute'])
 
     .controller('partnersCtrl', ['$rootScope','$timeout', 'DataFactory','toaster', function ($rootScope, $timeout, DataFactory, toaster){
 
-        console.log('this', this);
+        //console.log('this', this);
         var ctrl = this;
         ctrl.lockCarousel = false;
         if (!$rootScope.isMobile) {
@@ -19,10 +19,8 @@ angular.module('myApp.partners', ['ngRoute'])
                 ctrl.lockCarousel = true;
             }, 100);
         }
-
         var pageName = 'partners';
         var prmData = DataFactory.getDataForPage(pageName);
-
         prmData.then(function (data) {
             ctrl.data = data;
 
@@ -44,8 +42,14 @@ angular.module('myApp.partners', ['ngRoute'])
             };
 
 
+
+
         });
 
-
+        $(document).ready(function(){
+            $('.test').slick({
+                arrows: true
+            });
+        });
 
     }]);

@@ -13,7 +13,9 @@
   top: 50%;
   z-index: 2;
 }
-
+#msg {
+  display: none;
+}
 .title {
   h4 {
     font-size: 1.7em;
@@ -152,7 +154,7 @@
 #msg {
   position: absolute;
   min-height: 495px;
-  left: -1236px;
+  left: -100%;
   background-color: $lightBlue;
   color: white;
   overflow: hidden;
@@ -175,7 +177,7 @@
   margin-left: 110px;
   font-family: "nextExitRound-Regular", sans-serif;
   margin-top: -27px;
-  outline: none;
+  //outline: none;
 }
 
 .bankDetailsMargin {
@@ -186,10 +188,10 @@
   position: absolute;
   right: 4%;
   top: 17em;
-  height: 8em;
+  height: 10em;
   cursor: pointer;
   width: 70px;
-  outline: none;
+  //outline: none;
   z-index: 100;
 }
 
@@ -269,8 +271,8 @@
   .dd {
     position: fixed;
     height: 50px;
-    margin-top: 22px;
-    width: 116px;
+    margin-top: 23px;
+    width: 115px;
     margin-left: -30px;
     text-align: center;
     background-color: #00519c;
@@ -385,7 +387,8 @@
   .closeDonation {
     position: absolute;
     top: 0;
-    right: 85%;
+    left: 0 !important;
+    right: inherit;
   }
 
   #msg {
@@ -461,7 +464,7 @@
   }
   .paypal {
     float: left;
-    margin-left: 50px;
+    margin-left: 15px;
     text-align: center;
     p {
       margin-top: 0;

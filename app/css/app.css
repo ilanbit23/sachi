@@ -62,14 +62,19 @@ a {
 
 .nav {
   font-size: 1.3em;
-  display: flex; }
+  display: flex;
+  text-align: center; }
   .nav ul {
-    flex: 1.5; }
+    flex: 1.5;
+    font-size: 1.2em; }
   .nav li {
     padding-right: 0;
     padding-top: 20px;
     list-style: none;
-    padding-left: 0; }
+    padding-left: 0;
+    display: inline-block; }
+    .nav li:last-child {
+      border-bottom: 0; }
     .nav li:before {
       content: "|";
       color: #939597;
@@ -95,22 +100,14 @@ a:hover#menu-icon {
 .activity-sections li:last-child {
   border-bottom: none !important; }
 
-li {
-  outline: none;
-  display: inline-block; }
-  li:last-child {
-    border-bottom: 0; }
-
 .current {
   color: #00519c; }
 
 .nochach {
-  outline: none;
   cursor: pointer;
   width: 50px;
   float: right;
-  margin-right: -65px;
-  margin-left: 20px;
+  margin-left: -55px;
   margin-top: -15px; }
 
 .social {
@@ -123,8 +120,7 @@ li {
   flex: 1;
   height: 85px;
   margin-left: 0;
-  margin-right: -10px;
-  outline: none; }
+  margin-right: -10px; }
   .logo:hover {
     cursor: pointer; }
 
@@ -160,7 +156,7 @@ li {
   .nav {
     font-size: 1.3em;
     display: block;
-    margin-top: 20px; }
+    margin-top: 16px; }
 
   .social {
     margin-left: -1.5em; }
@@ -198,11 +194,12 @@ li {
     padding-left: 0.3em; }
 
   .fs18 {
-    font-size: 22px !important; }
+    font-size: 18px !important; }
 
   header > .nav ul {
     background-color: #eeeeee;
-    display: flex;
+    text-align: right;
+    display: block;
     max-width: 80px;
     flex-direction: column;
     padding: 0;
@@ -227,13 +224,13 @@ li {
     float: right;
     margin-top: 55px;
     cursor: pointer; } }
-@media only screen and (min-width: 640px) and (max-width: 860px) {
+@media only screen and (min-width: 640px) and (max-width: 1100px) {
   .nav ul {
-    margin-left: 4em;
+    margin-left: 0;
     flex: 1.5;
     margin-right: -2em;
     z-index: 2;
-    margin-top: 10px; }
+    margin-top: 25px; }
   .nav li:before {
     padding-right: 0.2em;
     padding-left: 0.2em; }
@@ -241,8 +238,45 @@ li {
   .social {
     margin-left: 0; }
 
+  .nochach {
+    margin-left: 10px; }
+
   .fb {
-    margin-right: 10px; } }
+    margin-right: 10px; }
+
+  .trance .nav {
+    margin-top: 20px;
+    direction: ltr; }
+    .trance .nav ul {
+      max-width: 110px;
+      text-align: left; }
+  .trance section {
+    direction: ltr; }
+  .trance aside ul {
+    margin-left: -25px; }
+  .trance aside .interviewName {
+    text-align: left; }
+  .trance article {
+    text-align: left; }
+    .trance article h1 {
+      padding-left: 25px; }
+  .trance .descParagraph {
+    padding-left: 0; }
+  .trance .headContact {
+    padding-left: 25px; }
+  .trance .info {
+    text-align: left;
+    margin-left: 25px; }
+  .trance .formSection {
+    float: right; }
+  .trance .ml50 {
+    margin-left: 50px; }
+  .trance .partnerName {
+    float: left; }
+  .trance .quote {
+    float: right; }
+  .trance .dropdown {
+    left: 50%; } }
 .bbn {
   border-bottom: none !important; }
 
@@ -306,8 +340,7 @@ li {
 a {
   font-family: 'NextExitRound-Regular', sans-serif !important;
   color: #939597;
-  text-decoration: none;
-  outline: none !important; }
+  text-decoration: none; }
   a:hover {
     color: #00519c !important;
     text-decoration: none; }
@@ -542,6 +575,9 @@ button.toast-close-button {
   top: 50%;
   z-index: 2; }
 
+#msg {
+  display: none; }
+
 .title h4 {
   font-size: 1.7em; }
 .title h3 {
@@ -647,7 +683,7 @@ button.toast-close-button {
 #msg {
   position: absolute;
   min-height: 495px;
-  left: -1236px;
+  left: -100%;
   background-color: #00519c;
   color: white;
   overflow: hidden;
@@ -667,8 +703,7 @@ button.toast-close-button {
   color: white;
   margin-left: 110px;
   font-family: "nextExitRound-Regular", sans-serif;
-  margin-top: -27px;
-  outline: none; }
+  margin-top: -27px; }
 
 .bankDetailsMargin {
   margin-top: -10px; }
@@ -677,10 +712,9 @@ button.toast-close-button {
   position: absolute;
   right: 4%;
   top: 17em;
-  height: 8em;
+  height: 10em;
   cursor: pointer;
   width: 70px;
-  outline: none;
   z-index: 100; }
 
 .donateDetails {
@@ -737,8 +771,8 @@ button.toast-close-button {
   .dd {
     position: fixed;
     height: 50px;
-    margin-top: 22px;
-    width: 116px;
+    margin-top: 23px;
+    width: 115px;
     margin-left: -30px;
     text-align: center;
     background-color: #00519c;
@@ -839,7 +873,8 @@ button.toast-close-button {
   .closeDonation {
     position: absolute;
     top: 0;
-    right: 85%; }
+    left: 0 !important;
+    right: inherit; }
 
   #msg {
     background-color: transparent;
@@ -905,7 +940,7 @@ button.toast-close-button {
 
   .paypal {
     float: left;
-    margin-left: 50px;
+    margin-left: 15px;
     text-align: center; }
     .paypal p {
       margin-top: 0;
@@ -940,23 +975,21 @@ button.toast-close-button {
 .imgSection {
   float: right;
   background-color: #001a5f;
-  height: 190px;
+  height: 250px;
   width: 33%; }
   .imgSection .name {
     color: #eeeeee;
     display: block;
     margin-top: 1em;
-    margin-right: 15px;
-    outline: none; }
-    .imgSection .name:hover {
-      color: #00519c; }
+    margin-right: 15px; }
   .imgSection .role {
     margin-top: 0 !important; }
   .imgSection .playCircle {
     display: flex;
     justify-content: center;
-    margin-top: -6em;
-    color: rgba(255, 255, 255, 0.75); }
+    margin-top: -8em;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 3em; }
   .imgSection .moreInfo {
     float: left;
     margin-top: -22px;
@@ -986,11 +1019,12 @@ button.toast-close-button {
 iframe {
   border: none !important;
   margin-bottom: -5px;
-  width: 100%; }
+  width: 100%;
+  height: 290px; }
 
 .gal {
   margin-bottom: -21px;
-  height: 190px;
+  height: 250px;
   width: 100%; }
   .gal:hover {
     cursor: pointer;
@@ -1047,7 +1081,7 @@ iframe {
   display: flex;
   width: 100%; }
   .activity .activity-sections, .people .activity-sections, .partners .activity-sections {
-    width: 33%;
+    width: 40%;
     float: left;
     margin-top: -2px; }
     .activity .activity-sections .myHr, .people .activity-sections .myHr, .partners .activity-sections .myHr {
@@ -1056,7 +1090,6 @@ iframe {
       margin-bottom: -10px;
       display: block; }
       .activity .activity-sections li p, .people .activity-sections li p, .partners .activity-sections li p {
-        outline: none;
         cursor: pointer;
         margin-bottom: 1px;
         margin-top: 0; }
@@ -1083,17 +1116,14 @@ iframe {
   position: relative; }
   .arrows .arrowRight {
     flex: 1.5;
-    float: right;
-    outline: none; }
+    float: right; }
   .arrows .arrowLeft {
-    outline: none;
     flex: 1.5;
     margin-right: 13em;
     margin-left: 0.5em; }
   .arrows i {
     cursor: pointer;
-    color: #eeeeee;
-    outline: none; }
+    color: #eeeeee; }
 
 aside {
   flex: 1.4;
@@ -1118,7 +1148,7 @@ aside {
     text-align: right;
     font-size: 1.3em;
     background-color: white;
-    margin-top: -5px;
+    margin-top: 0;
     padding-top: 10px;
     margin-bottom: -10px; }
 
@@ -1147,7 +1177,8 @@ article {
     margin-right: 15px; }
     article .desc p {
       margin-left: 1em;
-      direction: rtl; }
+      direction: rtl;
+      margin-top: 12px; }
 
 ::-webkit-scrollbar {
   width: 0.1em;
@@ -1190,7 +1221,6 @@ article {
       margin-bottom: 10px; }
     .activity aside nav, .people aside nav, .partners aside nav, .transparency aside nav, .contact aside nav {
       display: block;
-      padding-left: 15px;
       background-color: #00519C;
       color: #eeeeee !important;
       float: right;
@@ -1269,12 +1299,7 @@ article {
       text-align: center; }
 
   .mapPopup {
-    width: 100px; }
-
-  .selected {
-    border-bottom: 3px solid #eeeeee;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px; } }
+    width: 100px; } }
 .people {
   display: flex;
   width: 100%; }
@@ -1294,7 +1319,7 @@ article {
     flex: 1.4;
     margin-bottom: 30px; }
     .peopleDesc .boxImg img {
-      width: 106%; }
+      width: 104%; }
   .peopleDesc .btnEdit {
     margin-top: -2em;
     margin-bottom: 2em; }
@@ -1315,6 +1340,9 @@ article {
     .people aside p, .partners aside p {
       margin-bottom: 15px !important;
       margin-top: -10px !important; }
+    .people aside h3, .partners aside h3 {
+      padding-right: 0;
+      padding-left: 0; }
     .people aside .activity-sections li, .partners aside .activity-sections li {
       width: 110px;
       margin: auto !important; }
@@ -1456,14 +1484,14 @@ article {
     height: 3em; }
 
   .formTextArea {
-    width: 92.5%;
+    width: 98.5%;
     padding-right: 15px; }
 
   .formSend {
     float: none;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 94%;
+    width: 100%;
     height: 40px;
     font-size: 1.3em; }
 
@@ -1488,6 +1516,10 @@ article {
   .partners .recommendation {
     background-color: gainsboro;
     margin-top: 10em; }
+    .partners .recommendation li {
+      display: flex; }
+      .partners .recommendation li:last-child {
+        border-bottom: 0; }
 
 .cg {
   color: #77787a; }
@@ -1499,27 +1531,16 @@ article {
   padding-bottom: 0; }
 
 .recommendation {
-  width: 35%;
-  float: left;
-  margin-left: -1.7em; }
+  display: flex;
+  padding-right: 0; }
   .recommendation .btnEdit {
     display: inherit; }
-
-.recommendationRight {
-  flex: 1;
-  padding-right: 1em; }
-
-.recommendationMid {
-  flex: 1;
-  margin-right: 20px; }
+  .recommendation li {
+    flex: 1;
+    padding-left: 25px; }
 
 .ml30 {
   margin-left: 30px; }
-
-.recommendationLeft {
-  flex: 1;
-  margin-right: 20px;
-  margin-left: -30px; }
 
 .quote {
   float: left;
@@ -1531,14 +1552,12 @@ article {
 
 .logos {
   display: flex;
-  float: right;
-  margin-top: 8em;
-  margin-bottom: -7.7em; }
+  flex-wrap: wrap;
+  margin-top: 3em; }
 
 .partnersHr {
   height: 1px;
-  width: 100%;
-  margin-bottom: -14em; }
+  width: 100%; }
 
 .vr {
   margin-bottom: 15px; }
@@ -1547,9 +1566,7 @@ article {
   display: none !important; }
 
 .logoImg {
-  margin-top: -10px;
-  height: 95px;
-  width: 95%;
+  width: 140px;
   padding-right: 3px; }
   .logoImg:hover {
     cursor: pointer; }
@@ -1562,9 +1579,11 @@ article {
 
 @media only screen and (max-width: 640px) {
   .recommendation {
+    flex-direction: column;
     width: 100%;
-    margin-left: 0;
-    margin-top: 9.5em; }
+    padding: 0;
+    margin-top: 172px;
+    margin-right: 0; }
 
   .recommendationRight {
     font-size: 1.3em;
@@ -1573,8 +1592,9 @@ article {
     background-color: #eeeeee;
     padding-right: 40px;
     padding-top: 1em;
-    padding-bottom: 3em;
-    padding-left: 20px; }
+    padding-bottom: 6em;
+    padding-left: 20px;
+    margin-right: 0; }
 
   .cg {
     color: #231f20; }
@@ -1597,7 +1617,11 @@ article {
       margin-bottom: 0; }
 
   .logosRow {
-    margin-left: -10%; } }
+    margin-left: -10%; }
+
+  .vr {
+    height: 68px;
+    margin-bottom: 0; } }
 .transparency {
   display: flex;
   width: 100%; }
@@ -1673,6 +1697,9 @@ article {
     flex-direction: column; }
     .transparency aside {
       margin-bottom: 0 !important; }
+      .transparency aside h3 {
+        padding-left: 0;
+        padding-right: 0; }
     .transparency article h1 {
       display: block;
       padding-top: 20px;
@@ -1718,7 +1745,7 @@ body {
   font-family: 'NextExitRound-Regular', sans-serif !important;
   font-size: 1.0em;
   direction: rtl;
-  max-width: 860px;
+  max-width: 1168px;
   margin: auto;
   overflow-x: hidden;
   color: #403d3e; }

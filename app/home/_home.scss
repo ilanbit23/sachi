@@ -1,17 +1,14 @@
 .imgSection {
   float: right;
   background-color: $darkBlue;
-  height: 190px;
+  height: 250px;
   width: 33%;
   .name {
     color: $lighterGray;
     display: block;
     margin-top: 1em;
     margin-right: 15px;
-    outline: none;
-    &:hover {
-      color: $lightBlue;
-    }
+   // outline: none;
   }
   .role {
     margin-top: 0 !important
@@ -20,8 +17,9 @@
   .playCircle {
     display: flex;
     justify-content: center;
-    margin-top: -6em;
+    margin-top: -8em;
     color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 3em;
   }
   .moreInfo {
     float: left;
@@ -66,10 +64,11 @@ iframe {
   border: none !important;
   margin-bottom: -5px;
   width: 100%;
+  height: 290px;
 }
 .gal {
   margin-bottom: -21px;
-  height: 190px;
+  height: 250px;
   width: 100%;
   &:hover {
     cursor: pointer;

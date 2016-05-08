@@ -14,32 +14,33 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="bower_components/angular-carousel/dist/angular-carousel.css"/>
     <link rel="stylesheet" href="css/app.css">
+    <!--<link rel="stylesheet" href="css/appltr.css" ng-if="load">-->
     <link rel="stylesheet" href="css/fonts/font-awesome/scss/font-awesome.css">
+    <!--<link rel="stylesheet" href="bower_components/lifely-angular-carousel/angular-carousel.css"/>-->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
 
 </head>
-<body>
+<body close-popup ng-cloak="">
 <toaster-container toaster-options="{'time-out': 2000}"></toaster-container>
 <header>
     <nav class="nav">
         <a ng-click="hideNav = !hideNav"><i class="fa fa-bars" id="menu-icon"></i></a>
         <a href="#/home"><img tabindex="1"  src="img/logo.jpg" alt="sachi logo link to home page" class="logo"/></a>
-        <ul ng-cloak="" ng-hide="hideNav">
+        <ul ng-cloak="" ng-show="!hideNav" class="navUl">
             <!--<li><a class="current" href="#/home">ENG</a></li>-->
-            <li><a tabindex="2" ng-class="getClass('past')" href="#/activity/past">{{'Past' | translate}}</a></li>
-            <li><a tabindex="3" ng-class="getClass('present')" href="#/activity/present">{{'Present' | translate}}</a></li>
-            <li><a tabindex="4" ng-class="getClass('future')" href="#/activity/future">{{'Future' | translate}}</a></li>
-            <li><a tabindex="5" ng-class="getClass('giving')" href="#/activity/giving">{{'Giving' | translate}}</a></li>
-            <li><a tabindex="6" ng-class="getClass('people')" href="#/people">{{'People' | translate}}</a></li>
-            <li><a tabindex="7" ng-class="getClass('transparency')" href="#/transparency">{{'Transparency' | translate}}</a></li>
-            <li><a tabindex="8" ng-class="getClass('contact')" href="#/contact">{{'Contact' | translate}}</a></li>
+            <li><a ng-click="hideNavOnClick()" tabindex="2" ng-class="getClass('past')" href="#/activity/past">{{'Past' | translate}}</a></li>
+            <li><a ng-click="hideNavOnClick()" tabindex="3" ng-class="getClass('present')" href="#/activity/present">{{'Present' | translate}}</a></li>
+            <li><a ng-click="hideNavOnClick()" tabindex="4" ng-class="getClass('future')" href="#/activity/future">{{'Future' | translate}}</a></li>
+            <li><a ng-click="hideNavOnClick()" tabindex="5" ng-class="getClass('giving')" href="#/activity/giving">{{'Giving' | translate}}</a></li>
+            <li><a ng-click="hideNavOnClick()" tabindex="6" ng-class="getClass('people')" href="#/people">{{'People' | translate}}</a></li>
+            <li><a ng-click="hideNavOnClick()" tabindex="7" ng-class="getClass('transparency')" href="#/transparency">{{'Transparency' | translate}}</a></li>
+            <li><a ng-click="hideNavOnClick()" tabindex="8" ng-class="getClass('contact')" href="#/contact">{{'Contact' | translate}}</a></li>
         </ul>
         <span class="social">
-            <a href="http://www.israeltoremet.org/amuta/580485233" target="_blank">
-                <img tabindex="9" src="img/logos/nochach.png" alt="נכח" class="nochach"/>
-            </a>
+            <img tabindex="9" src="img/logos/nochach.png" alt="נכח" class="nochach"/>
             <a tabindex="10" target="_blank" href="https://www.facebook.com/%D7%A1%D7%97%D7%99-%D7%A1%D7%99%D7%99%D7%A8%D7%AA-%D7%97%D7%A1%D7%93-%D7%99%D7%97%D7%95%D7%93%D7%99%D7%AA-275095383548/?fref=ts">
                 <img src="img/fb-circ.png" alt="דף פייסבוק" class="fb"/>
             </a>
@@ -62,7 +63,7 @@
 <div ng-view></div>
 
 <footer>
-    <span class="login"><input type="checkbox" ng-model="user.isAdmin"/></span>
+    <!--<span class="login"><input type="checkbox" ng-model="user.isAdmin"/></span>-->
 </footer>
 
 <script src="bower_components/angular/angular.js"></script>
@@ -71,6 +72,8 @@
 <script src="lib/bootstrap/javascripts/ui-bootstrap-tpls-0.14.3.min.js"></script>
 <script src="lib/jquery/jquery-2.2.1.min.js"></script>
 <script src="app.js"></script>
+<script src="bower_components/slick-carousel/slick/slick.js"></script>
+<script src="bower_components/angular-slick/dist/slick.js"></script>
 <script src="bower_components/angular-translate/angular-translate.js"></script>
 <script src="js/aria.js"></script>
 <script src="bower_components/angular-carousel/dist/angular-carousel.js"></script>
@@ -78,6 +81,8 @@
 <script src="js/froogaloop.js"></script>
 <script src="bower_components/angularjs-toaster/toaster.js"></script>
 <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+<!--<script src="bower_components/lifely-angular-carousel/angular-carousel.js"></script>-->
+<!--<script src="bower_components/hammerjs/hammer.js"></script>-->
 <script src="factories/data-factory.js"></script>
 <script src="home/home.js"></script>
 <script src="activity/activity.js"></script>
