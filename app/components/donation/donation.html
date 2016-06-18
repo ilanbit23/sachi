@@ -1,27 +1,22 @@
 <div id="msg">
     <div class="title">
 
-        <h4 class="donation light"> תרומה</h4>
+        <h4 class="donation light">{{'Donation' | translate}}</h4>
 
         <div class="donationRightSide">
             <div class="bankDetails">
-                <h5 class="regular">
-                    העברה בנקאית
-                </h5>
+                <h5 class="regular">{{'Bank transfer' | translate}}</h5>
                 <h5 class="light bankDetailsMargin">
-                    הבנק הבינלאומי(31) סניף 109 אשקלון <br/>
-                    מספר חשבון:409-494542
+                    {{'International Bank (31) 109 Ashkelon branch' | translate}}<br/>
+                    {{'Account Number' | translate}}:    409-494542
                 </h5>
             </div>
             <br/>
 
             <div class="checkDetails">
-                <h5 class="regular">
-                    המחאה (צ'ק)
-                </h5>
+                <h5 class="regular">{{'Check' | translate}}</h5>
                 <h5 class="light bankDetailsMargin">
-                    ניתן לשלוח אלינו לכתובת: <br/>
-                    דיזנגוף 50, דירה 2410, ת"א
+                    {{'Dizengoff 50, Apartment 2410, TA' | translate}}:
                     <br/>
                 </h5>
             </div>
@@ -29,68 +24,25 @@
     </div>
 
     <div class="donationDetails">
-        <h3 class="mb-25">
-            עכשיו אתם!
-        </h3>
+        <h3 class="mb-25">{{'Now Its Your Turn' | translate}}</h3>
 
-        <h3 class="mb-25">
-            כל זה לא יכול לקרות
+        <h3 class="mb-25">{{'None of this can happen' | translate}}</h3>
 
-        </h3>
-
-        <h3>
-            בלי עזרתכם הנדיבה:
-
-        </h3>
+        <h3>{{'Without your generous help' | translate}}</h3>
 
         <form name="donationForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" novalidate>
             <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="D3Q8P8SHYJEL6">
+            <input type="hidden" name="hosted_button_id" value="{{paypalValue}}">
             <input type="hidden" name="on0" value="תרומות">
-            <input type="hidden" name="os0" value="{{donation.amount}}"/>
-            <h6>כל התרומות לעמותה מוכרות לצרכי מס לפי סעיף 46 לפקודת מס הכנסה</h6>
-            <h5>סכום התרומה:</h5>
-
-            <span class="inputRadioBtn">
-                <input id="donationAmount50" value="50" type="radio" ng-model="donation.amount" name="donationAmount">
-                <label class="donationAmount" for="donationAmount50">50 &#8362;</label>
-                <input id="donationAmount100" value="100" type="radio" ng-model="donation.amount" name="donationAmount">
-                <label class="donationAmount" for="donationAmount100">100 &#8362;</label>
-                <input id="donationAmount200" value="200" type="radio" ng-model="donation.amount" name="donationAmount">
-                <label class="donationAmount" for="donationAmount200">200 &#8362;</label>
-                <input id="donationAmount500" value="500" type="radio" ng-model="donation.amount" name="donationAmount">
-                <label class="donationAmount" for="donationAmount500">500 &#8362;</label>
-                <input type="hidden" name="currency_code" value="ILS">
-            </span>
-            <span class="inputBtn">
-                <input class="mobileDonationAmount" name="donationAmount" type="button" value="50 &#8362;"
-                       ng-click="donation.amount=50" ng-class="{selected : donation.amount == 50}"/>
-                <input class="mobileDonationAmount" name="donationAmount" type="button" value="100 &#8362;"
-                       ng-click="donation.amount=100" ng-class="{selected : donation.amount == 100}"/>
-                <input class="mobileDonationAmount" name="donationAmount" type="button" value="200 &#8362;"
-                       ng-click="donation.amount=200" ng-class="{selected : donation.amount == 200}"/>
-                <input class="mobileDonationAmount" name="donationAmount" type="button" value="500 &#8362;"
-                       ng-click="donation.amount=500" ng-class="{selected : donation.amount == 500}"/>
-            </span>
-            <br/>
-            <span>
-                <input id="other" class="inputRadioBtn" type="radio">
-                <label class="otherSum" for="other"> סכום אחר:</label>
-                <input ng-model="donation.amount" class="donationTextArea" type="text"/>&#8362;
-                <span class="donationMonthly">
-                    <input id="reDonation" type="radio">
-                    <label for="reDonation"> תרומה מתחדשת כל חודש</label>
-                </span>
-            </span>
-
-            <p class="donateDetails regular">פרטי המשלם:</p>
+            <!--<input type="hidden" name="os0" value="{{donation.amount}}"/>-->
+            <h6>{{'All donations are tax under section 46 of the Income Tax' | translate}}</h6>
 
             <div class="donationFooter">
-                <p class="donateOptions"> תשלום באמצעות: </p>
+                <p class="donateOptions">{{'Payment by' | translate}}:</p>
                 <span class="payment">
                     <span class="visa">
                         <img class="visaIcon" src="img/logos/visa.png" alt=""/>
-                        <label for="jgive">J-GIVE</label>
+                        <label class="jGive" for="jgive">J-GIVE</label>
                         <input ng-model="donation.visa" name="paymentOption" id="jgive" type="radio"/>
                     </span>
                     <span class="paypal">
@@ -99,9 +51,9 @@
                         <input ng-model="donation.paypal" name="paymentOption" id="paypal" type="radio">
                     </span>
                 </span>
-                <input type="submit" class="btnContinue" ng-click="donate()" value="המשך">
+                <input type="submit" class="btnContinue" ng-click="donate()" value="{{'Proceed' | translate}}">
 
-                <h5 class="donationLast"> כל התרומות מוכרות לצרכי מס לפי סעיף 46 לפקודת מס הכנסה</h5>
+                <h5 class="donationLast">{{'All donations are tax under section 46 of the Income Tax' | translate}}</h5>
                 <i class="fa fa-arrow-left fl arrow"></i>
             </div>
         </form>
@@ -109,45 +61,8 @@
 
 </div>
 <div onclick="slideIn('msg')" id="d1" class="dd donationOpen clickable">
-    תרומה
+    {{'Donation' | translate}}
 </div>
 <div class="closeDonation" onclick="slideOut('msg')" id="d2"></div>
 
-<!-- 59MFPTRMRTVZC dollar paying-->
-<!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">-->
-<!--<input type="hidden" name="cmd" value="_s-xclick">-->
-<!--<input type="hidden" name="hosted_button_id" value="D3Q8P8SHYJEL6">-->
-<!--<table>-->
-<!--<tr>-->
-<!--<td><input type="hidden" name="on0" value="תרומות">תרומות</td>-->
-<!--</tr>-->
-<!--<tr>-->
-<!--<td><select name="os0">-->
-<!--<option value="50">50 ₪50.00 ILS</option>-->
-<!--<option value="100">100 ₪100.00 ILS</option>-->
-<!--<option value="200">200 ₪200.00 ILS</option>-->
-<!--<option value="500">500 ₪500.00 ILS</option>-->
-<!--</select></td>-->
-<!--</tr>-->
-<!--</table>-->
-<!--<input type="hidden" name="currency_code" value="ILS">-->
-<!--<input type="image" src="https://www.paypalobjects.com/en_US/IL/i/btn/btn_donateCC_LG.gif" border="0"-->
-<!--name="submit" alt="PayPal - הדרך הקלה והבטוחה לשלם באינטרנט!">-->
-<!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
-<!--</form>-->
-<!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post">-->
-<!--<input type="hidden" name="cmd" value="_s-xclick">-->
-<!--<input type="hidden" name="hosted_button_id" value="59MFPTRMRTVZC">-->
-<!--<table>-->
-<!--<tr><td><input type="hidden" name="on0" value=""></td></tr><tr><td><select name="os0">-->
-<!--<option value="10">$10.00 USD - monthly</option>-->
-<!--<option value="20">$20.00 USD - monthly</option>-->
-<!--<option value="50">$50.00 USD - monthly</option>-->
-<!--<option value="100">$100.00 USD - monthly</option>-->
-<!--<option value="150">$150.00 USD - monthly</option>-->
-<!--</select> </td></tr>-->
-<!--</table>-->
-<!--<input type="hidden" name="currency_code" value="USD">-->
-<!--<input type="image" src="https://www.paypalobjects.com/en_US/IL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">-->
-<!--<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">-->
-<!--</form>-->
+

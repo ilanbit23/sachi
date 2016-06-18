@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   	$msg = 	"New message from: $contact->name (phone: $contact->phone subject: $contact->subject email: $contact->email company: $contact->company address: $contact->address) \n";
   	$msg .= "$contact->msg";
   	echo "success: " . $msg;
-    mail( 'ilan@misterbit.co.il',  'New contact' , $msg, "From: $contact->email" );
+    mail( 'contact@sahi-israel.org',  'New contact' , $msg, "From: $contact->email" );
 
   }
 

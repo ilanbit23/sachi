@@ -1,135 +1,436 @@
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
-}
-@import "vars";
-@import "nav";
-@import "general";
-@import "../bower_components/angularjs-toaster/toaster";
-
-@import "../components/donation/donation";
-@import "../home/home";
-@import "../activity/_activity";
-@import "../people/_people";
-@import "../contact/contact";
-@import "../partners/_partners";
-@import "../transparency/_transparency";
-
 body {
-  font-family: 'NextExitRound-Regular', sans-serif !important;
-  font-size: 1.0em;
-  direction: rtl;
-  max-width: 860px;
-  margin: auto;
-  overflow-x: hidden;
-  color: $darkGray;
+  direction: ltr;
 }
-
-
-
-.accColor {
-  position: absolute;
-  left: 10em;
-  top: 2px;
-  font-family: 'NextExitRound-Light', sans-serif !important;
-  color: gray;
-  .fa {
-    font: 14px/1 FontAwesome;
-  }
-  &:hover {
-    cursor: pointer;
-  }
-  p{
-    display: inline;
-    font-size: 1.4em;
-    color: $lightGray;
-  }
+.fr {
+  float: left !important;
 }
-
-.editable-buttons button, .btnEdit {
-  margin-left: 5px;
-  border-radius: 3px;
-  border: none;
-  padding: 5px;
-  margin-right: 3px;
-  margin-top: 5px;
-  &:hover {
-    background-color: $lightBlue;
-    color: white;
-  }
+.fl {
+  float: right !important;
 }
-
-input[type="text"] {
-  width: 70px;
-}
-.login {
-  input[type="checkbox"] {
-    margin-top: 10px;
-  }
-}
-
-
-@media only screen and (min-width: 640px) and (max-width: 860px){
-  a {
-    &:hover {
-      color: $lightBlue !important;
+.nav {
+  margin-top: 16px;
+  font-size: 1.2em;
+  display: flex;
+  li {
+    &:nth-child(1):before {
+      content: "" !important;
     }
   }
+  ul {
+    margin-right: 0;
+    margin-left: -50px;
+    direction: ltr;
+  }
+}
 
-  .login {
-    input[type="text"] {
-      width: 45px;
+.logo {
+  margin-left: 80px;
+}
+
+.closeDonation {
+  left: 4% !important;
+ // left: inherit;
+  top: 38%;
+}
+
+.imgSection {
+  float: left;
+  &:hover {
+    .quotes {
+      display: block;
+      margin-top: -174px;
     }
   }
-  .accColor p {
-    display: inline-block;
+  .moreInfo {
+    float: right;
+    margin-right: 35px;
+  }
+  .name {
+    margin-right: 0;
     margin-left: 0;
-    margin-top: -10px;
   }
-  .editable-buttons {
-    margin-bottom: 15px;
-    margin-top: 3px;
+  .text-left {
+    text-align: right;
+  }
+  .role {
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .homeQuote {
+    margin-left: 20px;
+    padding-top: 40px;
+    float: left;
+    margin-top: -27px;
+    width: 80%;
+
+  }
+  .quotes {
+    float: left;
+    bottom: 100px;
+    text-align: left;
+    margin-left: 35px;
+    color: white;
+    width: 42%;
+    margin-bottom: 7px;
+    padding-top: 15px;
+    display: none;
+  }
+  .quoteL {
+    width: 15px;
+    margin-bottom: 10px;
+    margin-right: -15px;
+    float: left;
+  }
+  .quoteR {
+    width: 15px;
+    float: left;
+    margin-top: 110px;
+    margin-left: -35px;
+    z-index: 1;
+  }
+  .more {
+    float: right;
+    margin-right: 25px;
+  }
+}
+//.imgSection .arrowMore {
+//  float: right;
+//  margin-left: 10px;
+//  transform: rotate(180deg);
+//}
+
+article .desc p {
+  direction: ltr;
+}
+
+article h1 {
+  padding-left: 25px;
+}
+
+aside .interviewName {
+  text-align: left;
+}
+
+.arrows {
+  flex-direction: row-reverse;
+}
+
+.validation {
+  margin-right: 5% !important;
+  float: right;
+}
+
+aside h3 {
+  text-align: right;
+  padding-right: 25px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.descParagraph {
+  font-size: 1.3em;
+  padding-left: 0;
+}
+
+.activity .activity-sections, .people .activity-sections, .partners .activity-sections {
+  width: 48%;
+  text-align: right;
+  float: right;
+  margin-right: 25px;
+  margin-top: -2px;
+}
+
+.peopleDesc article {
+  margin-right: 0;
+  margin-left: 45px;
+}
+
+.quote {
+  float: right;
+}
+
+.partnerName {
+  float: left;
+}
+
+.formSection {
+  float: right;
+}
+
+.info {
+  text-align: left;
+  margin-left: 25px;
+}
+
+.transparencyContent {
+  //flex-direction: row-reverse;
+}
+
+.dropbtn {
+  text-align: left;
+}
+
+.dropdown {
+  text-align: right;
+  margin-right: 25px;
+  margin-left: 5px;
+}
+
+.docList {
+  margin-left: 20px;
+}
+
+.arrowFr {
+  float: right;
+}
+
+.arrowDown {
+  left: 89%;
+  width: 20px;
+}
+
+
+.contactForm .validation {
+  margin-left: 10%;
+  font-size: 0.8em;
+}
+
+.formSend {
+  float: right;
+}
+
+.donation {
+  margin-left: 15%;
+}
+
+.dropdown-content {
+  margin-right: 163px;
+  text-align: left;
+}
+
+.jGive {
+  float: none;
+  margin-right: 15px;
+}
+
+.paypal label {
+  float: none;
+}
+
+.arrow {
+  margin-top: -75px;
+  margin-right: 80px;
+  float: right;
+  transform: rotate(180deg);
+}
+
+.btnContinue {
+  float: right;
+  margin-right: 110px;
+}
+
+.dd {
+  right: -52px;
+  left: inherit;
+}
+
+#msg {
+  right: -100%;
+  left: inherit;
+}
+
+.transform {
+  transform: rotate(180deg);
+}
+
+.thanks {
+  float: right;
+  margin-top: -15px;
+  margin-right: 105px;
+}
+
+.thanksTitle {
+  padding-left: 25px;
+}
+
+
+@media only screen and (min-width: 640px) and (max-width: 700px) {
+  .imgSection {
+    //padding-left: 40%;
+    float: none;
+  }
+  .dropdown-content {
+    width: 91%;
+    box-shadow: none;
+    right: 18px;
+    text-align: left;
+  }
+
+  .logo {
+    margin-left: 188px;
+  }
+  header > .nav ul {
+    left: -320px !important;
+  }
+  article .desc {
+    margin-top: 2em;
   }
 }
 
 @media only screen and (max-width: 640px) {
-  .editable-buttons {
+  aside h3 {
+    text-align: center;
+  }
+
+  .imgSection {
+    float: none;
+  }
+
+  .closeDonation {
+    right: 0 !important;
+    left: inherit !important;
+  }
+  .contactForm {
+    margin-left: 10px;
+  }
+  .activity .activity-sections li:before, .people .activity-sections li:before, .partners .activity-sections li:before, .transparency .activity-sections li:before, .contact .activity-sections li:before {
+    float: left;
+
+  }
+  .activity .activity-sections li p, .people .activity-sections li p, .partners .activity-sections li p, .transparency .activity-sections li p, .contact .activity-sections li p {
+    font-size: 14px !important;
+    text-align: center;
+  }
+  .dd {
+    margin-right: -30px;
+    right: 0 !important;
+    //left: inherit;
+  }
+  #msg {
+    right: inherit;
+    left: inherit;
+  }
+  .closeDonation {
+    top: 0;
+  }
+  .btnContinue {
+    float: left;
+    margin-left: -20px;
+  }
+  .donationDetails {
+    padding-left: 0;
+    h3 {
+      padding-left: 20px;
+      font-size: 1.3em;
+      padding-bottom: 10px;
+    }
+  }
+  .formSend {
+    float: none;
+  }
+  .headContact {
+    text-align: left;
+    padding-right: 15px;
+  }
+  header > .nav ul {
+    text-align: left;
+    max-width: 130px;
+    position: relative;
+    left: -152px;
+    top: 75px;
+  }
+  aside .interviewName {
+    margin-left: 48px;
+  }
+  .activity aside h3 {
+    padding-left: 35% !important;
+  }
+  .trans {
+    margin-left: 15px;
+  }
+  .thanks {
+    margin-left: 25px;
     float: right;
-    margin-bottom: 15px;
-    margin-top: 3px;
+    margin-top: -80px;
+    margin-right: 0;
   }
-  .accColor p {
-    display: inline-block;
-    margin-left: -1em;
-    padding: 0 2px 0 1px;
-    margin-top: -1em;
+  .thanksPage {
+    flex-direction: column;
+
+    .thanksArticle {
+      padding-left: 25px;
+      font-size: 1.2em;
+      margin-bottom: -30px;
+      padding-right: 25px;
+      .thanks {
+        float: none;
+        margin-top: 20px;
+        margin-right: 20px;
+        margin-left: 0;
+      }
+
+      .thanksTitle {
+        display: block;
+        margin-top: 0;
+        padding-right: 0;
+        padding-bottom: 5px;
+        background-color: white;
+        padding-top: 10px;
+        color: gray;
+      }
+    }
   }
+  .more {
+    margin-right: -5px !important;
+    right: 81% !important;
+    margin-top: 75px !important;
+    position: relative !important;
+  }
+  .homeQuote {
+    margin-left: 35px !important;
+    padding-top: 0 !important;
+    margin-bottom: 10px !important;
+    margin-right: 25px;
+    text-align: center;
+    float: right !important;
+    margin-top: 32px !important;
+
+  }
+  .quotes {
+    display: block !important;
+    padding-top: 15px;
+    margin-top: 80px !important;
+    margin-bottom: 0 !important;
+    width: 72% !important;
+  }
+
+  .quoteL {
+    width: 15px !important;
+    margin-top: 30px !important;
+    margin-right: -15px !important;
+    float: left !important;
+    margin-left: 0 !important;
+  }
+  .quoteR {
+    width: 15px;
+    margin-top: 0 !important;
+    margin-left: -23px !important;
+    float: right !important;
+    margin-bottom: 5px !important;
+  }
+  .recommendationRight {
+    margin-bottom: 9em !important;
+    margin-top: -153px !important;
+    background-color: #eeeeee;
+    padding-right: 40px !important;
+    padding-top: 1em !important;
+    padding-bottom: 11em !important;
+    padding-left: 20px !important;
+    margin-right: 0 !important;
+  }
+
 }
 
-//acc definitions
-.bw {
-  background-color: $lightGray !important;
-}
-.buttonbw {
-  background-color: $darkGray !important;
-}
-.asidebw {
-  border-top: 15px solid $lightGray;
-}
-img.grayscale {
-  -webkit-filter: grayscale(1);
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'gs\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#gs");
-  filter: grayscale(1);
-}
 
-.nav ul {
-  margin-right: -60px;
-  margin-left: 30px;
-  direction: ltr;
-}
-.nav {
-  font-size: 1.2em;
-  display: flex;
-}
-body {
-  direction: ltr;
-}
+

@@ -1,0 +1,40 @@
+.thanks {
+  float: left;
+  margin-top: -15px;
+  margin-left: 135px;
+}
+
+.thanksTitle {
+  padding-bottom: 5px;
+  margin-bottom: 100px;
+  padding-left: 295px;
+}
+
+@media only screen and (max-width: 640px) {
+  .thanksPage {
+    flex-direction: column;
+
+    .thanksArticle {
+      padding-left: 25px;
+      font-size: 1.2em;
+      margin-bottom: -30px;
+      padding-right: 25px;
+      .thanksTitle {
+        padding-left: 0;
+        display: block;
+        margin-top: 0;
+        padding-right: 0;
+        padding-bottom: 5px;
+        background-color: white;
+        padding-top: 10px;
+        color: gray;
+      }
+    }
+  }
+  .thanks {
+    float: left;
+    margin-top: -80px !important;
+    margin-left: 135px;
+    margin-right: 25px;
+  }
+}

@@ -10,27 +10,33 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>sachi</title>
-    <meta name="description" content="">
+    <title>SAHI</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="description" content='עמותת נכח - נתינה כדרך חיים (ע"ר) נוסדה מתוך רצון להשפיע ולהוביל התפתחות חברתית דרך הנתינה. לנכח תכניות לגילאים שונים, המרכזית שביניהן היא תכנית הנוער סח"י-סיירת חסד ייחודית שעוסקת באיתור בני נוער, והפיכתם לשגרירי נתינה בקהילתם בתהליך חינוכי ייחודי. '>
+    <meta name="description" content="Established in 2009, S.A.H.I. transforms the lives of Israel's disadvantaged 'street kids' based a unique strength-based approach in which the youth themselves engage in acts of giving and helping others.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="bower_components/angular-xeditable/dist/css/xeditable.css" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="bower_components/angular-carousel/dist/angular-carousel.css"/>
     <link rel="stylesheet" href="css/app.css">
-    <!--<link rel="stylesheet" href="css/appltr.css" ng-if="load">-->
+    <!--<link rel="stylesheet" href="css/appltr.css">-->
     <link rel="stylesheet" href="css/fonts/font-awesome/scss/font-awesome.css">
     <!--<link rel="stylesheet" href="bower_components/lifely-angular-carousel/angular-carousel.css"/>-->
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
 
 </head>
-<body close-popup ng-cloak="">
+<body id="SAHI" ng-class="(lang=='he')? 'rtl': 'ltr'" close-popup ng-cloak="">
+<a tabindex="1" ng-href="{{vm.pageName}}#content" class="skip">Skip to content</a>
 <toaster-container toaster-options="{'time-out': 2000}"></toaster-container>
 <header>
     <nav class="nav">
         <a ng-click="hideNav = !hideNav"><i class="fa fa-bars" id="menu-icon"></i></a>
-        <a href="#/home"><img tabindex="1"  src="img/logo.jpg" alt="sachi logo link to home page" class="logo"/></a>
+        <a href="#/home"><img tabindex="2"  ng-src="{{logo}}" alt="sachi logo link to home page" class="logo"/></a>
         <ul ng-cloak="" ng-show="!hideNav" class="navUl">
-            <!--<li><a class="current" href="#/home">ENG</a></li>-->
+            <li ng-hide="!isMobile">
+                <a ng-cloak="" ng-if="lang=='he'" ng-click="changeLang('en')" tabindex="12" alt="אתר באנגלית" class="trans">ENG</a>
+                <a ng-cloak="" ng-if="lang=='en'" ng-click="changeLang('he')" tabindex="12" alt="אתר בעברית" class="trans">עברית</a>
+            </li>
             <li><a ng-click="hideNavOnClick()" tabindex="2" ng-class="getClass('past')" href="#/activity/past">{{'Past' | translate}}</a></li>
             <li><a ng-click="hideNavOnClick()" tabindex="3" ng-class="getClass('present')" href="#/activity/present">{{'Present' | translate}}</a></li>
             <li><a ng-click="hideNavOnClick()" tabindex="4" ng-class="getClass('future')" href="#/activity/future">{{'Future' | translate}}</a></li>
@@ -60,7 +66,7 @@
     your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div ng-view></div>
+<div ng-view autoscroll="true"></div>
 
 <footer>
     <!--<span class="login"><input type="checkbox" ng-model="user.isAdmin"/></span>-->
@@ -88,6 +94,7 @@
 <script src="activity/activity.js"></script>
 <script src="people/people.js"></script>
 <script src="partners/partners.js"></script>
+<script src="thanks/thanks.js"></script>
 <script src="contact/contact.js"></script>
 <script src="transparency/transparency.js"></script>
 <script src="components/donation/donation.js"></script>

@@ -11,7 +11,7 @@
             </ul>
         </nav>
 
-        <iframe ng-src="{{vm.currVideo.urlFull}}"width="401" height="227" frameborder="0"
+        <iframe tabindex="15" ng-src="{{vm.currVideo.urlFull}}"width="401" height="330" frameborder="0"
                 title="0" byline="0" portrait="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
         </iframe>
         <div class="arrows">
@@ -19,33 +19,41 @@
             <span ng-style="{visibility: vm.lastVideo && 'hidden' || 'visible'}" tabindex="17" title="left arrow for next video" class="arrowLeft"><a ng-click="vm.nextVideo()"><i class="fa fa-arrow-left"></i></a></span>
         </div>
 <!--{{vm.currVideo | json}}-->
-        <span class="videoDetails">
-            <p tabindex="18" class="interviewName">{{vm.currVideo.name}}</p>
-            <p tabindex="18" class="interviewName">{{vm.currVideo.role}}</p>
-        </span>
+        <!--<span class="videoDetails">-->
+            <!--<p tabindex="18" class="interviewName">{{vm.currVideo.name}}</p>-->
+            <!--<p tabindex="18" class="interviewName pb-15">{{vm.currVideo.role}}</p>-->
+        <!--</span>-->
     </aside>
     <article ng-repeat="section in vm.data.sections" ng-if="vm.isSelected(section)">
 
         <h1 tabindex="{{$index+18}}" class="light">{{section.title}}</h1>
 
+
+        <!--<iframe ng-if="section.type == 'showActivityMap'" src="http://www.google.com/maps/d/u/1/viewer?authuser=1&mid=z3oXywwnQlYo.kq5dhi0856sM" width="401" height="227" frameborder="0">-->
+        <iframe tabindex="{{$index+19}}" class="activityMap" width="401" height="313" frameborder="0"
+                ng-if="section.type == 'showActivityMap'"
+                src="https://www.google.com/maps/d/embed?mid=1qtI29mfZxaL7oZ1x5_hrf6x-B2s">
+        </iframe>
+
+
         <div ng-repeat="section in vm.data.sections" ng-if="vm.isSelected(section)" class="desc">
 
-            <p tabindex="{{$index+19}}" editable-textarea="section.textPrimary" e-rows="7" e-cols="40" e-form="textBtnForm1"
-               onaftersave="vm.updateModel()" class="strong light mb0">
+            <p id="content" tabindex="{{$index+20}}" editable-textarea="section.textPrimary" e-rows="7" e-cols="40" e-form="textBtnForm1"
+               onaftersave="vm.updateModel()" class="light mb0 fs13">
                 {{section.textPrimary}}
             </p>
             <button class="btnEdit" ng-if="user.isAdmin" ng-click="textBtnForm1.$show()" ng-hide="textBtnForm1.$visible">ערוך</button>
             <br/>
 
-            <p tabindex="{{$index+20}}" editable-textarea="section.textSecondary" e-rows="7" e-cols="40" e-form="textBtnForm2"
-               onaftersave="vm.updateModel()" class="descParagraph light">
+            <p tabindex="{{$index+21}}" editable-textarea="section.textSecondary" e-rows="7" e-cols="40" e-form="textBtnForm2"
+               onaftersave="vm.updateModel()" class="descParagraph light fs13">
                 {{section.textSecondary}}
             </p>
             <button class="btnEdit" ng-if="user.isAdmin" ng-click="textBtnForm2.$show()" ng-hide="textBtnForm2.$visible">ערוך</button>
         </div>
     </article>
 
-    <div class="mapPopup" ng-if="vm.showActivityMap"></div>
+
 
 </section>
 

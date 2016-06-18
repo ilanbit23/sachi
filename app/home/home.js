@@ -17,6 +17,7 @@ angular.module('myApp.home', ['ngRoute'])
         var currPlayedVideo = null;
 
         ctrl.getVideo = function (videoId) {
+            
             return DataFactory.getVideo(videoId);
         };
 
@@ -51,10 +52,12 @@ angular.module('myApp.home', ['ngRoute'])
                 });
 
                 function onFinish(id) {
-                    $scope.$apply(function () {
+                    $timeout(function () {
+                        //console.log('Video is Finished!');
+                        //document.webkitCancelFullScreen();
                         currPlayedVideo.playNow = false;
                         currPlayedVideo.isPlaying = false;
-                    });
+                    }, 1000);
                 }
             }, 500);
         };
@@ -83,5 +86,17 @@ angular.module('myApp.home', ['ngRoute'])
             });
             return idx;
         }
+        //$(function() {
+        //    $("#imgSection").tabs({event:'mouseover'});
+        //});
+
+
+        $scope.$on('$destroy', function() {
+            console.log('Bye now');
+            if (currPlayedVideo) {
+                currPlayedVideo.playNow = false;
+                currPlayedVideo.isPlaying = false;
+            }
+        });
 
     }]);

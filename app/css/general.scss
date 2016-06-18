@@ -80,7 +80,7 @@
 }
 
 a {
-  font-family: 'NextExitRound-Regular', sans-serif !important;
+  font-family: 'NextExitRound-Light', sans-serif !important;
   color: $lightGray;
   text-decoration: none;
  // outline: none !important;
@@ -89,7 +89,9 @@ a {
     text-decoration: none;
   }
 }
-
+.fs14 {
+  font-size: 1.4em;
+}
 ul {
   list-style-type: none;
 }

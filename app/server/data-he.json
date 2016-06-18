@@ -2,18 +2,20 @@
   "videosData": {
     "1": {
       "id": 1,
-      "page": "past",
-      "urlShort": "https://player.vimeo.com/video/164911150?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164916983?autoplay=0",
-      "name": "אליהו",
-      "role": "יאנג לידר",
+      "page": "future",
+      "urlShort": "https://player.vimeo.com/video/165553090?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/164925843?autoplay=0",
+      "quote": "אנחנו באים ואומרים להם \"אנחנו צריכים את העזרה שלכם\"",
+      "name": "אברהם חיון",
+      "role": "מנכ\"ל",
       "order": 1
     },
     "2": {
       "id": 2,
-      "page": "past",
+      "page": "present",
       "urlShort": "https://player.vimeo.com/video/164912182?autoplay=1",
       "urlFull": "https://player.vimeo.com/video/164913116?autoplay=0",
+      "quote": "זה היה חיבוק של \"את משלנו\"",
       "name": "בליינש",
       "role": "לידרית",
       "order": 2
@@ -23,82 +25,142 @@
       "page": "past",
       "urlShort": "https://player.vimeo.com/video/164912181?autoplay=1",
       "urlFull": "https://player.vimeo.com/video/164919262?autoplay=0",
+      "quote": "אתה נראה אחד שאוהב לעזור",
       "name": "תומר",
       "role": "לידר",
       "order": 3
     },
     "4": {
       "id": 4,
-      "page": "present",
+      "page": "past",
       "urlShort": "https://player.vimeo.com/video/164915005?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164915005?autoplay=0",
+      "urlFull": "https://player.vimeo.com/video/164921255?autoplay=0",
+      "quote": "היום אני עסוק בנתינה",
       "name": "סהר",
       "role": "לידר",
-      "order": 4
+      "order": 12
     },
     "5": {
       "id": 5,
       "page": "present",
       "urlShort": "https://player.vimeo.com/video/164915002?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164915002?autoplay=0",
+      "urlFull": "https://player.vimeo.com/video/164921247?autoplay=0",
+      "quote": "סח\"י זה מעבר להתנדבות. סח\"י זה בשבילי הבית",
       "name": "בת חן",
       "role": "לידרית",
       "order": 5
     },
     "6": {
       "id": 6,
-      "page": "past",
+      "page": "future",
       "urlShort": "https://player.vimeo.com/video/164915001?autoplay=1",
       "urlFull": "https://player.vimeo.com/video/165260225?autoplay=0",
+      "quote": "עשיתי את השינוי הזה אך ורק בגללי, בשביל עצמי",
       "name": "מיכאל",
       "role": "לידר",
       "order": 6
     },
     "7": {
       "id": 7,
-      "page": "present",
+      "page": "giving",
       "urlShort": "https://player.vimeo.com/video/164915000?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164915000?autoplay=0",
+      "urlFull": "https://player.vimeo.com/video/164921245?autoplay=0",
+      "quote": "זה כמו גחליליות שנמשכות לאור, לחום",
       "name": "ענבר",
       "role": "רכזת בוגרים",
       "order": 7
     },
     "8": {
       "id": 8,
-      "page": "future",
-      "urlShort": "https://player.vimeo.com/video/157043575?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164915000?autoplay=0",
-      "name": "אברהם חיון",
-      "role": "מנכ\"ל",
+      "page": "present",
+      "urlShort": "https://player.vimeo.com/video/164911150?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/164916983?autoplay=0",
+      "quote": "אתה יכול לסובב את הגב ולהתעלם מדבר כזה?",
+      "name": "אליהו",
+      "role": "יאנג לידר",
       "order": 8
     },
     "9": {
       "id": 9,
       "page": "present",
-      "urlShort": "https://player.vimeo.com/video/164914999?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164914999?autoplay=0",
+      "urlShort": "https://player.vimeo.com/video/165553096?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168099869?autoplay=0",
+      "quote": "הם פותחים לך את הראש. מלמדים אותך",
       "name": "נאור",
       "role": "חבר סיירת",
-      "order": 9
+      "order": 15
     },
     "10": {
       "id": 10,
       "page": "present",
       "urlShort": "https://player.vimeo.com/video/164912179?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164912179?autoplay=0",
+      "urlFull": "https://player.vimeo.com/video/164921243?autoplay=0",
+      "quote": "החלטתי שאני גם רוצה להיות ילדה שמשפיעה",
       "name": "שרונה",
       "role": "לידרית",
-      "order": 10
+      "order": 13
     },
     "11": {
       "id": 11,
-      "page": "giving",
+      "page": "past",
       "urlShort": "https://player.vimeo.com/video/164911073?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164911073?autoplay=0",
+      "urlFull": "https://player.vimeo.com/video/164921249?autoplay=0",
+      "quote": "ראיתי דברים שלא ידעתי עליהם לפני",
       "name": "נתנאל",
       "role": "חבר סיירת",
       "order": 11
+    },
+    "12": {
+      "id": 12,
+      "page": "past",
+      "urlShort": "https://player.vimeo.com/video/168141453?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168141452?autoplay=0",
+      "quote": "חברה המושתתת על נתינה וחשיבה ודאגה לזולת",
+      "name": "עודד וייס",
+      "role": "יזם ואיש חינוך",
+      "order": 4
+    },
+    "13": {
+      "id": 13,
+      "page": "future",
+      "urlShort": "https://player.vimeo.com/video/168147445?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168099864?autoplay=0",
+      "quote": "אני רואה את סח\"י בכל עיר, בכל שכונה",
+      "name": "עודד וייס",
+      "role": "יזם ואיש חינוך",
+      "order": 10
+    },
+    "14": {
+      "id": 14,
+      "page": "giving",
+      "urlShort": "https://player.vimeo.com/video/168141451?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168100002?autoplay=0",
+      "quote": "מה שאנחנו עושים זה חינוך לנתינה",
+      "name": "עודד וייס",
+      "role": "יזם ואיש חינוך",
+      "order": 14
+    },
+    "15": {
+      "id": 15,
+      "page": "past",
+      "urlShort": "https://player.vimeo.com/video/168099870?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168147540?autoplay=0",
+      "quote": "האמונה הגדולה-  שילכו אחרינו",
+      "name": "עודד ואברהם",
+      "role": "מקימים",
+      "order": 9
+    },
+    "16": {
+      "id": 16,
+      "page": "giving",
+      "urlShort": "https://player.vimeo.com/video/168099891?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168555252?autoplay=0",
+      "quote": "הוא מראה להם דוגמא אישית אחרת",
+      "name": "ענבר",
+      "role": "רכזת בוגרים",
+      "order": 16
     }
+
   },
   "home": {},
   "past": {
@@ -136,8 +198,8 @@
       },
       {
         "title": "מפת פעילות",
-        "textPrimary": "מפת פעילות",
-        "textSecondary": "זוהי האימפריה שלנו",
+        "textPrimary": "",
+        "textSecondary": "",
         "type": "showActivityMap"
       }
     ]
@@ -200,8 +262,8 @@
         "title": "האנשים שלנו",
         "titlePrimary": "עודד וייס",
         "titleSecondary": "נשיא מייסד",
-        "textPrimaryPeople":"איש חינוך למעלה מ-20 שנה, הקים ב־2007 את עמותת נכח - נתינה כדרך חיים (ע\"ר) והגה את תכניות העמותה- סח\"י, חש\"ן, שה\"ם ועוד ",
-        "textSecondaryPeople": "מתוך תפיסה ש\"הנתינה מחברת אותנו למי שאנחנו באמת\", כיחיד וכחברה. משמש כיום כמנהל החינוכי של העמותה. ",
+        "textPrimaryPeople": "איש חינוך למעלה מ-20 שנה, הקים ב־2007 את עמותת נכח - נתינה כדרך חיים (ע\"ר) והגה את תכניות העמותה- סח\"י, חש\"ן, שה\"ם ועוד מתוך תפיסה ש\"הנתינה מחברת אותנו למי שאנחנו באמת\", כיחיד וכחברה. משמש כיום כמנהל החינוכי של העמותה",
+        "textSecondaryPeople": "",
         "img": "img/people/oded.jpg"
       },
       {
@@ -232,7 +294,7 @@
         "title": "האנשים שלנו",
         "titlePrimary": "ולריה פוליאקוב",
         "titleSecondary": "רכזת מטה ",
-        "textPrimaryPeople": "בוגרת תואר שני בניהול מלכ\"רים ומגדר. כרכזת מטה היא אחראית על הפן האדמינסטרטיבי. בנוסף, היא עובדת על פיתוח תכנית GPS (Girl Power Sahi), שמטרתה העצמת נערות בסיכון. ",
+        "textPrimaryPeople": "בוגרת תואר שני בניהול מלכ\"רים ומגדר. כרכזת מטה היא אחראית על הפן האדמינסטרטיבי. בנוסף, היא עובדת על פיתוח תכנית GPS -   Girl Power Sahi, שמטרתה העצמת נערות בסיכון. ",
         "textSecondaryPeople": "\"להיות בפעילות ולראות את ההשפעה של הנתינה על בני הנוער מרגש אותי כל פעם מחדש. הצוות של סח\"י עובד מהלב וזה מה שיוצר את האווירה הכל כך מיוחדת בארגון.\"",
         "img": "img/people/valeria.jpg"
       },
@@ -241,16 +303,24 @@
         "titlePrimary": "אורי צדוק",
         "titleSecondary": "רכז ירושלים והסביבה",
         "textPrimaryPeople": "הצ'יף הראשון של סח\"י בירושלים. נשוי עם שני ילדים, ירושלמי. היום הוא רכז אזור ירושלים, שותף בהדרכות של כל הצ'יפים, בליווי הלוגיסטיקי והרוחני. חי את סח\"י בכל נימיו ונשמתו, ילדיו ואשתו מגבים את העשייה האין סופית שלו בעמותה.",
-        "textSecondaryPeople": "\"בצבא, מצאתי את המשמעות האמתית בעבודה עם החיילים, זה נתן לי דרייב עצום. חיפשתי את ההגשמה הזו באזרחות ומצאתי את זה דרך סח\"י\". ",
-        "img": "img/people/inbar.jpg"
+        "textSecondaryPeople": "\"סח\"י בשבילי היא הדבר הכי גדול בעולם\". ",
+        "img": "img/people/ori.jpg"
       },
       {
         "title": "האנשים שלנו",
         "titlePrimary": "אוהד שעאר",
         "titleSecondary": "רכז שטח",
-        "textPrimaryPeople": "אהד הוא הצ'יף של קרית מלאכי ומלווה קבוצות נוספות. נשוי ואב לשנתיים. אוהב את מה שהוא עושה, אוהב אנשים ועשיית טוב.",
+        "textPrimaryPeople": "אהד הוא הצ'יף של קריית מלאכי ומלווה קבוצות נוספות. נשוי ואב לשתיים. אוהב את מה שהוא עושה, אוהב אנשים ועשיית טוב.",
         "textSecondaryPeople": "\"סח\"י בשבילי זה סיפוק אדיר, אני מביא הביתה תכלית של נתינה, של חסד ואהבת הזולת. זוהי הזדמנות בשבילי לאפשר לאדם להגיע לטוב שבו, בלי לשפוט או להעביר ביקורת , תמיד לראות את הטוב שבכל אחד\".",
         "img": "img/people/ohad.jpg"
+      },
+      {
+        "title": "האנשים שלנו",
+        "titlePrimary": "יוחאי בוחבוט",
+        "titleSecondary": "רכז אזור דרום",
+        "textPrimaryPeople": "שירת שירות קרבי ארוך ומשמעותי כקצין, השתחרר בתפקיד מ\"פ מבצעית ובחר להמשיך את הנתינה באזרחות בעיר הולדתו- קרית גת. יוחאי מרכז את אזור הדרום של סח\"י, תפקיד הכולל עבודה שוטפת במתן מענה לקבוצות, ובשיתופי פעולה עם הגופים השונים והרשויות. ",
+        "textSecondaryPeople": "\"בצבא, מצאתי את המשמעות האמתית בעבודה עם החיילים, זה נתן לי דרייב עצום. חיפשתי את ההגשמה הזו באזרחות ומצאתי את זה דרך סח\"י\".",
+        "img": "img/people/yochai.jpg"
       },
       {
         "title": "האנשים שלנו",
@@ -258,7 +328,7 @@
         "titleSecondary": "רכז אזור מרכז",
         "textPrimaryPeople": "נשוי עם שני ילדים. השתחרר משירות של 10 שנים בצבא, במהלך שירותו פיקד על חיילים רבים. בעל תואר ראשון בחברה וביטחון. החליט להמשיך את הנתינה למדינה במסגרת סח\"י, היום מרכז את אזור המרכז. ",
         "textSecondaryPeople": "\"סח\"י בשבילי זאת הזדמנות לתת הזדמנות לאנשים מזדמנים\"",
-        "img": "img/people/ohad.jpg"
+        "img": "img/people/avner.jpg"
       }
     ]
   },
@@ -279,11 +349,11 @@
       },
       {
         "textPrimaryPartners": "על ידי תמיכה בסחי אנחנו תומכים בטווח הארוך לשינוי החברה הישראלית על ידי השפעה חיובית על קהילה, עיר, מדינה.",
-        "companyName": "עופר בבלי"
+        "companyName": "עפר בבלי, מנכ\"ל המשרד הישראלי- הפדרציה היהודית של שיקאגו"
       },
       {
         "textPrimaryPartners": " אם יש משהו שהוא השורש, שיחולל ומחולל מהפכה זה סחי. זה חובה של כל אדם להבין שסחי זו התשובה שלו אם הוא רוצה להפוך את המקום הזה להכי טוב, שיצטרף זה יתקן אותו, יהפוך אותו לאדם הכי גבוה שיכול להיות",
-        "companyName": "עדי אלטשולר"
+        "companyName": "עדי אלטשולר, יזמית חברתית- מייסדת תנועת הנוער \"כנפיים של קרמבו\" ומיזם \"זיכרון בסלון\""
       }
     ],
     "logos": [
@@ -314,8 +384,8 @@
       },
       {
         "id": 6,
-        "name": "ידידי צהל בארה\"ב",
-        "url": "http://http://www.fidf.org/"
+        "name": "The Estelle Friedman Gervis Family Foundation",
+        "url": ""
       },
       {
         "id": 7,
@@ -370,9 +440,231 @@
       {
         "id": 17,
         "name": "עמותת לחן",
-        "url": "http://www.leumi.co.il/home03/Leumi_Tomorrow/9840/"
+        "url": "http://www.lachan.org.il/he/"
+      },
+      {
+        "id": 18,
+        "name": "רמי לוי",
+        "url": "http://www.rami-levy.co.il/"
+      },
+      {
+        "id": 19,
+        "name": "תנופה",
+        "url": "http://tnufaqg.co.il/"
+      },
+      {
+        "id": 20,
+        "name": "גשר",
+        "url": "http://www.gesher.co.il/"
+      },
+      {
+        "id": 21,
+        "name": "גשר",
+        "url": "http://www.shivyon.gov.il/Pages/default.aspx"
+      },
+      {
+        "id": 22,
+        "name": "Chicago Federation (Partnership 2gether)",
+        "url": "https://www.juf.org/p2g/"
+      },
+      {
+        "id": 23,
+        "name": "Pratt Foundation",
+        "url": "http://www.prattfoundation-israel.co.il/"
+      },
+      {
+        "id": 24,
+        "name": "The Orion Foundation",
+        "url": ""
+      },
+      {
+        "id": 25,
+        "name": "עיריית ירושלים  - החטיבה לקידום נוער וצעירים",
+        "url": "https://www.jerusalem.muni.il/Residents/CommunityAffairs/Noar/Pages/default.aspx"
+      },
+      {
+        "id": 26,
+        "name": "The Gimprich Family Foundation",
+        "url": ""
+      },
+      {
+        "id": 27,
+        "name": "The Lily and Nathan Silver Family Foundation",
+        "url": ""
+      },
+      {
+        "id": 28,
+        "name": "Yedidut Toronto",
+        "url": "http://www.ff-yt.org/"
+      },
+      {
+        "id": 29,
+        "name": "Arison",
+        "url": "http://www.arisonfoundation.com/"
+      },
+      {
+        "id": 30,
+        "name": "The Jewish Community Foundation of Southern Arizona (JCF)",
+        "url": "https://jcftucson.org/"
+      },
+      {
+        "id": 31,
+        "name": "Sobell Foundation",
+        "url": "http://www.sobellfoundation.org.uk/"
+      },
+      {
+        "id": 32,
+        "name": "Leichtag Foundation",
+        "url": "http://www.leichtag.org/"
+      },
+      {
+        "id": 33,
+        "name": "Acharai Fund",
+        "url": "http://acharaifund.org/"
+      },
+      {
+        "id": 34,
+        "name": "עופרטקס",
+        "url": "http://www.ofertex.com/"
+      },
+      {
+        "id": 35,
+        "name": "נווה חנה, בית הילדים",
+        "url": "http://www.nevehanna.org/childrenHouse"
+      },
+      {
+        "id": 36,
+        "name": "מוטב יחדיו ",
+        "url": "http://www2.jdc.org.il/he/pictures/308"
+      },
+      {
+        "id": 37,
+        "name": "לקט ישראל",
+        "url": "http://www.leket.org/"
+      },
+      {
+        "id": 38,
+        "name": "עיר ללא אלימות",
+        "url": "http://www.cwv.gov.il/"
+      },
+      {
+        "id": 39,
+        "name": "החברה למתנ\"סים",
+        "url": "http://www.matnasim.org.il/"
+      },
+      {
+        "id": 40,
+        "name": "אגף שח\"ר- שירותי חינוך ורווחה, ירושלים",
+        "url": "http://cms.education.gov.il/educationcms/units/shachar/alhaagaf/odot.htm"
+      },
+      {
+        "id": 41,
+        "name": "sketchit",
+        "url": "http://www.skechit.co.uk/"
+      },
+      {
+        "id": 42,
+        "name": "שגרירי רוטשילד",
+        "url": "http://br.rcf.org.il/"
+      },
+      {
+        "id": 43,
+        "name": "שותפות ביחד חוף אשקלון",
+        "url": "https://jcftucson.org/"
+      },
+      {
+        "id": 44,
+        "name": "משרד החינןך",
+        "url": "http://cms.education.gov.il/EducationCMS/Units/YeledNoarBesikun/"
+      },
+      {
+        "id": 45,
+        "name": "chuck wolfe",
+        "url": ""
       }
-
     ]
+  },
+
+  "transparency": {
+    "years": {
+      "2014": [
+        {
+          "title": "Registration certificate",
+          "url": "transparency/docs/2014/1.pdf"
+        },
+        {
+          "title": "Proper management permit",
+          "url": "transparency/docs/2014/2.pdf"
+        },
+        {
+          "title": "Public institute permit",
+          "url": "transparency/docs/2014/3.pdf"
+        },
+        {
+          "title": "Tax deduction permit",
+          "url": "transparency/docs/2014/4.pdf"
+        },
+        {
+          "title": "VAT certificate",
+          "url": "transparency/docs/2014/5.pdf"
+        },
+        {
+          "title": "Account bookkeeping certificate",
+          "url": "transparency/docs/2014/6.pdf"
+        }
+      ],
+      "2015": [
+        {
+          "title": "Registration certificate",
+          "url": "transparency/docs/2015/1.pdf"
+        },
+        {
+          "title": "Proper management permit",
+          "url": "transparency/docs/2015/2.pdf"
+        },
+        {
+          "title": "Public institute permit",
+          "url": "transparency/docs/2015/3.pdf"
+        },
+        {
+          "title": "Tax deduction permit",
+          "url": "transparency/docs/2015/4.pdf"
+        },
+        {
+          "title": "VAT certificate",
+          "url": "transparency/docs/2015/5.pdf"
+        },
+        {
+          "title": "Account bookkeeping certificate",
+          "url": "transparency/docs/2015/6.pdf"
+        }
+      ],
+      "2016": [
+        {
+          "title": "Registration certificate",
+          "url": "transparency/docs/2016/1.pdf"
+        },
+        {
+          "title": "Proper management permit",
+          "url": "transparency/docs/2016/2.pdf"
+        },
+        {
+          "title": "Public institute permit",
+          "url": "transparency/docs/2016/3.pdf"
+        },
+        {
+          "title": "Tax deduction permit",
+          "url": "transparency/docs/2016/4.pdf"
+        },
+        {
+          "title": "VAT certificate",
+          "url": "transparency/docs/2016/5.pdf"
+        },
+        {
+          "title": "Account bookkeeping certificate",
+          "url": "transparency/docs/2016/6.pdf"
+        }
+      ]
+    }
   }
 }

@@ -80,10 +80,11 @@
   .peopleDesc {
     flex-direction: column;
     margin-top: 30px;
-    padding-right: 50px;
-    padding-left: 4em;
+    img {width: 100% !important;}
     article {
       margin-right: 0 !important;
+      padding-left: 10px;
+      padding-right: 15px;
     }
   }
 

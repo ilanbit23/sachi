@@ -2,27 +2,30 @@
   "videosData": {
     "1": {
       "id": 1,
-      "page": "past",
-      "urlShort": "https://player.vimeo.com/video/164911150?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164916983?autoplay=0",
-      "name": "Eliyau",
-      "role": "Young Leader",
+      "page": "future",
+      "urlShort": "https://player.vimeo.com/video/166694276?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168551454?autoplay=0",
+      "quote": "We come to them and we say: \"We need your help\"",
+      "name": "Avraham",
+      "role": "CEO",
       "order": 1
     },
     "2": {
       "id": 2,
       "page": "past",
-      "urlShort": "https://player.vimeo.com/video/164912182?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164913116?autoplay=0",
-      "name": "Bleinesh",
+      "urlShort": "https://player.vimeo.com/video/166694279?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168553703?autoplay=0",
+      "quote": "It was a hug that said \"you're one of us\"",
+      "name": "Blainesh",
       "role": "Leader",
       "order": 2
     },
     "3": {
       "id": 3,
       "page": "past",
-      "urlShort": "https://player.vimeo.com/video/164912181?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164919262?autoplay=0",
+      "urlShort": "https://player.vimeo.com/video/166694288?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168586770?autoplay=0",
+      "quote": "You look like somebody who likes to help",
       "name": "Tomer",
       "role": "Leader",
       "order": 3
@@ -30,17 +33,19 @@
     "4": {
       "id": 4,
       "page": "present",
-      "urlShort": "https://player.vimeo.com/video/164915005?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164915005?autoplay=0",
+      "urlShort": "https://player.vimeo.com/video/166694289?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168555255?autoplay=0",
+      "quote": "Today I concentrate on giving",
       "name": "Sahar",
       "role": "Leader",
-      "order": 4
+      "order": 12
     },
     "5": {
       "id": 5,
       "page": "present",
-      "urlShort": "https://player.vimeo.com/video/164915002?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164915002?autoplay=0",
+      "urlShort": "https://player.vimeo.com/video/166694280?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168552526?autoplay=0",
+      "quote": "SAHI is more than just volunteering, SAHI is my home",
       "name": "Bat Chen",
       "role": "Leader",
       "order": 5
@@ -48,8 +53,9 @@
     "6": {
       "id": 6,
       "page": "present",
-      "urlShort": "https://player.vimeo.com/video/164915001?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/165260225?autoplay=0",
+      "urlShort": "https://player.vimeo.com/video/166694281?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168555253?autoplay=0",
+      "quote": "I made this change only for myself",
       "name": "Michael",
       "role": "Leader",
       "order": 6
@@ -57,47 +63,102 @@
     "7": {
       "id": 7,
       "page": "future",
-      "urlShort": "https://player.vimeo.com/video/164915000?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164915000?autoplay=0",
+      "urlShort": "https://player.vimeo.com/video/166694285?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168558500?autoplay=0",
+      "quote": "They're like fireflies that are drawn to the light",
       "name": "Inbar",
       "role": "Alumni Coordinator",
       "order": 7
     },
     "8": {
       "id": 8,
-      "page": "future",
-      "urlShort": "https://player.vimeo.com/video/157043575?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/157043575?autoplay=0",
-      "name": "Avraham",
-      "role": "CTO",
+      "page": "past",
+      "urlShort": "https://player.vimeo.com/video/166694278?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168555250?autoplay=0",
+      "quote": "Can you turn your back and ignore something like that?",
+      "name": "Eliyau",
+      "role": "Young Leader",
       "order": 8
     },
     "9": {
       "id": 9,
       "page": "future",
-      "urlShort": "https://player.vimeo.com/video/164914999?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164914999?autoplay=0",
+      "urlShort": "https://player.vimeo.com/video/166694282?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/169201028?autoplay=0",
+      "quote": "They open your mind. They teach you",
       "name": "Naor",
-      "role": "Patrol member",
-      "order": 9
+      "role": "SAHI Member",
+      "order": 15
     },
     "10": {
       "id": 10,
       "page": "giving",
-      "urlShort": "https://player.vimeo.com/video/164912179?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164912179?autoplay=0",
+      "urlShort": "https://player.vimeo.com/video/166694287?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168586769?autoplay=0",
+      "quote": "I also wanted to be someone who influences",
       "name": "Sharona",
       "role": "Leader",
-      "order": 10
+      "order": 13
     },
     "11": {
       "id": 11,
       "page": "giving",
-      "urlShort": "https://player.vimeo.com/video/164911073?autoplay=1",
-      "urlFull": "https://player.vimeo.com/video/164911073?autoplay=0",
+      "urlShort": "https://player.vimeo.com/video/166694283?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/168555254?autoplay=0",
+      "quote": "I saw things that I never knew existed",
       "name": "Netanel",
-      "role": "Patrol member",
+      "role": "SAHI member",
       "order": 11
+    },
+    "12": {
+      "id": 12,
+      "page": "past",
+      "urlShort": "https://player.vimeo.com/video/168141453?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/169212598?autoplay=0",
+      "quote": "A society based on giving and concern for others",
+      "name": "Oded Weiss",
+      "role": "Founder and Educator",
+      "order": 4
+    },
+    "13": {
+      "id": 13,
+      "page": "future",
+      "urlShort": "https://player.vimeo.com/video/168147445?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/169210476?autoplay=0",
+      "quote": "I see SAHI in every city, every neighborhood",
+      "name": "Oded Weiss",
+      "role": "Founder and Educator",
+      "order": 10
+    },
+    "14": {
+      "id": 14,
+      "page": "giving",
+      "urlShort": "https://player.vimeo.com/video/168141451?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/169211086?autoplay=0",
+      "quote": "What we do is educate about giving",
+      "name": "Oded Weiss",
+      "role": "Founder and Educator",
+      "order": 14
+    },
+    "15": {
+      "id": 15,
+      "page": "past",
+      "urlShort": "https://player.vimeo.com/video/168099870?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/169203536?autoplay=0",
+      "quote": "We truly believed that they'll follow us",
+      "name": "Oded and Avraham",
+      "role": "Founders",
+      "order": 9
+    },
+    "16": {
+      "id": 16,
+      "page": "giving",
+      "urlShort": "https://player.vimeo.com/video/168099891?autoplay=1",
+      "urlFull": "https://player.vimeo.com/video/169199873?autoplay=0",
+      "quote": "Leading by example is the most important educational work",
+      "name": "Inbar",
+      "role": "Alumni Coordinator",
+      "order": 16
     }
   },
   "home": {},
@@ -148,19 +209,19 @@
     "pageTitle": "Future",
     "sections": [
       {
-        "title": "The young cohort",
+        "title": "Kids",
         "textPrimary": "Experience shows us that the younger someone is when exposed to giving, the bigger the horizons that open up before that person, which may steer them towards positive destinies. In order to reach ever younger children, we developed the HOSHEN PROGRAM. HOSHEN is the Hebrew acronym for “Friends of Giving”, a program designed for children under 12. ",
         "textSecondary": "with these kids include educational content through dialogue, games, stories and plays, in which we focus on themes of mutual help and assistance. This activity promotes social awareness and sensitivity towards weak and different populations, from a young age. We are now at the last stage of running successful pilot programs of HOSHEN groups in Kiryat Gat and in Jerusalem.",
         "selected": false
       },
       {
-        "title": "The graduates Program",
+        "title": "Graduates",
         "textPrimary": "Although SAHI is a youth program, we are proud of the more than 150 graduates over 18. We stand by our graduates and help them face the challenges of young people taking their first steps in the adult world. ",
         "textSecondary": "Our graduate program being launched now is called MASHAKIM, an acronym for “Neighborhood and Community Leaders”. In the program, our graduates receive personal mentorship to help them fulfill their personal dreams and to turn them into meaningful leaders in the neighborhoods where they reside. ",
         "selected": true
       },
       {
-        "title": "Independence with Essence",
+        "title": "Unity Project",
         "textPrimary": "NOCHACH is proud to be a central partner in the “Independence with Essence” initiative. The State of Israel is fast approaching its 70th anniversary and the future looks bleak. There is a growing polarization among different sectors and groups in our society, the public discourse is becoming louder and more aggressive, and social solidarity is shrinking along with many people’s belief in our righteousness and our ability to sustain a Jewish and democratic state.",
         "textSecondary": "We propose to infuse our independence with meaning. We aim to reach festivity sites and private homes throughout the country on Independence Day using varied and original means in order to encourage a “thinking” celebration that would combine the bursting joy with meaningful reflection on the reasons why we are here and on the goodness and beauty of our independent existence."
       },
@@ -199,8 +260,8 @@
         "title": "Our People",
         "titlePrimary": "Oded Weiss ",
         "titleSecondary": "Founder and Educational Director",
-        "textPrimaryPeople": "Oded is an educator with 20 years’ experience who established the NOCHACH (\"Giving as a Way of Life\") non-profit organization in 2007 and  established the organization’s programs ",
-        "textSecondaryPeople": "SAHI, Hoshen, Shoham and more – out of the realization that \"Giving connects us to who we really are\". He is currently acting as Nochah’s educational director. ",
+        "textPrimaryPeople": "Oded is an educator with 20 years’ experience \n who established the NOCHACH (\"Giving as a Way of Life\") non-profit organization \n in 2007 and  established the organization’s programs - \n  SAHI, Hoshen, Shoham and more. \n out of the realization that \"Giving connects us to who we really are\".",
+        "textSecondaryPeople": "He is currently acting as Nochah’s educational director. ",
         "img": "img/people/oded.jpg"
       },
       {
@@ -241,7 +302,7 @@
         "titleSecondary": "Regional Coordinator, Jerusalem",
         "textPrimaryPeople": "Ori was Jerusalem’s first Chief. A resident of the city, he is married and has two children. Ori is the Coordinator for the Jerusalem region, helping to train all the Chiefs and supporting them logistically. He lives and breathes SAHI, encouraged by his wife and two children in his infinite work on behalf of the organization.  ",
         "textSecondaryPeople": "“SAHI for me is the greatest thing in the world”.",
-        "img": "img/people/avraham.jpg"
+        "img": "img/people/ori.jpg"
       },
       {
         "title": "Our People",
@@ -265,13 +326,12 @@
         "titleSecondary": "Regional Coordinator, Central Region",
         "textPrimaryPeople": "Married with two kids, Avner served for 10 years in an IDF combat unit commanding troops. Holds a first degree in society and security studies. Decided to keep giving to the state of Israel through SAHI, currently coordinates all central region activities.",
         "textSecondaryPeople": "\"SAHI give me to opportunity to give opportunities to others\"",
-        "img": "img/people/ohad.jpg"
+        "img": "img/people/avner.jpg"
       }
     ]
   },
   "partners": {
-    "pageTitle": "אנשים",
-    "engPageTitle": "partners",
+    "pageTitle": "People",
     "sections": [
       {
         "title": "האנשים שלנו",
@@ -284,22 +344,22 @@
     ],
     "recommendations": [
       {
-        "textPrimaryPartners": "סח\"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת שותפות עם נוער בסיכון, הלומד לקחת אחריות על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר שינוי חיובי הן אצל הנער והן בקהילה מסביבו.",
-        "companyName": "שם גוף או חברה"
+        "textPrimaryPartners": "The teens I met after 6 months were not the same people I met the first time. Their manner of speaking has changed, as did their language, behavior towards each other and with adults, the subjects that occupied them, their focus for doing and their ability to listen and respect each other.",
+        "companyName": "Edna Darnel, Director of Educational Development and Personal Care, Jerusalem Municipality"
       },
       {
-        "textPrimaryPartners": " \"לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית לפרומי בלוף קינץ תתיח לרעח. לת צשחמי צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. ",
-        "companyName": "שם גוף או חברה"
+        "textPrimaryPartners": "By supporting SAHI, we support a change in the Israeli society for the long term, by a positive influence on a community, city and country.",
+        "companyName": "Ofer Bavly, Director General, Israel Office, Jewish  Federation of  Chicago"
       },
       {
-        "textPrimaryPartners": "סח\"י מביאה גישה חדשנית, ״הפוכה״, שיוצרת שותפות עם נוער בסיכון, הלומד לקחת אחריות על עצמו ועל הסביבה דרך נתינה. תהליך זה יוצר שינוי חיובי הן אצל הנער והן בקהילה מסביבו.",
-        "companyName": "שם גוף או חברה"
+        "textPrimaryPartners": "If anything will create and is creating a revolution it’s SAHI. Everyone should realize that SAHI is their answer if they wish to make this place the best. Joining will repair a person; make him the best person he can be.",
+        "companyName": "Adi Altschuler, Social Entrepreneur – Founder of the 'Kermbo Wings' youth movement and the 'Zikaron Basalon' holocaust commemoration initiative"
       }
     ],
     "logos": [
       {
         "id": 1,
-        "name": "steinmetz-foundation",
+        "name": "The Agnes & Beny Steinmetz Foundation",
         "url": "http://www.steinmetz-foundation.co.il"
       },
       {
@@ -321,7 +381,289 @@
         "id": 5,
         "name": "keren azrieli",
         "url": "http://www.azrielifoundation.org.il/"
+      },
+      {
+        "id": 6,
+        "name": "The Estelle Friedman Gervis Family Foundation",
+        "url": ""
+      },
+      {
+        "id": 7,
+        "name": "התוכנית הלאומית לילדים ונוער בסיכון",
+        "url": "https://www.jerusalem.muni.il/Residents/CommunityAffairs/Noar/Pages/default.aspx"
+      },
+      {
+        "id": 8,
+        "name": "קידום נוער ירושלים",
+        "url": "http://www.knoar.jerusalem.muni.il/"
+      },
+      {
+        "id": 9,
+        "name": "עמותת בית ישראל",
+        "url": "http://reut.org.il/"
+      },
+      {
+        "id": 10,
+        "name": "לתת",
+        "url": "https://www.latet.org.il/he/"
+      },
+      {
+        "id": 11,
+        "name": "אימפקט",
+        "url": "http://82.80.37.66/impact/#"
+      },
+      {
+        "id": 12,
+        "name": "ידידים",
+        "url": "http://www.yedidim.org.il/"
+      },
+      {
+        "id": 13,
+        "name": "גרפוס פרינט",
+        "url": "http://www.graphosprint.co.il/"
+      },
+      {
+        "id": 14,
+        "name": "כנף של אהבה",
+        "url": "http://wingoflove.org.il/"
+      },
+      {
+        "id": 15,
+        "name": "Jewish Helping Hands Foundation",
+        "url": "http://jewishhelpinghands.org/"
+      },
+      {
+        "id": 16,
+        "name": "בנק לאומי",
+        "url": "http://www.leumi.co.il/home03/Leumi_Tomorrow/9840/"
+      },
+      {
+        "id": 17,
+        "name": "עמותת לחן",
+        "url": "http://www.lachan.org.il/he/"
+      },
+      {
+        "id": 18,
+        "name": "רמי לוי",
+        "url": "http://www.rami-levy.co.il/"
+      },
+      {
+        "id": 19,
+        "name": "תנופה",
+        "url": "http://tnufaqg.co.il/"
+      },
+      {
+        "id": 20,
+        "name": "גשר",
+        "url": "http://www.gesher.co.il/"
+      },
+      {
+        "id": 21,
+        "name": "גשר",
+        "url": "http://www.shivyon.gov.il/Pages/default.aspx"
+      },
+      {
+        "id": 22,
+        "name": "Chicago Federation (Partnership 2gether)",
+        "url": "https://www.juf.org/p2g/"
+      },
+      {
+        "id": 23,
+        "name": "Pratt Foundation",
+        "url": "http://www.prattfoundation-israel.co.il/"
+      },
+      {
+        "id": 24,
+        "name": "The Orion Foundation",
+        "url": ""
+      },
+      {
+        "id": 25,
+        "name": "עיריית ירושלים  - החטיבה לקידום נוער וצעירים",
+        "url": "https://www.jerusalem.muni.il/Residents/CommunityAffairs/Noar/Pages/default.aspx"
+      },
+      {
+        "id": 26,
+        "name": "The Gimprich Family Foundation",
+        "url": ""
+      },
+      {
+        "id": 27,
+        "name": "The Lily and Nathan Silver Family Foundation",
+        "url": ""
+      },
+      {
+        "id": 28,
+        "name": "Yedidut Toronto",
+        "url": "http://www.ff-yt.org/"
+      },
+      {
+        "id": 29,
+        "name": "Arison",
+        "url": "http://www.arisonfoundation.com/"
+      },
+      {
+        "id": 30,
+        "name": "The Jewish Community Foundation of Southern Arizona (JCF)",
+        "url": "https://jcftucson.org/"
+      },
+      {
+        "id": 31,
+        "name": "Sobell Foundation",
+        "url": "http://www.sobellfoundation.org.uk/"
+      },
+      {
+        "id": 32,
+        "name": "Leichtag Foundation",
+        "url": "http://www.leichtag.org/"
+      },
+      {
+        "id": 33,
+        "name": "Acharai Fund",
+        "url": "http://acharaifund.org/"
+      },
+      {
+        "id": 34,
+        "name": "עופרטקס",
+        "url": "http://www.ofertex.com/"
+      },
+      {
+        "id": 35,
+        "name": "נווה חנה, בית הילדים",
+        "url": "http://www.nevehanna.org/childrenHouse"
+      },
+      {
+        "id": 36,
+        "name": "מוטב יחדיו ",
+        "url": "http://www2.jdc.org.il/he/pictures/308"
+      },
+      {
+        "id": 37,
+        "name": "לקט ישראל",
+        "url": "http://www.leket.org/"
+      },
+      {
+        "id": 38,
+        "name": "עיר ללא אלימות",
+        "url": "http://www.cwv.gov.il/"
+      },
+      {
+        "id": 39,
+        "name": "החברה למתנ\"סים",
+        "url": "http://www.matnasim.org.il/"
+      },
+      {
+        "id": 40,
+        "name": "אגף שח\"ר- שירותי חינוך ורווחה, ירושלים",
+        "url": "http://cms.education.gov.il/educationcms/units/shachar/alhaagaf/odot.htm"
+      },
+      {
+        "id": 41,
+        "name": "sketchit",
+        "url": "http://www.skechit.co.uk/"
+      },
+      {
+        "id": 42,
+        "name": "שגרירי רוטשילד",
+        "url": "http://br.rcf.org.il/"
+      },
+      {
+        "id": 43,
+        "name": "שותפות ביחד חוף אשקלון",
+        "url": "https://jcftucson.org/"
+      },
+      {
+        "id": 44,
+        "name": "משרד החינןך",
+        "url": "http://cms.education.gov.il/EducationCMS/Units/YeledNoarBesikun/"
+      },
+      {
+        "id": 45,
+        "name": "chuck wolfe",
+        "url": ""
       }
     ]
+  },
+  "transparency": {
+    "years": {
+      "2014": [
+        {
+          "title": "Registration certificate",
+          "url": "transparency/docs/2014/1.pdf"
+        },
+        {
+          "title": "Proper management permit",
+          "url": "transparency/docs/2014/2.pdf"
+        },
+        {
+          "title": "Public institute permit",
+          "url": "transparency/docs/2014/3.pdf"
+        },
+        {
+          "title": "Tax deduction permit",
+          "url": "transparency/docs/2014/4.pdf"
+        },
+        {
+          "title": "VAT certificate",
+          "url": "transparency/docs/2014/5.pdf"
+        },
+        {
+          "title": "Account bookkeeping certificate",
+          "url": "transparency/docs/2014/6.pdf"
+        }
+      ],
+      "2015": [
+        {
+          "title": "Registration certificate",
+          "url": "transparency/docs/2015/1.pdf"
+        },
+        {
+          "title": "Proper management permit",
+          "url": "transparency/docs/2015/2.pdf"
+        },
+        {
+          "title": "Public institute permit",
+          "url": "transparency/docs/2015/3.pdf"
+        },
+        {
+          "title": "Tax deduction permit",
+          "url": "transparency/docs/2015/4.pdf"
+        },
+        {
+          "title": "VAT certificate",
+          "url": "transparency/docs/2015/5.pdf"
+        },
+        {
+          "title": "Account bookkeeping certificate",
+          "url": "transparency/docs/2015/6.pdf"
+        }
+      ],
+      "2016": [
+        {
+          "title": "Registration certificate",
+          "url": "transparency/docs/2016/1.pdf"
+        },
+        {
+          "title": "Proper management permit",
+          "url": "transparency/docs/2016/2.pdf"
+        },
+        {
+          "title": "Public institute permit",
+          "url": "transparency/docs/2016/3.pdf"
+        },
+        {
+          "title": "Tax deduction permit",
+          "url": "transparency/docs/2016/4.pdf"
+        },
+        {
+          "title": "VAT certificate",
+          "url": "transparency/docs/2016/5.pdf"
+        },
+        {
+          "title": "Account bookkeeping certificate",
+          "url": "transparency/docs/2016/6.pdf"
+        }
+      ]
+    }
   }
 }

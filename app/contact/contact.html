@@ -1,54 +1,55 @@
 <section class="contact">
     <aside>
-        <h3 tabindex="14">קשר</h3>
+        <h3 tabindex="14">{{'Contact' | translate}}</h3>
 
         <p tabindex="15" class="info">
-            למידע נוסף על עמותת נכח ופעילויות סח"י,<br/>
-            לשיתופי פעולה, הצטרפות ולפתיחת סיירות חדשות –<br/><br/>
-            פנו אלינו ל:&nbsp;<a href="contact@sahi-israel.org">contact@sahi-israel.org</a> <br/><br/>
-            או השאירו הודעה ב <a href="tel:+97254-4634546" class="">054-4634546</a>
+            {{'For more information on the "Nochac"h" organization and Sah"i activities' | translate}}<br/>
+            {{'Cooperation, Joining, and Opening of new Grace Patrols' | translate}}–<br/><br/>
+            {{'Contact us at' | translate}}:&nbsp;<a href="contact@sahi-israel.org">contact@sahi-israel.org</a> <br/><br/>
+            {{'Or leave a message at' | translate}} <a href="tel:+972547-991395" class=""> 054-7991395</a>
         </p>
     </aside>
     <article>
         <h1 tabindex="16" class="light headContact">
-            אתם מוזמנים להצטרף למשפחת
-            סח"י, <br/>למעגל הנתינה ולפעילות
-            לשינוי <br/> פני החברה בישראל
+            {{'You are invited to join the Sah"i family' | translate}}<br/>
+            {{'Giving circle activities' | translate}}<br/>
+            {{'Change the face of Israeli society' | translate}}
+
         </h1>
     </article>
 </section>
 <div class="formSection">
-    <p tabindex="17">ליצירת קשר, אנא מלאו את הפרטים ונחזור אליכם בהקדם</p>
+    <p tabindex="17">{{'Contact Us' | translate}}</p>
 
     <form name="contactForm" class="contactForm" ng-submit="vm.sendContact()">
         <div class="formRight">
-            <label tabindex="18" for="contactName" class="name">*{{'Name' | translate}}</label>
+            <label tabindex="18" for="contactName" class="contact fr">*{{'Name' | translate}}</label>
             <span class="validation" ng-show="contactForm.contactName.$touched && contactForm.contactName.$invalid">{{'Required field' | translate}}</span>
             <input tabindex="19" name="contactName"  ng-model="vm.contact.name" id="contactName" type="text" class="formInput" required/>
 
 
-            <label tabindex="20" for="contactPhone" class="name">{{'Phone' | translate}}</label>
+            <label tabindex="20" for="contactPhone" class="contact fr">*{{'Phone' | translate}}</label>
             <span class="validation" ng-show="contactForm.contactPhone.$touched && contactForm.contactPhone.$invalid">{{'Required field' | translate}}</span>
             <input tabindex="21" name="contactPhone" ng-model="vm.contact.phone" id="contactPhone" type="tel" class="formInput" required/>
 
-            <label tabindex="22" for="contactSubject" class="name">{{'Subject' | translate}}</label>
+            <label tabindex="22" for="contactSubject" class="contact fr">{{'Subject' | translate}}</label>
             <input tabindex="23" id="contactSubject" ng-model="vm.contact.subject" type="text" class="formInput"/>
         </div>
         <div class="formMiddle">
-            <label tabindex="24" for="contactEmail" class="name">*{{'Mail' | translate}}</label>
+            <label tabindex="24" for="contactEmail" class="contact fr">*{{'Mail' | translate}}</label>
             <span class="validation" ng-show="contactForm.contactEmail.$touched && contactForm.contactEmail.$invalid">{{'Required field' | translate}}</span>
             <input tabindex="25" name="contactEmail" ng-model="vm.contact.email" id="contactEmail" type="email" class="formInput" required/>
 
-            <label tabindex="26" for="contactCompany" class="name">{{'Company' | translate}}</label>
+            <label tabindex="26" for="contactCompany" class="contact fr">{{'Company' | translate}}</label>
             <input tabindex="27" id="contactCompany" ng-model="vm.contact.company" type="text" class="formInput"/>
 
-            <label tabindex="28" for="contactAddress" class="name">{{'Address' | translate}}</label>
+            <label tabindex="28" for="contactAddress" class="contact fr">{{'Address' | translate}}</label>
             <input tabindex="29" id="contactAddress" ng-model="vm.contact.address" type="text" class="formInput"/>
         </div>
         <div class="formLeft">
-            <label tabindex="30" for="contactMsg" class="name">{{'Subject details' | translate}}</label>
+            <label tabindex="30" for="contactMsg" class="contact fr">*{{'Subject details' | translate}}</label>
             <span class="validation" ng-show="contactForm.contactMsg.$touched && contactForm.contactMsg.$invalid">{{'Required field' | translate}}</span>
-            <textarea tabindex="31" name="contactMsg" ng-model="vm.contact.msg" id="contactMsg" cols="19" rows="6" class="formTextArea" required></textarea>
+            <textarea tabindex="31" name="contactMsg" ng-model="vm.contact.msg" id="contactMsg" cols="16" rows="6" class="formTextArea" required></textarea>
             <input type="submit" tabindex="32" value="{{'Send' | translate}}" class="formSend">
         </div>
     </form>

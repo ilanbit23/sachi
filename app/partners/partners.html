@@ -1,23 +1,29 @@
 <div class="partners">
     <aside>
-        <h3>{{vm.data.pageTitle}}</h3>
+        <h3>{{'Partners' | translate}}</h3>
         <nav>
             <ul class="mt-15 activity-sections">
                 <li>
                     <a ng-href="#people">
-                        <p class="light fs18">האנשים שלנו</p>
+                        <p class="light fs18">{{'Our people' | translate}}</p>
                     </a>
                 </li>
                 <img src="img/hr.PNG" class="myHr" alt=""/>
                 <li>
-                    <p class="regular fs18">השותפים שלנו</p>
+                    <p class="regular fs18">{{'Our partners' | translate}}</p>
                 </li>
+                <img src="img/hr.PNG" class="myHr" alt=""/>
+                <li>
+                    <a ng-href="#thanks">
+                        <p class="light fs18">{{'Thanks' | translate}}</p>
+                    </a>
+                </li>
+                <img src="img/hr.PNG" class="myHr" alt=""/>
             </ul>
         </nav>
-
     </aside>
     <article>
-        <h1 class="light">השותפים שלנו</h1>
+        <h1 class="light">{{'Our partners' | translate}}</h1>
     </article>
 </div>
 <div class="">
@@ -27,7 +33,7 @@
         <li ng-repeat="recommendations in vm.data.recommendations">
             <!--<span class="rn-carousel-control rn-carousel-control-next ng-scope" ng-click="nextSlide()" ng-if="carouselIndex >= 0 || false"></span>-->
             <div class="recommendationRight">
-                <img src="img/quoteR.PNG" alt="quote"/>
+                <img class="transform" src="img/quoteR.PNG" alt="quote"/>
                 <p editable-textarea="recommendations.textPrimaryPartners" e-rows="7" e-cols="40" e-form="textBtnForm1" onaftersave="vm.updateModel()"
                    class="cg light">{{recommendations.textPrimaryPartners}}
                 </p>
@@ -37,7 +43,7 @@
                    class="partnerName">{{recommendations.companyName}}
                 </p>
                 <button ng-if="user.isAdmin" class="btnEdit" ng-click="textBtnForm2.$show()" ng-hide="textBtnForm2.$visible">ערוך</button>
-                <img class="quote" src="img/quoteL.PNG" alt="quote"/>
+                <img class="homeQuote transform fl" src="img/quoteL.PNG" alt="quote"/>
             </div>
             <!--<span class="rn-carousel-control rn-carousel-control-prev ng-scope" ng-click="prevSlide()" ng-if="carouselIndex < slides.length - 1 || false"></span>-->
         </li>

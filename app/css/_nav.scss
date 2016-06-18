@@ -51,15 +51,16 @@ a {
     &:last-child {
       border-bottom: 0;
     }
+    &:nth-child(2):before {
+      content: "" !important;
+    }
     &:before {
       content: "|";
       color: $lightGray;
       padding-right: 0.3em;
       padding-left: 0.3em;
     }
-    &:first-child:before {
-      content: "" !important;
-    }
+
   }
 }
 header {
@@ -129,7 +130,8 @@ a:hover#menu-icon {
 }
 
 .fr {
-  float: right;
+  float: right !important;
+
 }
 
 .yt {
@@ -156,7 +158,7 @@ a:hover#menu-icon {
   .nav {
     font-size: 1.3em;
     display: block;
-    margin-top: 16px;
+    margin-top: 10px;
   }
 
   .social {
@@ -214,20 +216,25 @@ a:hover#menu-icon {
     padding: 0;
     padding-left: 10px;
   }
+
   header > nav ul li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     margin-right: 5px;
-    margin-top: 15px;
+    //margin-top: 15px;
   }
+
   header > nav ul li a {
     color: black;
   }
+
   .logo {
     text-align: center;
-    float: none;
-    margin: auto;
-    padding-left: 10%;
+    /* float: none; */
+    margin-right: -40px;
+    /* width: 200px; */
+    /* padding-left: 27%; */
     margin-bottom: -17px;
+
   }
 
   #menu-icon {
@@ -242,7 +249,7 @@ a:hover#menu-icon {
     ul {
       margin-left: 0;
       flex: 1.5;
-      margin-right: -2em;
+      //margin-right: -2em;
       z-index: 2;
       margin-top: 25px;
     }

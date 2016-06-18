@@ -13,12 +13,12 @@ angular.module('myApp.partners', ['ngRoute'])
 
         //console.log('this', this);
         var ctrl = this;
-        ctrl.lockCarousel = false;
-        if (!$rootScope.isMobile) {
-            $timeout(function () {
-                ctrl.lockCarousel = true;
-            }, 100);
-        }
+        //ctrl.lockCarousel = false;
+        //if (!$rootScope.isMobile) {
+        //    $timeout(function () {
+        //        ctrl.lockCarousel = true;
+        //    }, 100);
+        //}
         var pageName = 'partners';
         var prmData = DataFactory.getDataForPage(pageName);
         prmData.then(function (data) {

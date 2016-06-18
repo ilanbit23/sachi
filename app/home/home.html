@@ -1,33 +1,59 @@
-<section>
-  <!--<pre>-->
-      <!--{{vm.data.videos | json}}-->
-  <!--</pre>-->
+<section class="home">
+    <!--<div class="main">-->
+        <!--<div class="img">-->
+            <!--<img class="myImg" src="img/faces/1.jpg" alt=""/>-->
+            <!--<span class="myQuote">-->
+                <!--"quote"-->
+            <!--</span>-->
+            <!--<span class="iconPlay">-->
+                <!--"iconplay"-->
+            <!--</span>-->
+            <!--<span class="imgDetails">-->
+                <!--"name+role"-->
+            <!--</span>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <!--<iframe src="//player.vimeo.com/video/55874553?api=1&player_id=video123&title=0&byline=0&portrait=0&color=c9ff23;autoplay=1" width="720" height="405"  id="video123" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>-->
     <div ng-repeat="video in vm.data.videos track by video.id" class="imgSection">
-        <img tabindex="{{video.id+13}}" ng-if="!video.playNow" ng-class="{mt7:$first}"
-             ng-src="./img/faces/{{video.id}}.jpg" alt="{{video.name}}" class="gal" ng-click="vm.playVideo(video)"/>
+        <div class="inside" ng-click="vm.playVideo(video)">
+            <img ng-click="vm.playVideo(video)" tabindex="{{video.id+13}}" ng-if="!video.playNow"
+                 ng-class="{mt7:$first}" id="img{{video.id}}"
+                 ng-src="./img/faces/{{video.id}}.jpg" alt="{{video.name}}" class="gal"/>
 
-        <div tabindex="{{video.id+14}}" ng-if="!video.playNow" class="playCircle"><i
-                class="fa fa-play-circle-o fa-3x play"></i></div>
-            <span ng-if="!video.playNow" class="imgInfo">
-                <span title="{{video.name}}" tabindex="{{video.id+15}}" class="name">{{video.name}}</span>
-                <span title="{{video.role}}" tabindex="{{video.id+16}}" class="name role">{{video.role}}</span>
-                <span title="מידע נוסף" tabindex="{{video.id+17}}" class="moreInfo">
-                    <a ng-href="#/activity/{{vm.getVideo(video.id).page}}?videoId={{video.id}}">
-                        <span class="imgLeft">
-                            <i class="fa fa-arrow-left arrowMore"></i>
-                            <p class="more">{{'More' | translate}}</p>
-                        </span>
-                    </a>
+            <span ng-click="vm.playVideo(video)" ng-if="!video.playNow" class="playCircle">
+                <img src="img/play.png" class="play" ng-click="vm.playVideo(video)"></span>
+                <span ng-if="!video.playNow" class="">
+                    <div class="text-left mr-20">
+                        <div title="{{video.name}}" tabindex="{{video.id+15}}" class="name">{{video.name}}</div>
+                        <div title="{{video.role}}" tabindex="{{video.id+16}}" class="role">{{video.role}}</div>
+                    </div>
+                    <div class="quotes">
+                        <img class="transform quoteL" src="img/quoteR.PNG" alt="quote"/>
+                        <span title="{{video.qoute}}" tabindex="{{video.id+17}}"
+                              class="homeQuote">{{video.quote}}</span>
+                        <img class="transform quoteR" src="img/quoteL.PNG" alt="quote"/>
+                    </div>
                 </span>
-            </span>
 
+            <div ng-if="!video.playNow" title="{{'More' | translate}}" tabindex="{{video.id+18}}" class="">
+                <a class="linkMore" ng-href="#/activity/{{vm.getVideo(video.id).page}}?videoId={{video.id}}">
+                    <span class="imgLeft">
+                        <!--<i class="fa fa-arrow-left arrowMore"></i>-->
+                        <p class="more">{{'More' | translate}}</p>
+                    </span>
+                </a>
+            </div>
 
-        <iframe id="video{{video.id}}" ng-if="video.isPlaying" ng-show="video.playNow"
-                ng-src="{{vm.getVideo(video.id).urlShort}}" width="286" height="190" frameborder="0"
-                title="0" byline="0" portrait="0"  webkitallowfullscreen mozallowfullscreen allowfullscreen>
-        </iframe>
+            <div class="iframe">
+                <iframe tabindex="{{video.id+14}}" id="video{{video.id}}" ng-if="video.isPlaying"
+                        ng-show="video.playNow"
+                        ng-src="{{vm.getVideo(video.id).urlShort}}" width="584" height="329" frameborder="0"
+                        title="0" byline="0" portrait="0">
+                        <!--webkitallowfullscreen mozallowfullscreen allowfullscreen-->
+                </iframe>
+            </div>
+        </div>
     </div>
     <div class="editHomePage" ng-if="user.isAdmin">
         <table style="width:400px">
@@ -53,7 +79,7 @@
             <input id="personRole" type="text" ng-model="vm.newVideo.personRole" required/>
             בחר מחלקה
             <select ng-model="vm.newVideo.page" required>
-                <option value="past" selected="selected" >עבר</option>
+                <option value="past" selected="selected">עבר</option>
                 <option value="present">הווה</option>
                 <option value="future">עתיד</option>
                 <option value="giving">נתינה</option>

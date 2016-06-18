@@ -48,19 +48,19 @@ angular.module('myApp.activity', ['ngRoute'])
                 //section.selected = true;
                 //activeSection.selected = false;
                 activeSection = section;
-                var w = window.innerWidth;
-                var h = window.innerHeight;
-                var winUrl = 'http://www.google.com/maps/d/u/1/viewer?authuser=1&mid=z3oXywwnQlYo.kq5dhi0856sM&t=' + Date.now();
-                if (section.type === 'showActivityMap') {
-                    if (w>860) {
-                        window.open(winUrl, "", "top=100, left=100,width=1200, height=500");
-                    }
-                    else {
-                        window.open(winUrl, "", "top=0, left=0,width=" + w + ", height=500");
-                    }
-
-                    //ctrl.showActivityMap = true;
-                }
+                //var w = window.innerWidth;
+                //var h = window.innerHeight;
+                //
+                //if (section.type === 'showActivityMap') {
+                //    if (w>860) {
+                //        window.open(winUrl, "", "top=100, left=100,width=1200, height=500");
+                //    }
+                //    else {
+                //        window.open(winUrl, "", "top=0, left=0,width=" + w + ", height=500");
+                //    }
+                //
+                //    //ctrl.showActivityMap = true;
+                //}
             },
 
             ctrl.prevVideo = function () {

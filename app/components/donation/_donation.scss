@@ -126,7 +126,7 @@
   }
 
   input[type="radio"] {
-    margin-left: 8px;
+    margin-left: 19px;
     margin-bottom: 10px;
   }
   input[type="text"] {
@@ -237,11 +237,15 @@
 }
 
 .visaIcon {
-  display: none;
+  display: block;
+  width: 50px;
+  margin-right: 9px;
 }
 
 .paypalIcon {
-  display: none;
+  display: block;
+  width: 50px;
+  margin-right: 12px;
 }
 
 @media only screen and (min-width: 860px) and (max-width: 1260px) {
@@ -459,13 +463,14 @@
     input[type="radio"] {
       float: none;
       display: block;
-      margin-right: 4em;
+      margin-right: 2em;
     }
   }
   .paypal {
     float: left;
     margin-left: 15px;
     text-align: center;
+    margin-top: -5px;
     p {
       margin-top: 0;
       margin-bottom: -30px;
@@ -477,7 +482,7 @@
     input[type="radio"] {
       float: none;
       display: block;
-      margin-right: 4em;
+      margin-right: 2em;
     }
     label {
       float: none;
@@ -485,6 +490,7 @@
 
   }
   .btnContinue {
+    margin-right: -18px;
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 1.5em;

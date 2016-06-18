@@ -31,7 +31,9 @@
   text-decoration: none;
   color: $darkGray;
 }
-
+.activityMap {
+  height: 313px;
+}
 .activity {
   iframe {
     margin-bottom: -2em;
@@ -72,7 +74,7 @@
 
 aside {
   flex: 1.4;
-  margin-bottom: 4em;
+  margin-bottom: 7em;
   background-color: $lighterGray;
   padding-bottom: 0;
   text-align: left;
@@ -130,7 +132,6 @@ article {
     p {
       margin-left: 1em;
       direction: rtl;
-      margin-top: 12px;
     }
   }
 }
@@ -150,7 +151,7 @@ article {
 
 .descParagraph {
   font-size: 1.3em;
-  padding-left: 50px;
+  padding-left: 0;
 }
 
 
@@ -164,7 +165,9 @@ article {
     margin-top: -10em;
   }
 }
-
+.pb-15 {
+  padding-bottom: 15px;
+}
 @media only screen and (max-width: 640px) {
   .activity, .people, .partners, .transparency, .contact {
     aside {
@@ -175,6 +178,7 @@ article {
       .interviewName {
         margin-bottom: -9em;
         margin-top: 9em;
+        margin-right: 40px;
       }
       h3 {
         padding-left: 88%;
@@ -208,7 +212,7 @@ article {
     .activity-sections {
       width: 30%;
       float: none;
-      margin-top: 20px !important;
+      margin-top: 24px !important;
       .myHr {
         display: none;
       }
@@ -257,6 +261,10 @@ article {
       padding-top: 10px !important;
       padding-left: 25px !important;
       max-width: 85% !important;
+      p {
+        margin-top: 40px;
+        margin-bottom: -25px;
+      }
     }
 
   }

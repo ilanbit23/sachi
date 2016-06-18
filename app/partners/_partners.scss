@@ -3,7 +3,7 @@
   width: 100%;
   aside {
     max-height: 89px;
-    padding-bottom: 0;
+    padding-bottom: 50px;
   }
   .activity-sections {
     margin-top: -10px;
@@ -44,6 +44,7 @@
 }
 
 .recommendation {
+  margin-top: -3em;
   display: flex;
   padding-right: 0;
   .btnEdit {
@@ -95,7 +96,8 @@
 }
 
 .logoImg {
-  width: 140px;
+  min-height: 70px;
+  width: 185px;
   padding-right: 3px;
   &:hover {
     cursor: pointer;
@@ -119,8 +121,8 @@
   }
   .recommendationRight {
     font-size: 1.3em;
-    margin-bottom: 6em;
-    margin-top: -80px;
+    margin-bottom: 9em;
+    margin-top: -153px;
     background-color: $lighterGray;
     padding-right: 40px;
     padding-top: 1em;
@@ -132,10 +134,19 @@
     color: #231f20;
   }
   .light {
-    font-family: "nextExitRound-Regular", sans-serif;
+    font-family: "nextExitRound-Light", sans-serif;
   }
   .rn-carousel-control {
     display: block;
+  }
+  .logoImg {
+    width: 80%;
+    //padding-right: 30px;
+    //padding-left: 30px;
+  }
+  .logos {
+    text-align: center;
+    margin-top: -8em;
   }
   .partners {
     aside {
